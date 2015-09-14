@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ v2.0b1 | 201101 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+
+body {
+  line-height: 1;
+  }
+
+ol, ul {
+  list-style: none;
+  }
+
+blockquote, q {
+  quotes: none;
+  }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+  }
+
+/* remember to define visible focus styles! 
+:focus {
+  outline: ?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+  }
+
+del {
+  text-decoration: line-through;
+  }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*----------------------------------------------------
+Mobile Style
+-------------------------------------------------------*/
+
+body {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  }
+
+#container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 1em auto;
+  width: 100%;
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+.logo {
+  }
+
+.masthead {
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+nav > ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  }
+
+nav > ul > li {
+	flex: 0 1 auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	transition: all linear 0.1s;
+  }
+
+nav > ul > li:hover {
+	background: #e3b3b3;
+	}
+
+nav > ul > li > a {
+  display: block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #808285;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.75em;
+  z-index: 2;
+  /*border: 1px solid #cc0000;*/
+  }
+
+nav > ul > li > ul {
+          display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+        background: #e3b3b3;
+        margin: 0 0 0 1em;
+        /*border: 1px solid #cc0000;*/
+        display: none;
+        position: absolute;
+  }
+
+nav > ul > li > ul > li > a {
+  flex: 0 1 auto;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  display: block;
+  /*border: 1px solid #cc0000;*/
+  }
+
+
+nav > ul > li:hover ul {
+          display: inline-block;
+          z-index: 2;
+        }
+
+
+.main {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  }
+
+article {
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+.sidebar {
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+
+footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1em;
+  background: #000;
+  /*border: 1px solid #cc0000;*/
+  }
+
+.copyright {
+  color: #fff;
+  text-align: center;
+  }
+
+/*----------------------------------------------------
+Wide Style
+-------------------------------------------------------*/
+@media only screen and (min-width: 800px) {
+
+header {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 1em;
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+nav > ul {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  margin: 0 0 1em 0.5em;
+  background: #fff;
+  /*border: 1px solid #cc0000;*/
+  }
+
+.main {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  }
+
+article {
+  width: 100%;
+  }
+
+}
