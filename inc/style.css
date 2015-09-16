@@ -40,6 +40,10 @@ blockquote, q {
   quotes: none;
   }
 
+strong {
+  font-weight: bold;
+  }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -107,28 +111,35 @@ header {
   /*border: 1px solid #cc0000;*/
   }
 
-nav > ul {
+/*----------------------------------------------------
+   Navigation [Mobile]
+-------------------------------------------------------*/
+nav > .menu-link > ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  background: #fff; /* background for nav dropdown */
   }
 
-nav > ul > li {
+nav > .menu-link > ul > li {
 	flex: 0 1 auto;
-	margin: 0;
-	padding: 0;
+  display: block;
+	margin: 0.5em 0;
+	padding: 0.5em 0;
 	position: relative;
-	transition: all linear 0.1s;
+  font-size: 1.5rem;
+  transition: all linear 0.1s;
+  border-bottom: 1px solid #999;
   }
 
-nav > ul > li:hover {
-	background: #e3b3b3;
+nav > .menu-link > ul > li:hover {
+	background: #f3f2ff;
 	}
 
-nav > ul > li > a {
+nav > .menu-link > ul > li > a {
   display: block;
   padding: 0.5em 1em;
   cursor: pointer;
@@ -141,34 +152,68 @@ nav > ul > li > a {
   /*border: 1px solid #cc0000;*/
   }
 
-nav > ul > li > ul {
-          display: -webkit-flex;
+.menu-link {
+  position: fixed;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-        background: #e3b3b3;
-        margin: 0 0 0 1em;
-        /*border: 1px solid #cc0000;*/
-        display: none;
-        position: absolute;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+  width: 100%;
+  padding: 0.5em 0 0.5em 0em;
+  top: 0;
+  left: 0;
   }
 
-nav > ul > li > ul > li > a {
-  flex: 0 1 auto;
-  padding: 0.5em 1em;
-  cursor: pointer;
+.menu-link {
   display: block;
-  /*border: 1px solid #cc0000;*/
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 ;
   }
 
+.bar-icon-wrapper {
+  -webkit-transform: translate3d(0,0,0);
+  margin: 0 0 0 1em;
+  display: inline-block;
+  }
 
-nav > ul > li:hover ul {
-          display: inline-block;
-          z-index: 2;
-        }
+.bar-icon {
+  height: 3px;
+  width: 20px;
+  background: #000;
+  display: block;
+  opacity: 1;
+  margin-top: 4px;
+  -webkit-transition: -webkit-transform .1s ease-in;
+  -o-transition: -o-transform .1s ease;
+  -ms-transition: -ms-transform .1s ease;
+  -moz-transition: -moz-transform .1s ease;
+  transition: transform .1s ease-in;
+  -webkit-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
 
+.show_menu {
+  color: #fff;
+  cursor: pointer;
+  }
+
+nav > .menu-link > ul.main-navigation {
+ display: none;
+  }
+
+/*----------------------------------------------------
+  Page Elements [Mobile]
+-------------------------------------------------------*/
 
 .main {
   display: -webkit-flex;
@@ -210,6 +255,46 @@ footer {
   text-align: center;
   }
 
+.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+	}
+
+.content-cell-wide {
+	width: 61.65%;
+}
+
+.content-cell {
+ width: 38.35%;
+}
+
+.show_detail {
+  cursor: pointer;
+  }
+
+.details {
+ display: none;
+  }
+
+.tongue-content {
+  font-size: 2rem;
+  color: #808285;
+  line-height: 1.3em;
+  text-align: left;
+  margin: 0 0 0.25em 0.5em;
+  padding: 0.75em;
+  text-indent: 0;
+  width: 77%;
+  border: 1px solid #fff8b5; 
+  }
+
 /*----------------------------------------------------
 Wide Style
 -------------------------------------------------------*/
@@ -227,7 +312,19 @@ header {
   /*border: 1px solid #cc0000;*/
   }
 
-nav > ul {
+/*----------------------------------------------------
+  Navigation [Desktop]
+-------------------------------------------------------*/
+
+.show_menu {
+  display: none;
+  }
+
+nav > .menu-link > ul.main-navigation {
+	display: block;
+	}
+ 
+nav > .menu-link > ul {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -235,9 +332,39 @@ nav > ul {
   -ms-flex-pack: left;
   justify-content: left;
   margin: 0 0 1em 0.5em;
-  background: #fff;
-  /*border: 1px solid #cc0000;*/
   }
+
+nav > .menu-link > ul > li {
+	display: inline;
+	flex: 0 1 auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+  border: none;
+  }
+
+nav > .menu-link > ul > li > a {
+	display: inline;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  font-size: 0.75rem;
+  }
+
+.menu-link {
+  position: relative;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+  padding: 0.5em 0 0.5em 0em;
+  }
+
+/*----------------------------------------------------
+  Page Elements
+-------------------------------------------------------*/
 
 .main {
   -webkit-flex-direction: row;
