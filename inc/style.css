@@ -82,6 +82,7 @@ body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  color: #808285;
   }
 
 #container {
@@ -101,20 +102,28 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
   background: #fff;
-  /*border: 1px solid #cc0000;*/
   }
 
 .logo {
+ }
+
+.tagline {
+  font-size: 1.25em;
+  font-style: italic;
+  margin: 50px 0 0 20px;
   }
 
-.masthead {
-  background: #fff;
-  /*border: 1px solid #cc0000;*/
+.heavy-italic {
+  font-weight: bold;
   }
+
 
 /*----------------------------------------------------
    Navigation [Mobile]
@@ -229,11 +238,20 @@ nav > .menu-link > ul.main-navigation {
   flex-direction: column;
   }
 
+.banner {
+  clear: both;
+  width: 100%;
+}
+
 article {
   background: #fff;
   clear: both;
   /*border: 1px solid #cc0000;*/
   }
+
+article p {
+  margin: 0 2em 2em;
+}
 
 .sidebar {
   background: #fff;
@@ -279,11 +297,11 @@ footer {
   -webkit-justify-content: left;
   -ms-flex-pack: left;
   justify-content: left;
-	}
+  }
 
 .content-cell-wide {
-	width: 61.65%;
-	display: inline;
+  width: 61.65%;
+  display: inline;
 }
 
 .content-cell {
@@ -305,7 +323,6 @@ footer {
 
 .description {
   font-size: 1rem;
-  color: #808285;
   font-weight: light;
   line-height: 2em;
   text-align: left;
@@ -327,7 +344,6 @@ box-shadow: 1000px 1000px 5px 1000px rgba(0,0,0,0.75);
 
 .description-top {
   font-size: 1rem;
-  color: #808285;
   font-weight: light;
   line-height: 1.4em;
   text-align: left;
@@ -365,15 +381,7 @@ Wide Style
 @media only screen and (min-width: 800px) {
 
 header {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 1em;
-  background: #fff;
-  /*border: 1px solid #cc0000;*/
+
   }
 
 /*----------------------------------------------------
@@ -437,7 +445,10 @@ nav > .menu-link > ul > li > a {
   }
 
 article {
-  width: 100%;
+  width: 90%;
+  margin 2em auto;
   }
+
+
 
 }

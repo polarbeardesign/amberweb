@@ -10,7 +10,7 @@
 		<ul class="mobile main-navigation">
 			<li><a href="index.php">Home</a></li>
 			<li><a href="index.php">About Amber Lodging</a></li>
-			<li><a href="index.php">How We Work</a></li>
+			<li><a href="how_we_work.php">How We Work</a></li>
 			<li><a href="index.php">Current Resident Request</a></li>
 			<li><a href="index.php">Request Information</a></li>
 			<li><a href="index.php">Contact Us</a></li>

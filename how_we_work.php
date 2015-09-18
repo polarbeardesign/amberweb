@@ -4,13 +4,9 @@
   <title></title>
   
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-  <link rel="stylesheet" type="text/css" href="inc/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="inc/slick/slick-theme.css"/>
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-
 
 </head>
 
@@ -26,34 +22,16 @@
   <?php include('inc/nav.php') ?>
 </nav>
 
+<div class="banner">
+  <img src="img/banner_hww.png" width="100%"/>
+</div>
+
 <section class="main">
 
-  <article 
-  <div class="your-class">
-    <div>
-    <img src='img/slider_antarctica_crop.png' width="100%"/>
-    </div>
-    <div>
-     <img src='img/slider_color_crop.png' width="100%"/>
-    </div>
-    <div>
-     <img src='img/slider_castle_crop.png' width="100%"/>
-    </div>
-    <div>
-     <img src='img/slider_human_crop.png' width="100%"/>
-    </div>
-    <div>
-     <img src='img/slider_tablet_crop.png' width="100%"/>
-    </div>
-    </div>
-  </article>
 
-<article>
 
-    <div class="row">
-      <div class="content-cell-wide">
-        <span class="show_detail"><img src="img/hww_1625_1083.png" width="100%" alt="How we work" /></span>
-        <span class="details description-top" id="5">
+  <article>
+
         <p><span class="large">It&rsquo;s quite simple, really.</span> We do whatever it takes to get you the housing for one person to hundreds; local to global, one night to many years. And whatever obstacles that come up, we either have a system to get over them, or we invent one on the spot. You&rsquo;re only interested in getting your people where they need to be. We&rsquo;re only interested in making your life easy.</p>
 
         <p>Hotel: <span class="small">Hotel accommodations are available for both domestic and international visits. We&rsquo;ll identify the best hotel option based on your specifics and arrange direct billing. We&rsquo;ll streamline the whole process for your business travel and preview trips.</span></p>
@@ -72,22 +50,7 @@
 
         <p>Choose what you want, not what you don&rsquo;t. <span class="small">The whole enchilada or a la cart &#8211; you decide. Our services are offered on a menu basis. We know that employees have different requirements to be happy and we&rsquo;ve designed our programs to offer each piece from rental assistance to furniture rental individually</span>.</p>
         </span>
-      </div>
-      <div class="content-cell">
-        <span class="show_detail"><img src="img/ri_1011_1083.png" width="100%" alt="Request information" /></span>
-        <span class="details description" id="6">
-        <p><span class="large">We’ve piqued your interest.</span> Now dig deeper for the details, we welcome it. Because that’s when you’ll really be impressed.
-        </span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="content-cell">
-        <img src="img/aa_1020_1085.png" width="100%" alt="About Amber" />
-      </div>
-      <div class="content-cell-wide">
-        <img src="img/cr_1614_1082.png" width="100%" alt="Current resident request" />
-      </div>
-    </div>
+ 
 </article>
 
 </section>
