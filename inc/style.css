@@ -74,6 +74,23 @@ table {
   border-spacing: 0;
 }
 
+input {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  background: #ebeced;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  }
+
+.center input {
+  width: 100px;
+  display: block;
+  margin: 0 auto 2em;
+  cursor: pointer;
+  }
+
 /*----------------------------------------------------
 Mobile Style
 -------------------------------------------------------*/
@@ -109,15 +126,16 @@ header {
   -ms-flex-pack: flex-start;
   justify-content: flex-start;
   background: #fff;
-  }
+ s  }
 
 .logo {
+  margin: 0 0 0 1em;
  }
 
 .tagline {
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-style: italic;
-  margin: 50px 0 0 20px;
+  margin: 3.5em 0 0 0;
   }
 
 .heavy-italic {
@@ -236,11 +254,29 @@ nav > .menu-link > ul.main-navigation {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  max-width: 1500px;
   }
 
 .banner {
   clear: both;
   width: 100%;
+}
+
+.banner h1 {
+text-align: right;
+}
+
+h1.banner-text {
+  position: relative;
+  width: 40%;
+  min-width: 300px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.85);
+  padding: 1rem;
 }
 
 article {
@@ -251,6 +287,20 @@ article {
 
 article p {
   margin: 0 2em 2em;
+  line-height: 1.3em;
+}
+
+article h2, article h3 {
+  font-weight: bold;
+  margin: 0 2em 0.65em 1.9em;
+}
+
+article h2 {
+  font-size: 1.1em;
+}
+
+article h3 {
+  font-size: 1rem;
 }
 
 .sidebar {
@@ -376,13 +426,44 @@ box-shadow: 1000px 1000px 5px 1000px rgba(0,0,0,0.75);
   }
 
 /*----------------------------------------------------
+   Table [mobile]
+-------------------------------------------------------*/
+
+td {
+padding: 0.5em;
+}
+
+td.label {
+text-align: right;
+}
+
+/*----------------------------------------------------
 Wide Style
 -------------------------------------------------------*/
 @media only screen and (min-width: 800px) {
 
+body {
+  background: #333;
+  }
+
+#container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 1em auto;
+  width: 100%;
+  background: #fff;
+  max-width: 1500px;
+  }
+
 header {
 
   }
+
+
 
 /*----------------------------------------------------
   Navigation [Desktop]
@@ -403,7 +484,7 @@ nav > .menu-link > ul {
   -webkit-justify-content: left;
   -ms-flex-pack: left;
   justify-content: left;
-  margin: 0 0 1em 0.5em;
+  margin: 0 0 1em 1.5em;
   }
 
 nav > .menu-link > ul > li {
@@ -417,7 +498,7 @@ nav > .menu-link > ul > li {
 
 nav > .menu-link > ul > li > a {
 	display: inline;
-  padding: 0.5em 0.75em;
+  padding: 0 0.75em;
   cursor: pointer;
   font-size: 0.75rem;
   }
@@ -431,7 +512,7 @@ nav > .menu-link > ul > li > a {
   -ms-flex-pack: flex-start;
   justify-content: flex-start;
   z-index: 1;
-  padding: 0.5em 0 0.5em 0em;
+  padding: 0;
   }
 
 /*----------------------------------------------------
@@ -445,10 +526,17 @@ nav > .menu-link > ul > li > a {
   }
 
 article {
-  width: 90%;
-  margin 2em auto;
+  width: 80%;
+  display: block;
+  margin: 0 auto 2em;
+  max-width: 950px;
   }
 
-
+.resident-request {
+  width: 80%;
+  display: block;
+  margin: 0 auto 2em;
+  max-width: 950px;
+}
 
 }
