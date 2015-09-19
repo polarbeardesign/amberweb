@@ -94,7 +94,6 @@
 </footer>
 
 </div>
-<div id="page-cover"></div>
 
 <script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="inc/slick/slick.min.js"></script>

@@ -117,22 +117,22 @@
 /* Dots */
 .slick-slider
 {
-    margin-bottom: 30px;
+    margin-bottom: 0; /* 30px; original */
 }
 
 .slick-dots
 {
     position: absolute;
-    bottom: -45px;
+    bottom: 25px; /* was -45px */
 
     display: block;
 
-    width: 100%;
+    width: 97%;
     padding: 0;
 
     list-style: none;
 
-    text-align: center;
+    text-align: right;
 }
 .slick-dots li
 {
@@ -178,9 +178,8 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 20px; /* was 6px; */
     line-height: 20px;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -188,17 +187,23 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    content: '\2022'; /* was '•'; 2022, is bullet,  025ef is circle*/
     text-align: center;
 
-    opacity: .25;
-    color: black;
+    opacity: 1; /* was .25; */
+    color: #fff; /* was black; */
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before
 {
-    opacity: .75;
-    color: black;
+    opacity: 1; /* was .75; */
+    font-size: 18px;
+    margin-top: -2px;
+    font-weight: bold; 
+    color: #fff;
+    content: '\025ef';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
