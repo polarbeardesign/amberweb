@@ -51,18 +51,18 @@
   <article style="position: relative;">
     <div class="row">
       <div class="content-cell-wide">
-        <a href='how_we_work.php'><img src="img/hww_1625_1083.png" width="100%" alt="How we work" /></a>
+        <a href='how_we_work.php'><img src="img/hww_585_390.png" width="100%" alt="How we work" /></a>
        </div>
       <div class="content-cell">
-        <a href='request_information.php'><img src="img/ri_1011_1083.png" width="100%" alt="Request information" /></a>
+        <a href='request_information.php'><img src="img/ri_365_390.png" width="100%" alt="Request information" /></a>
       </div>
     </div>
     <div class="row">
       <div class="content-cell">
-        <a href='about_amber_lodging.php'><img src="img/aa_1020_1085.png" width="100%" alt="About Amber" /></a>
+        <a href='about_amber_lodging.php'><img src="img/aa_365_390.png" width="100%" alt="About Amber" /></a>
       </div>
       <div class="content-cell-wide">
-        <a href='current_resident_request.php'><img src="img/cr_1614_1082.png" width="100%" alt="Current resident request" /></a>
+        <a href='current_resident_request.php'><img src="img/cr_585_390.png" width="100%" alt="Current resident request" /></a>
       </div>
     </div>
   </article>
