@@ -17,8 +17,8 @@ BodyStr = BodyStr & "The user entered: " & vbCRLF
 BodyStr = BodyStr & "Name: " & Request.Form("UserFirstName") & " " & Request.Form("UserLastName") & vbCRLF
 BodyStr = BodyStr & "Company: " & Request.Form("UserCompany") & vbCRLF
 BodyStr = BodyStr & "Address: " &  Request.Form("UserAddress") & ", " & Request.Form("UserCity") & ", " & Request.Form("UserState") & ", " & Request.Form("UserZip") & vbCRLF
-BodyStr = BodyStr & "Phone: "  &  Request.Form("userdayareacode") & "-" & Request.Form("userdayphone1") & "-" & Request.Form("userdayphone2") & vbCRLF
-BodyStr = BodyStr & "Fax: "  &  Request.Form("userfaxareacode") & "-" & Request.Form("userfax1") & "-" & Request.Form("userfax2") & vbCRLF
+BodyStr = BodyStr & "Phone: "  &  Request.Form("UserPhone") & vbCRLF
+BodyStr = BodyStr & "Fax: "  &  Request.Form("UserFax") & vbCRLF
 BodyStr = BodyStr & "Email: " &  Request.Form("UserEmail") & vbCRLF
 BodyStr = BodyStr & "Comments: "  &  Request.Form("Userinfocomments") & vbCRLF
 

@@ -8,7 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
+  <link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
 
 </head>
 
@@ -38,7 +38,7 @@
         
         <h3>Information request:</h3>
 
-<form id="formID" method="post" name="RequestInfo" action="info_re2.asp">
+<form id="formID" method="post" name="info" action="request_information_recvd.asp">
 
 <table class='resident-request'>
 <tr>
