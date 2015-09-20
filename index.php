@@ -31,19 +31,49 @@
   <article>
   <div class="single-item" >
     <div>
-     <img src='img/slider_color.png' width="100%"/>
+    <img
+    srcset="img/slider_color_1500.png 1500w,
+            img/slider_color_960.png 960w,
+            img/slider_color_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/slider_color_960.png' width="100%" 
+    alt="Amber favorite color" />
      </div>
     <div>
-     <img src='img/slider_castle.png' width="100%"/>
+    <img
+    srcset="img/slider_castle_1500.png 1500w,
+            img/slider_castle_960.png 960w,
+            img/slider_castle_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/slider_castle_960.png' width="100%" 
+    alt="Amber castle" />
     </div>    
     <div>
-     <img src='img/slider_tablet.png' width="100%"/>
+    <img 
+    srcset="img/slider_tablet_1500.png 1500w,
+            img/slider_tablet_960.png 960w,
+            img/slider_tablet_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/slider_tablet_960.png' width="100%" 
+    alt="Amber above and beyond" />
     </div>
     <div>
-    <img src='img/slider_antarctica.png' width="100%"/>
+    <img 
+    srcset="img/slider_antarctica_1500.png 1500w,
+            img/slider_antarctica_960.png 960w,
+            img/slider_antarctica_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/slider_antarctica_960.png' width="100%" 
+    alt="Amber Leases" />
     </div>
     <div>
-     <img src='img/slider_human.png' width="100%"/>
+    <img 
+    srcset="img/slider_human_1500.png 1500w,
+            img/slider_human_960.png 960w,
+            img/slider_human_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/slider_human_960.png' width="100%" 
+    alt="Amber 24 -7" />
     </div>
     </div>
   </article>
@@ -51,18 +81,18 @@
   <article style="position: relative;">
     <div class="row">
       <div class="content-cell-wide">
-        <a href='how_we_work.php'><img src="img/hww_585_390.png" width="100%" alt="How we work" /></a>
+        <a href='how_we_work.php'><img src="img/button_hww_585_390.png" width="100%" alt="How we work" /></a>
        </div>
       <div class="content-cell">
-        <a href='request_information.php'><img src="img/ri_365_390.png" width="100%" alt="Request information" /></a>
+        <a href='request_information.php'><img src="img/button_ri_365_390.png" width="100%" alt="Request information" /></a>
       </div>
     </div>
     <div class="row">
       <div class="content-cell">
-        <a href='about_amber_lodging.php'><img src="img/aa_365_390.png" width="100%" alt="About Amber" /></a>
+        <a href='about_amber_lodging.php'><img src="img/button_aa_365_390.png" width="100%" alt="About Amber" /></a>
       </div>
       <div class="content-cell-wide">
-        <a href='current_resident_request.php'><img src="img/cr_585_390.png" width="100%" alt="Current resident request" /></a>
+        <a href='current_resident_request.php'><img src="img/button_cr_585_390.png" width="100%" alt="Current resident request" /></a>
       </div>
     </div>
   </article>
