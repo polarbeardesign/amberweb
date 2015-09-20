@@ -84,6 +84,10 @@ input {
   -moz-border-radius: 2px;
   }
 
+input[type=text] {
+ width: 100%;
+}
+
 .center input {
   width: 100px;
   display: block;
@@ -130,12 +134,18 @@ header {
 
 .logo {
   margin: 0 0 0 1em;
+  width: 150px;
+ }
+
+.logo img {
+  width: 100%;
  }
 
 .tagline {
-  font-size: 1.1em;
+  font-size: 0.85em;
   font-style: italic;
-  margin: 3.5em 0 0 0;
+  margin: 4em 0 0 0;
+  width: 10em;
   }
 
 .heavy-italic {
@@ -352,12 +362,12 @@ footer {
   }
 
 .content-cell-wide {
-  width: 61.55%;
+  width: 61.65%;
   display: inline;
 }
 
 .content-cell {
- width: 38.45%;
+ width: 38.35%;
 }
 
 .show_detail {
@@ -396,6 +406,9 @@ position: relative;
 
   }
 
+.resident-request {
+  width: 95%;
+  }
 
 /*----------------------------------------------------
    Table [mobile]
@@ -491,7 +504,17 @@ nav > .menu-link > ul > li > a {
   Page Elements
 -------------------------------------------------------*/
 
+.logo {
+  margin: 0 0 0 1em;
+  width: 150px;
+ }
 
+.tagline {
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 3.5em 0 0 0;
+  width: 20em;
+  }
 
 article {
   width: 80%;

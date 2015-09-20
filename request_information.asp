@@ -43,47 +43,47 @@
 <table class='resident-request'>
 <tr>
   <td class='label'><label for="UserFirstName">First Name*:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='UserFirstName' name='UserFirstName' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='UserFirstName' name='UserFirstName' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserLastName">Last Name*:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='UserLastName' name='UserLastName' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='UserLastName' name='UserLastName' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserCompany">Company:</label></td>
-  <td><input type='text' id='UserCompany' name='UserCompany' value='' size='40'></td>
+  <td><input type='text' id='UserCompany' name='UserCompany' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserAddress">Address:</label></td>
-  <td><input type='text' id='UserAddress' name='UserAddress' value='' size='40'></td>
+  <td><input type='text' id='UserAddress' name='UserAddress' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserCity">City:</label></td>
-  <td><input type='text' id='UserCity' name='UserCity' value='' size='40'></td>
+  <td><input type='text' id='UserCity' name='UserCity' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserState">State:</label></td>
-  <td><input type='text' id='UserState' name='UserState' value='' size='40'></td>
+  <td><input type='text' id='UserState' name='UserState' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserZip">Postal / Zip Code:</label></td>
-  <td><input type='text' id='UserZip' name='UserZip' value='' size='40'></td>
+  <td><input type='text' id='UserZip' name='UserZip' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserPhone">Daytime Phone:</label></td>
-  <td><input type='text' id='UserPhone' name='UserPhone' value='' size='40'></td>
+  <td><input type='text' id='UserPhone' name='UserPhone' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserFax">Fax:</label></td>
-  <td><input type='text' id='UserFax' name='UserFax' value='' size='40'></td>
+  <td><input type='text' id='UserFax' name='UserFax' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="UserEmail">Email*:</label></td>
-  <td><input class="validate[required,custom[email]]" type='text' id='UserEmail' name='UserEmail' value='' size='40'></td>
+  <td><input class="validate[required,custom[email]]" type='text' id='UserEmail' name='UserEmail' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="Userinfocomments">Comments:</label></td>
-  <td><input type='text' id='Userinfocomments' name='Userinfocomments' value='' size='40'></td>
+  <td><input type='text' id='Userinfocomments' name='Userinfocomments' value=''></td>
 </tr>
 </table>
 
