@@ -1,3 +1,6 @@
   <div class="copyright">
-    <img src="img/logo_bw.svg" width="200px" alt="Amber Lodging" />
+    <img 
+    srcset="img/logo_bw.svg 208w"
+    src='img/logo_bw.png' width="100%" 
+    alt="Amber Lodging" />
   </div>

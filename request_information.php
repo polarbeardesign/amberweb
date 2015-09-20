@@ -25,7 +25,13 @@
 </nav>
 
 <div class="banner">
-  <img src="img/banner_ri.png" width="100%"/>
+    <img
+    srcset="img/banner_ri_1500.png 1500w,
+            img/banner_ri_960.png 960w,
+            img/banner_ri_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/banner_ri_960.png' width="100%" 
+    alt="Amber How We Work" />
   <h1 class="banner-text">Request Information</h1>
 
 </div>

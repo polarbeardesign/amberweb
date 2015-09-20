@@ -23,7 +23,13 @@
 </nav>
 
 <div class="banner">
-  <img src="img/banner_about.png" width="100%"/>
+    <img
+    srcset="img/banner_about_1500.png 1500w,
+            img/banner_about_960.png 960w,
+            img/banner_about_480.png 480w"
+    sizes="(min-width: 93.75em) 93.75em, 100vw"
+    src='img/banner_about_960.png' width="100%" 
+    alt="About Amber" />
   <h1 class="banner-text">About Us</h1>
 
 </div>
