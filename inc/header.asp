@@ -1,5 +1,5 @@
   <div class="logo">
-  <a href="index.php"><img 
+  <a href="home.asp"><img 
     srcset="img/logo.svg 208w"
     src='img/logo.png' width="100%" 
     alt="Amber Lodging" /></a>
