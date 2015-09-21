@@ -26,11 +26,11 @@
 
 <div class="banner">
     <img
-    srcset="img/banner_crr_1500.png 1500w,
-            img/banner_crr_960.png 960w,
-            img/banner_crr_480.png 480w"
+    srcset="img/banner_crr_1500.jpg 1500w,
+            img/banner_crr_960.jpg 960w,
+            img/banner_crr_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
-    src='img/banner_crr_960.png' width="100%" 
+    src='img/banner_crr_960.jpg' width="100%" 
     alt="Amber Contact Resident Request" />
   <h1 class="banner-text">Current Resident Request</h1>
 
@@ -44,36 +44,36 @@
 
         <p>For maintenance or extension requests, departure confirmation or general questions, please provide the following information:</p>
 
-<form id="formID" method="post" name="RequestInfo" action="resident_request_recvd.asp">
+<form id="formID" method="post" name="RequestInfo" action="request_resident_recvd.asp">
 
 <table class='resident-request'>
 <tr>
-  <td class='label'><label for="FirstName">First Name*:</label></td>
+  <td class='label'><label for="FirstName">First Name *:</label></td>
   <td><input class="validate[required] text-input" type='text' id='FirstName' name='FirstName' value='' size='40'></td>
 </tr>
 <tr>
-  <td class='label'><label for="LastName">Last Name*:</label></td>
+  <td class='label'><label for="LastName">Last Name *:</label></td>
   <td><input class="validate[required] text-input" type='text' id='LastName' name='LastName' value='' size='40'></td>
 </tr>
 <tr>
-  <td class='label'><label for="AptNo">Apartment Number:</label></td>
-  <td><input type='text' id='AptNo' name='AptNo' value='' size='40'></td>
+  <td class='label'><label for="AptNo">Apartment Number *:</label></td>
+  <td><input class="validate[required] text-input" type='text' id='AptNo' name='AptNo' value='' size='40'></td>
 </tr>
 <tr>
-  <td class='label'><label for="PropertyName">Property Name:</label></td>
-  <td><input type='text' id='PropertyName' name='PropertyName' value='' size='40'></td>
+  <td class='label'><label for="PropertyName">Property Name *:</label></td>
+  <td><input class="validate[required] text-input" type='text' id='PropertyName' name='PropertyName' value='' size='40'></td>
 </tr>
 <tr>
-  <td class='label'><label for="phone">Daytime Phone:</label></td>
-  <td><input type='text' id='phone' name='phone' value='' size='40'></td>
+  <td class='label'><label for="phone">Daytime Phone *:</label></td>
+  <td><input class="validate[required] text-input" type='text' id='phone' name='phone' value='' size='40'></td>
 </tr>
 <tr>
-  <td class='label'><label for="email">Email*:</label></td>
+  <td class='label'><label for="email">Email *:</label></td>
   <td><input class="validate[required,custom[email]]" type='text' id='email' name='email' value='' size='40'></td>
 </tr>
 <tr>
-  <td class='label'><label for="comments">Questions / Comments:</label></td>
-  <td><input type='text' id='comments' name='comments' value='' size='40'></td>
+  <td class='label'><label for="comments">Questions / Comments *:</label></td>
+  <td><input class="validate[required] text-input" type='text' id='comments' name='comments' value='' size='40'></td>
 </tr>
 </table>
 

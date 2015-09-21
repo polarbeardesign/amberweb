@@ -38,9 +38,9 @@ BodyStr = BodyStr & "Comments: "  &  Request.Form("Userinfocomments") & vbCRLF
 '
     Set objNewMail = CreateObject("CDO.Message")
     objNewMail.Subject = "Info Request Mail from Amberlodging mailform." 
-    objNewMail.From = "inforeq@amberlodging.com"
-    objNewMail.Sender = "inforeq@amberlodging.com"
-    objNewMail.To = "inforeq@amberlodging.com"
+    objNewMail.From = "mail@amberlodging.com"
+    objNewMail.Sender = "mail@amberlodging.com"
+    objNewMail.To = "mail@amberlodging.com"
     objNewMail.TextBody = BodyStr
     
        
@@ -49,7 +49,7 @@ BodyStr = BodyStr & "Comments: "  &  Request.Form("Userinfocomments") & vbCRLF
 
     'Name or IP of Remote SMTP Server
     objNewMail.Configuration.Fields.Item _
-        ("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "azumaexm1"
+        ("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "azumaexch1"
     
     'Server port (typically 25)
     objNewMail.Configuration.Fields.Item _
@@ -96,11 +96,11 @@ sectionHeader="INFORMATION REQUEST"
 
 <div class="banner">
     <img
-    srcset="img/banner_ri_1500.png 1500w,
-            img/banner_ri_960.png 960w,
-            img/banner_ri_480.png 480w"
+    srcset="img/banner_ri_1500.jpg 1500w,
+            img/banner_ri_960.jpg 960w,
+            img/banner_ri_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
-    src='img/banner_ri_960.png' width="100%" 
+    src='img/banner_ri_960.jpg' width="100%" 
     alt="Amber How We Work" />
   <h1 class="banner-text">Request Information</h1>
 

@@ -12,7 +12,7 @@ Dim objNewMail
  
 'Set the body field
 
-BodyStr = "Information Request From Amberlodging Website" & vbCRLF
+BodyStr = "Current Resident Request From Amberlodging Website" & vbCRLF
 BodyStr = BodyStr & "The user entered: " & vbCRLF
 BodyStr = BodyStr & "Name: " & Request.Form("FirstName") & " " & Request.Form("LastName") & vbCRLF
 BodyStr = BodyStr & "Apartment: " & Request.Form("AptNo") & vbCRLF
@@ -36,9 +36,9 @@ BodyStr = BodyStr & "Comments: "  &  Request.Form("comments") & vbCRLF
 '
     Set objNewMail = CreateObject("CDO.Message")
     objNewMail.Subject = "Current Resident Request Mail from Amberlodging mailform." 
-    objNewMail.From = "inforeq@amberlodging.com"
-    objNewMail.Sender = "inforeq@amberlodging.com"
-    objNewMail.To = "inforeq@amberlodging.com"
+    objNewMail.From = "mail@amberlodging.com"
+    objNewMail.Sender = "mail@amberlodging.com"
+    objNewMail.To = "mail@amberlodging.com"
     objNewMail.TextBody = BodyStr
     
        
@@ -47,7 +47,7 @@ BodyStr = BodyStr & "Comments: "  &  Request.Form("comments") & vbCRLF
 
     'Name or IP of Remote SMTP Server
     objNewMail.Configuration.Fields.Item _
-        ("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "azumaexm1"
+        ("http://schemas.microsoft.com/cdo/configuration/smtpserver") = "azumaexch1"
     
     'Server port (typically 25)
     objNewMail.Configuration.Fields.Item _
@@ -94,13 +94,13 @@ sectionHeader="INFORMATION REQUEST"
 
 <div class="banner">
     <img
-    srcset="img/banner_crr_1500.png 1500w,
-            img/banner_crr_960.png 960w,
-            img/banner_crr_480.png 480w"
+    srcset="img/banner_crr_1500.jpg 1500w,
+            img/banner_crr_960.jpg 960w,
+            img/banner_crr_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
-    src='img/banner_crr_960.png' width="100%" 
+    src='img/banner_crr_960.jpg' width="100%" 
     alt="Amber Contact Resident Request" />
-  <h1 class="banner-text">Request Information</h1>
+  <h1 class="banner-text">Current Resident Request Information</h1>
 
 </div>
 

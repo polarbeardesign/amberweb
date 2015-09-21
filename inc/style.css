@@ -505,14 +505,14 @@ nav > .menu-link > ul > li > a {
 -------------------------------------------------------*/
 
 .logo {
-  margin: 0 0 0 1em;
+  margin: 0 1em;
   width: 150px;
  }
 
 .tagline {
   font-size: 1.1em;
   font-style: italic;
-  margin: 3.5em 0 0 0;
+  margin: 3.7em 0 0 0;
   width: 20em;
   }
 
