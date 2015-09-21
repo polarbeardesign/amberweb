@@ -49,31 +49,31 @@
 <table class='resident-request'>
 <tr>
   <td class='label'><label for="FirstName">First Name *:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='FirstName' name='FirstName' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='FirstName' name='FirstName' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="LastName">Last Name *:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='LastName' name='LastName' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='LastName' name='LastName' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="AptNo">Apartment Number *:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='AptNo' name='AptNo' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='AptNo' name='AptNo' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="PropertyName">Property Name *:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='PropertyName' name='PropertyName' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='PropertyName' name='PropertyName' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="phone">Daytime Phone *:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='phone' name='phone' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='phone' name='phone' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="email">Email *:</label></td>
-  <td><input class="validate[required,custom[email]]" type='text' id='email' name='email' value='' size='40'></td>
+  <td><input class="validate[required,custom[email]]" type='text' id='email' name='email' value=''></td>
 </tr>
 <tr>
   <td class='label'><label for="comments">Questions / Comments *:</label></td>
-  <td><input class="validate[required] text-input" type='text' id='comments' name='comments' value='' size='40'></td>
+  <td><input class="validate[required] text-input" type='text' id='comments' name='comments' value=''></td>
 </tr>
 </table>
 
