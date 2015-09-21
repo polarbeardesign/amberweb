@@ -26,11 +26,11 @@
 
 <div class="banner">
     <img
-    srcset="img/banner_crr_1500.png 1500w,
-            img/banner_crr_960.png 960w,
-            img/banner_crr_480.png 480w"
+    srcset="img/banner_crr_1500.jpg 1500w,
+            img/banner_crr_960.jpg 960w,
+            img/banner_crr_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
-    src='img/banner_crr_960.png' width="100%" 
+    src='img/banner_crr_960.jpg' width="100%" 
     alt="Amber Contact Resident Request" />
   <h1 class="banner-text">Current Resident Request</h1>
 
