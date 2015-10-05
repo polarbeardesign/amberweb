@@ -31,7 +31,7 @@
   <article>
   <div class="single-item" >
     <div>
-    <span class="show_detail" data-attribute="description_1" ><img
+    <span class="show_detail_1" ><img
     srcset="img/slider_color_1500.jpg 1500w,
             img/slider_color_960.jpg 960w,
             img/slider_color_480.jpg 480w"
@@ -40,16 +40,16 @@
     alt="Amber favorite color" /></span>
      </div>
     <div>
-    <img
+    <span class="show_detail_2" ><img
     srcset="img/slider_castle_1500.jpg 1500w,
             img/slider_castle_960.jpg 960w,
             img/slider_castle_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
     src='img/slider_castle_960.jpg' width="100%" 
-    alt="Amber castle" />
+    alt="Amber castle" /></span>
     </div>    
     <div>
-    <img 
+    <span class="show_detail_3" ><img 
     srcset="img/slider_tablet_1500.jpg 1500w,
             img/slider_tablet_960.jpg 960w,
             img/slider_tablet_480.jpg 480w"
@@ -58,7 +58,7 @@
     alt="Amber above and beyond" />
     </div>
     <div>
-    <img 
+    <span class="show_detail_4" ><img 
     srcset="img/slider_antarctica_1500.jpg 1500w,
             img/slider_antarctica_960.jpg 960w,
             img/slider_antarctica_480.jpg 480w"
@@ -67,7 +67,7 @@
     alt="Amber Leases" />
     </div>
     <div>
-    <img 
+    <span class="show_detail_5" ><img 
     srcset="img/slider_human_1500.jpg 1500w,
             img/slider_human_960.jpg 960w,
             img/slider_human_480.jpg 480w"
@@ -78,38 +78,39 @@
     </div>
   </article>
 
+  <article>
 <!-- Color -->
 
       <span class="details description" id="description_1">
-        <p><strong>There&rsquo;s rarely such a thing as a typical corporate assignment.</strong> We&rsquo;re not the typical corporate housing company. We make stays happen for one night to years at a time. Every traveller gets a plan that fits their requirements. Every location comes with the services that assure a great stay—from housing to insurance to finding a good vet. We do what it takes, so that people can go where they need to do what it takes.</p>
+        <p><strong>There&rsquo;s rarely such a thing as a typical corporate assignment.</strong> We&rsquo;re not the typical corporate housing company. We make stays happen for one night to years at a time. Every traveller gets a plan that fits their requirements. Every location comes with the services that assure a great stay&#8211;from housing to insurance to finding a good vet. We do what it takes, so that people can go where they need to do what it takes.</p>
       </span>
 
 <!-- Castle -->
 
       <span class="details description" id="description_2">
-        <p><strong>Home is where you need it to be. And sometimes a home isn&rsquo;t a traditional house. Sometimes a home needs to be a tree house in Pennsylvania or a house boat in Atlanta or a villa in the Italian wine country. Sometimes it has to be a remote cabin in the woods, a National Park Ranger helped us find the perfect place. And yes if your home has to be a castle, we&rsquo;ve done that too, in England, Italy and Scotland.</p>
+        <p><strong>Home is where you need it to be.</strong> And sometimes a home isn&rsquo;t a traditional house. Sometimes a home needs to be a tree house in Pennsylvania or a house boat in Atlanta or a villa in the Italian wine country. Sometimes it has to be a remote cabin in the woods, a National Park Ranger helped us find the perfect place. And yes if your home has to be a castle, we&rsquo;ve done that too, in England, Italy and Scotland.</p>
       </span>
 
 
 <!-- Above and Beyond [tablet] -->
 
       <span class="details description" id="description_3">
-        <p><strong>Whether it&rsquo;s domestic or global, travel and housing can come with complicated, unexpected problems. And if we haven&rsquo;t already found a solution, we&rsquo;ll invent a new one. Everything from developing global rental insurance at no extra cost to our clients, or holding leases on five continents. We even offer pre-arrival inspection with photos to ensure compliance with your guidelines. Basically, we fix problems.</p>
+        <p><strong>Whether it&rsquo;s domestic or global, travel and housing can come with complicated, unexpected problems.</strong> And if we haven&rsquo;t already found a solution, we&rsquo;ll invent a new one. Everything from developing global rental insurance at no extra cost to our clients, or holding leases on five continents. We even offer pre-arrival inspection with photos to ensure compliance with your guidelines. Basically, we fix problems.</p>
       </span>
 
 
 <!-- Leases -->
 
       <span class="details description" id="description_4">
-        <p><strong>Let&rsquo;s say you&rsquo;re trying to sign a lease in some country on the other side of the world. But by the time you sign a lease in your US office it might already be lost to someone competing for the location. We have a proprietary, fluid system that allows us to vet, sign and fund the lease for our clients, all over the world.</p>
+        <p><strong>Let&rsquo;s say you&rsquo;re trying to sign a lease in some country on the other side of the world.</strong> But by the time you sign a lease in your US office it might already be lost to someone competing for the location. We have a proprietary, fluid system that allows us to vet, sign and fund the lease for our clients, all over the world.</p>
       </span>
 
 <!-- 24 / 7 | Human -->
 
       <span class="details description" id="description_5">
-        <p><strong>What good is 24-hour support unless you&rsquo;re talking to a live, qualified, helpful member of our team? At AMBER Lodging Co. we understand that emergencies can occur at any time and that&rsquo;s why our guests calls for emergency help are answered live 24/7 by a trained member of our ops team empowered to help. We&rsquo;ll be there when you need us.</p>
+        <p><strong>What good is 24-hour support unless you&rsquo;re talking to a live, qualified, helpful member of our team?</strong> At AMBER Lodging Co. we understand that emergencies can occur at any time and that&rsquo;s why our guests calls for emergency help are answered live 24/7 by a trained member of our ops team empowered to help. We&rsquo;ll be there when you need us.</p>
       </span>
-
+  </article>
 
 
   <article style="position: relative;">
@@ -161,14 +162,30 @@
   });
 
   $(document).ready(function() {
-    $(".show_detail").click(function () {
-      $(data-attribute).toggle(duration = 10);
+    $(".show_detail_1").click(function () {
+      $(description_1).toggle(duration = 10);
     });
-//    $(".show_detail").mouseleave(function () {
-//      $(this).siblings($(this)).toggle(duration = 10);
-//    });
   });
-
+  $(document).ready(function() {
+    $(".show_detail_2").click(function () {
+      $(description_2).toggle(duration = 10);
+    });
+  });
+  $(document).ready(function() {
+    $(".show_detail_3").click(function () {
+      $(description_3).toggle(duration = 10);
+    });
+  });
+  $(document).ready(function() {
+    $(".show_detail_4").click(function () {
+      $(description_4).toggle(duration = 10);
+    });
+  });
+  $(document).ready(function() {
+    $(".show_detail_5").click(function () {
+      $(description_5).toggle(duration = 10);
+    });
+  });
   </script>
 
 </body>
