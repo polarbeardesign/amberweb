@@ -514,11 +514,17 @@ nav > .menu-link > ul > li > a {
   width: 20em;
   }
 
-article {
+.hero {
+max-height: 500px;
+overflow: hidden;
+margin-bottom: 1em;
+}
+
+.center {
   width: 80%;
   display: block;
   margin: 0 auto 1em;
-  max-width: 950px;
+  max-width: 950px; 
   }
 
 .resident-request {

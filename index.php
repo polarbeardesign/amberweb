@@ -28,7 +28,7 @@
 
 <section class="main">
 
-  <article>
+  <article class='hero'>
   <div class="single-item" >
     <div>
     <span class="show_detail_1" ><img
@@ -36,7 +36,7 @@
             img/slider_color_960.jpg 960w,
             img/slider_color_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
-    src='img/slider_color_960.jpg' width="100%" 
+    src='img/slider_color_960.jpg' width="100%" style='height; 500px;'
     alt="Amber favorite color" /></span>
      </div>
     <div>
@@ -113,7 +113,7 @@
   </article>
 
 
-  <article style="position: relative;">
+  <article class='center' style="position: relative;">
     <div class="row">
       <div class="content-cell-wide">
         <a href='how_we_work.php'><img src="img/button_hww_585_390.jpg" width="100%" alt="How we work" /></a>
