@@ -264,7 +264,6 @@ nav > .menu-link > ul.main-navigation {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 1500px;
   }
 
 .banner {
