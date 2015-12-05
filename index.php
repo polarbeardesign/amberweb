@@ -31,14 +31,24 @@
   <article class='hero'>
   <div class="single-item" >
     <div>
-    <span class="show_detail_1" ><img
+    <span class="show_detail_1" >
+
+    <img
     srcset="img/slider_color_1500.jpg 1500w,
             img/slider_color_960.jpg 960w,
             img/slider_color_480.jpg 480w"
     sizes="(min-width: 93.75em) 93.75em, 100vw"
-    src='img/slider_color_960.jpg' width="100%" style='height; 500px;'
-    alt="Amber favorite color" /></span>
+    src='img/slider_color_960.jpg' width="100%" 
+    alt="Amber castle" />
+    <div class='overlay-text'>
+    <p class='main'>Who do you need to send?</p>
+    <p class='main'>Where do they want to go?</p>
+    <p class='main'>How long will they live there?</p>
+    <p class='last'>What's their favorite color?</p>
+    </div>
+    </span>
      </div>
+
     <div>
     <span class="show_detail_2" ><img
     srcset="img/slider_castle_1500.jpg 1500w,
@@ -121,8 +131,6 @@
       <div class="content-cell">
         <a href='request_information.php'><img src="img/button_ri_365_390.jpg" width="100%" alt="Request information" /></a>
       </div>
-    </div>
-    <div class="row">
       <div class="content-cell">
         <a href='about_amber_lodging.php'><img src="img/button_aa_365_390.jpg" width="100%" alt="About Amber" /></a>
       </div>
