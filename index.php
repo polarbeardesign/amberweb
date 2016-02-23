@@ -186,6 +186,21 @@
       $(description_5).toggle(duration = 10);
     });
   });
+
+
+ 		$(document).ready(function() {
+            $(".Login").click(function() {
+					var h = $("body").height() + 'px';
+             	    $("#black_overlay").css({"height":h,"visibility":"visible"});
+					$(".login_form").css('display','block');
+			});
+			$(".close, #submit").click(function() {
+				$(".login_form").css('display','none');
+				$("#black_overlay").css("visibility","hidden");
+			});
+			
+        });
+ 
   </script>
 
 </body>
