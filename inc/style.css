@@ -94,6 +94,9 @@ input[type=text] {
   margin: 0 auto 2em;
   cursor: pointer;
   }
+.clearer {
+clear: both;
+}
 
 /*----------------------------------------------------
 Mobile Style
@@ -385,11 +388,12 @@ footer {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 0px;
+  margin-bottom: 1em;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 1;
+  position: absolute;
 }
 
 /* Declare heights because of positioning of img element */
@@ -415,7 +419,7 @@ width: 300px;
 
 /* Move page indicators to right side */
 .carousel-indicators {
-  left: 80%;
+  left: 70%;
   }
 
 /* Bump up size of carousel content */
@@ -425,34 +429,37 @@ width: 300px;
   line-height: 1.2;
   }
 
+.show_detail_1, .show_detail_2, .show_detail_3, .show_detail_4, .show_detail_5 {
+  cursor: pointer;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 .carousel-image-one {
-background: url('/img/slider_color_689.jpg') no-repeat top left;
-}
+  background: url('/img/slider_color_689.jpg') no-repeat top left;
+  }
 
 .carousel-image-two {
-background: url('/img/slider_castle_689.jpg') no-repeat top right;
-}
+  background: url('/img/slider_castle_689.jpg') no-repeat top right;
+  }
 
 .carousel-image-three {
-background: url('/img/slider_tablet_689.jpg') no-repeat top left;
-}
+  background: url('/img/slider_tablet_689.jpg') no-repeat top left;
+  }
 
 .carousel-image-four {
-background: url('/img/slider_antarctica_689.jpg') no-repeat top right;
-}
+  background: url('/img/slider_antarctica_689.jpg') no-repeat top right;
+  }
 
 .carousel-image-five {
-background: url('/img/slider_human_689.jpg') no-repeat top right;
-}
-
+  background: url('/img/slider_human_689.jpg') no-repeat top right;
+  }
 
 .carousel-caption-one {
-  width: 50%;
+  width: 45%;
   text-align: left;
-  left: 50%;
+  left: 45%;
   padding-bottom: 30px;
   }
 
@@ -464,29 +471,29 @@ background: url('/img/slider_human_689.jpg') no-repeat top right;
   }
 
 .carousel-caption-three {
-  width: 180px;
+  width: 35%;
   text-align: center;
-  left: 50%;
+  left: 60%;
   padding-bottom: 70px;
   }
 
 .carousel-caption-four {
-  width: 45%;
+  width: 55%;
   text-align: center;
-  left: 10%;
+  left: 7%;
   padding-bottom: 40px;
   }
 
 .carousel-caption-five {
   width: 30%;
   text-align: left;
-  left: 12%;
+  left: 16%;
   padding-bottom: 40px;
   }
 
 .dark {
   color: #333;
-  text-shadow: 0 1px 2px rgba(0,0,0,.1);
+  text-shadow: 0 1px 2px rgba(255,255,255,.5);
   }
 
 .carousel-caption p {
@@ -504,13 +511,9 @@ background: url('/img/slider_human_689.jpg') no-repeat top right;
   font-size: 1.3rem;
   }
 
-.carousel-caption-one p.main {
+.carousel-caption-one p.main, .carousel-caption p.last {
   font-size: 0.75rem;
   }
-
-.carousel-caption p.last {
-  font-size: 0.75rem;
-}
 
 .details {
  display: none;
@@ -518,25 +521,25 @@ background: url('/img/slider_human_689.jpg') no-repeat top right;
 
 .description {
   z-index: 9999;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 2em;
   text-align: left;
-  margin:  0 0.25em 0.5em 0;
-  padding: 0.75em;
+  margin:  -1em 0.25em 0.25em 0;
+  padding: 0.75em 0.75em 0.75em 1em;
   text-indent: 0;
-  width: 60%;
+  width: 90%;
   max-width: 750px;
-
   position: relative;
   background: #fff;
   border-radius: 0px 0px 20px 0px;
   -moz-border-radius: 0px 0px 20px 0px;
   -webkit-border-radius: 0px 0px 20px 0px;
   border: 1px solid #999; 
-
   }
 
-
+.description p {
+  margin:  0.25em 0.25em 0.25em 1.5em;
+  }
 
 /*----------------------------------------------------
    Table [mobile]
@@ -550,104 +553,10 @@ td.label {
 text-align: right;
 }
 
-
 /*----------------------------------------------------
-Medium Width Style 800 <=> 900
+Medium Width Style 600 <=> 900
 -------------------------------------------------------*/
-@media only screen and (min-width: 800px) {
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 285px;
-}
-
-.carousel-image-one {
-background: url('/img/slider_color_983.jpg') no-repeat top left;
-}
-
-.carousel-image-two {
-background: url('/img/slider_castle_983.jpg') no-repeat top right;
-}
-
-.carousel-image-three {
-background: url('/img/slider_tablet_983.jpg') no-repeat top left;
-}
-
-.carousel-image-four {
-background: url('/img/slider_antarctica_983.jpg') no-repeat top right;
-}
-
-.carousel-image-five {
-background: url('/img/slider_human_983.jpg') no-repeat top right;
-}
-
-.carousel-caption-one {
-  width: 45%;
-  text-align: left;
-  left: 45%;
-  padding-bottom: 75px;
-
-}
-
-.carousel-caption-two {
-  width: 45%;
-  text-align: left;
-  left: 12%;
-  padding-bottom: 70px;
-
-}
-
-.carousel-caption-three {
-  width: 480px;
-  text-align: center;
-  left: 40%;
-  padding-bottom: 110px;
-
-}
-
-.carousel-caption-four {
-  width: 45%;
-  text-align: center;
-  left: 12%;
-  padding-bottom: 60px;
-
-}
-
-.carousel-caption-five {
-  width: 30%;
-  text-align: left;
-  left: 12%;
-  padding-bottom: 50px;
-}
-
-.carousel-caption p.main {
-  font-weight: bold;
-  font-size: 2.3rem;
-
-}
-
-.carousel-caption p.last {
-  margin-top: 1em;
-  font-size: 1.75rem;
-}
-
-.carousel-caption-one p.main {
-  font-size: 1.5rem;
-}
-
-.carousel-caption p.last {
-  font-size: 1.25rem;
-}
-
-}
-/*----------------------------------------------------
-Wide Style 900 <=> 1280
--------------------------------------------------------*/
-@media only screen and (min-width: 900px) {
-
-body {
-  background: #333;
-  }
+@media only screen and (min-width: 600px) {
 
 #container {
   display: -webkit-flex;
@@ -660,12 +569,6 @@ body {
   width: 100%;
   background: #fff;
   }
-
-header {
-
-  }
-
-
 
 /*----------------------------------------------------
   Navigation [Desktop]
@@ -724,7 +627,7 @@ nav > .menu-link > ul > li > a {
 .logo {
   margin: 0 1em;
   width: 150px;
- }
+   }
 
 .tagline {
   font-size: 1.1em;
@@ -732,10 +635,6 @@ nav > .menu-link > ul > li > a {
   margin: 3.7em 0 0 0;
   width: 20em;
   }
-
-.hero {
-border: 1px solid red;
-}
 
 .center {
   display: block;
@@ -747,104 +646,145 @@ border: 1px solid red;
   display: block;
   margin: 0 auto 2em;
   max-width: 950px;
+  }
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 285px;
+  }
+
+.carousel-image-one {
+  background: url('/img/slider_color_983.jpg') no-repeat top left;
+  }
+
+.carousel-image-two {
+  background: url('/img/slider_castle_983.jpg') no-repeat top right;
+  }
+
+.carousel-image-three {
+  background: url('/img/slider_tablet_983.jpg') no-repeat top left;
+  }
+
+.carousel-image-four {
+  background: url('/img/slider_antarctica_983.jpg') no-repeat top right;
+  }
+
+.carousel-image-five {
+  background: url('/img/slider_human_983.jpg') no-repeat top right;
+  }
+
+.carousel-caption-one {
+  left: 45%;
+  padding-bottom: 35px;
+  }
+
+.carousel-caption-two {
+  padding-bottom: 70px;
+  }
+
+.carousel-caption-three {
+  left: 55%;
+  padding-bottom: 110px;
+  }
+
+.carousel-caption-four {
+  padding-bottom: 60px;
+  }
+
+.carousel-caption-five {
+  padding-bottom: 50px;
+  }
+
+.carousel-caption p.main {
+  font-size: 1.6rem;
+  }
+
+.carousel-caption p.last {
+  font-size: 1.6rem;
+  }
+
+.carousel-caption-one p.main, .carousel-caption p.last {
+  font-size: 1.2rem;
+  }
+
+.description {
+  font-size: 0.85rem;
+  width: 80%;
+  }
 }
+/*----------------------------------------------------
+Wide Style 900 <=> 1280
+-------------------------------------------------------*/
+@media only screen and (min-width: 900px) {
+
+
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 400px;
-}
-
-.carousel-caption-one {
-  width: 45%;
-  text-align: left;
-  left: 45%;
-  padding-bottom: 150px;
-
-}
-
-.carousel-caption-two {
-  width: 45%;
-  text-align: left;
-  left: 12%;
-  padding-bottom: 140px;
-
-}
-
-.carousel-caption-three {
-  width: 480px;
-  text-align: center;
-  left: 50%;
-  padding-bottom: 225px;
-
-}
-
-.carousel-caption-four {
-  width: 45%;
-  text-align: center;
-  left: 12%;
-  padding-bottom: 125px;
-
-}
-
-.carousel-caption-five {
-  width: 30%;
-  text-align: left;
-  left: 12%;
-  padding-bottom: 100px;
-
-}
-
-.dark {
-  color: #333;
-  text-shadow: 0 1px 2px rgba(0,0,0,.1);
   }
 
-.carousel-caption p {
-  margin: 0 0 .25em 0;
-  font-style: italic;
-}
+.carousel-caption-one {
+  padding-bottom: 75px;
+  }
+
+.carousel-caption-two {
+  padding-bottom: 70px;
+  }
+
+.carousel-caption-three {
+  padding-bottom: 175px;
+  }
+
+.carousel-caption-four {
+  padding-bottom: 65px;
+  }
+
+.carousel-caption-five {
+  padding-bottom: 50px;
+  }
 
 .carousel-caption p.main {
-  font-weight: bold;
   font-size: 2.3rem;
-
-}
+  }
 
 .carousel-caption p.last {
-  margin-top: 1em;
   font-size: 1.3rem;
-}
+  }
 
-.carousel-caption-one p.main {
+.carousel-caption-one p.main, .carousel-caption p.last {
   font-size: 1.8rem;
-}
+  }
 
-.carousel-caption p.last {
-  font-size: 1.8rem;
-}
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 .carousel-image-one {
-background: url('/img/slider_color_1511.jpg') no-repeat top left;
-}
+  background: url('/img/slider_color_1511.jpg') no-repeat top left;
+  }
 
 .carousel-image-two {
-background: url('/img/slider_castle_1511.jpg') no-repeat top right;
-}
+  background: url('/img/slider_castle_1511.jpg') no-repeat top right;
+  }
 
 .carousel-image-three {
-background: url('/img/slider_tablet_1511.jpg') no-repeat top left;
-}
+  background: url('/img/slider_tablet_1511.jpg') no-repeat top left;
+  }
 
 .carousel-image-four {
-background: url('/img/slider_antarctica_1511.jpg') no-repeat top right;
-}
+  background: url('/img/slider_antarctica_1511.jpg') no-repeat top right;
+  }
 
 .carousel-image-five {
-background: url('/img/slider_human_1511.jpg') no-repeat top right;
-}
+  background: url('/img/slider_human_1511.jpg') no-repeat top right;
+  }
+
+.description {
+  font-size:1rem;
+  width: 75%;
+  }
 
 }
 
@@ -857,80 +797,54 @@ Extra Wide Style
 -------------------------------------------------- */
 
 .carousel-image-one {
-background: url('/img/slider_color_2128.jpg') no-repeat top left;
-}
+  background: url('/img/slider_color_2128.jpg') no-repeat top left;
+  }
 
 .carousel-image-two {
-background: url('/img/slider_castle_2128.jpg') no-repeat top right;
-}
+  background: url('/img/slider_castle_2128.jpg') no-repeat top right;
+  }
 
 .carousel-image-three {
-background: url('/img/slider_tablet_2128.jpg') no-repeat top left;
-}
+  background: url('/img/slider_tablet_2128.jpg') no-repeat top left;
+  }
 
 .carousel-image-four {
-background: url('/img/slider_antarctica_2128.jpg') no-repeat top right;
-}
+  background: url('/img/slider_antarctica_2128.jpg') no-repeat top right;
+  }
 
 .carousel-image-five {
-background: url('/img/slider_human_2128.jpg') no-repeat top right;
-}
+  background: url('/img/slider_human_2128.jpg') no-repeat top right;
+  }
 
 .carousel-caption-one {
-  width: 480px;
-  text-align: left;
-  left: 55%;
-  padding-bottom: 100px;
-
-}
+  padding-bottom: 65px;
+  }
 
 .carousel-caption-two {
-  width: 45%;
-  text-align: left;
-  left: 12%;
-  padding-bottom: none;
-
-}
+  padding-bottom: 70px;
+  }
 
 .carousel-caption-three {
-  width: 480px;
-  text-align: center;
-  left: 55%;
-  padding-bottom: 200px;
-
-}
+  padding-bottom: 125px;
+  }
 
 .carousel-caption-four {
-  width: 45%;
-  text-align: center;
-  left: 12%;
-  padding-bottom: none;
-
-}
+  padding-bottom: 45px;
+  }
 
 .carousel-caption-five {
-  width: 30%;
-  text-align: left;
-  left: 12%;
-  padding-bottom: none;
-
-}
+  padding-bottom: 20px;
+  }
 
 .carousel-caption p.main {
-  font-weight: bold;
   font-size: 3.3rem;
-
-}
+  }
 
 .carousel-caption p.last {
-  margin-top: 1em;
   font-size: 2.3rem;
-}
+  }
 
-.carousel-caption-one p.main {
+.carousel-caption-one p.main, .carousel-caption p.last {
   font-size: 2.0rem;
-}
+  }
 
-.carousel-caption p.last {
-  font-size: 2rem;
-}

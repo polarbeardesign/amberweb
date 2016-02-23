@@ -3,6 +3,7 @@
 <head>
   <title>Amber Lodging</title>
   <link href="inc/bootstrap.min.css" rel="stylesheet">
+  <link href="inc/bootstrap-responsive.min.css" rel="stylesheet">
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
 <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -156,22 +157,22 @@
   </article>
 
 
-  <article>
-    <div class="row">
-      <div class="content-cell-wide">
+<div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-xs-9 col-sm-9 col-md-3">
         <a href='how_we_work.php'><img src="img/button_hww_585_390.jpg" width="100%" alt="How we work" /></a>
        </div>
-      <div class="content-cell">
+      <div class="col-xs-3 col-sm-3 col-md-3">
         <a href='request_information.php'><img src="img/button_ri_365_390.jpg" width="100%" alt="Request information" /></a>
       </div>
-      <div class="content-cell">
+      <div class="col-xs-3 col-sm-3 col-md-3">
         <a href='about_amber_lodging.php'><img src="img/button_aa_365_390.jpg" width="100%" alt="About Amber" /></a>
       </div>
-      <div class="content-cell-wide">
+      <div class="col-xs-9 col-sm-9 col-md-3">
         <a href='current_resident_request.php'><img src="img/button_cr_585_390.jpg" width="100%" alt="Current resident request" /></a>
       </div>
     </div>
-  </article>
+  </div>
 
 </section>
 
@@ -245,6 +246,36 @@
 
   $(document).ready(function() {
      $(".glyphicon").click(function () {
+       $(description_5).hide();
+    });
+  });
+
+  $(document).ready(function() {
+     $(".carousel-indicators").click(function () {
+       $(description_1).hide();
+    });
+  });
+
+  $(document).ready(function() {
+     $(".carousel-indicators").click(function () {
+       $(description_2).hide();
+    });
+  });
+
+  $(document).ready(function() {
+     $(".carousel-indicators").click(function () {
+       $(description_3).hide();
+    });
+  });
+
+  $(document).ready(function() {
+     $(".carousel-indicators").click(function () {
+       $(description_4).hide();
+    });
+  });
+
+  $(document).ready(function() {
+     $(".carousel-indicators").click(function () {
        $(description_5).hide();
     });
   });
