@@ -1,5 +1,3 @@
-<div class="Login">LOG&nbsp;IN</div>
-
 <div id="black_overlay" style="width: 100%;"> </div>
 <div class="login_form">
 	<img src="img/form_close.png" width="20" height="20" class="close" />

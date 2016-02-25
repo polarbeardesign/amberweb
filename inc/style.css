@@ -153,80 +153,6 @@ header {
   }
 
 /*----------------------------------------------------
-   Forms [Mobile]
--------------------------------------------------------*/
-.Login, .close {
-cursor: pointer;
-}
-
-.close {
-  margin-left: 290px;
-  }
-
-#black_overlay {
-  background-color: #ebeced;
-  left: 0;
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  width: 100%;
-  z-index: 50;
-  }
-
-.login_form  {
-  width:290px;
-  height:338px;
-  padding:20px;
-  background-color:#ebeced;
-  display: none;
-
-  z-index:999;
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  }
-
-.login_form > h3  {
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin: 0 0 2em 0;
-}
-
-.login_form > label {
-  font-size: 0.7em;
-  display: block;
-  margin: 0.5em 0;
-}
-
-.login_form > input[type=text], .login_form > input[type=password] {
- width: auto;
- margin-bottom: 1em;
- display: block;
-}
-
-.li-button {
-  font-size: 0.75em;
-  background-color:#003399;
-  color: #fff;
-  text-transform: uppercase;
-  display: block;
-  width: 219px;
-  padding: 1em;
-  margin: 1em 0;
-}
-
-.forgot-pwd {
-  font-size: 0.75em;
-  display: block;
-  width: 219px;
-  text-align: center;
-}
-
-
-/*----------------------------------------------------
    Navigation [Mobile]
 -------------------------------------------------------*/
 nav > .menu-link > ul {
@@ -508,7 +434,7 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 1em auto;
+  margin: 1em auto 2em;
   width: 100%;
   background: #fff;
   max-width: 1500px;
@@ -605,5 +531,193 @@ margin-bottom: 1em;
   margin: 0 auto 2em;
   max-width: 950px;
 }
+
+/*----------------------------------------------------
+   Client Pages
+-------------------------------------------------------*/
+
+/* black bar at top of page */
+.title-bar {
+  margin: 0.85em;
+  display: inline;
+  color: #fefefe;
+}
+
+.alc {
+  margin-left: 2em;
+  float: left;
+}
+
+.client-name {
+  margin-right: 2em;
+  float: right;
+}
+
+.client-home {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.client-home:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+    background-image: url('../img/banner_crr_1500.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.banner .search-banner {
+text-align: center;
+color: #333;
+letter-spacing: 0.04em;
+background: #fff;
+font-size: 2em;
+}
+
+.banner h1.search-banner  {
+text-transform: uppercase;
+font-weight: bold;
+margin-top: 3em;
+}
+
+.banner h2.search-banner  {
+font-weight: lighter;
+margin-top: 0.7em;
+margin-bottom: 3em;
+}
+
+.search-bar {
+padding: 1em;
+border-top: 1px solid #333;
+border-bottom: 1px solid #333;
+background: #edeeef ;
+}
+
+.xyz {
+font-size: 1.9em;
+text-align: center;
+letter-spacing: 0.04em;
+}
+
+article h1.xyz  {
+text-transform: uppercase;
+font-weight: bold;
+margin-top: 3em;
+}
+
+article h2.xyz  {
+font-weight: lighter;
+margin-top: 0.7em;
+margin-bottom: 3em;
+}
+
+.preview-tile {
+ border: 1px solid #edeeef; 
+}
+
+/*----------------------------------------------------
+   Lightbox Forms
+-------------------------------------------------------*/
+
+.Login, .close {
+cursor: pointer;
+}
+
+.Login {
+  display: block;
+  text-align: right;
+  margin-right: 2em;
+}
+
+.close {
+  margin-left: 290px;
+  }
+
+#black_overlay {
+  background-color: #ebeced;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 50;
+  }
+
+.login_form  {
+  width:290px;
+  height:338px;
+  padding:20px;
+  background-color:#ebeced;
+  display: none;
+
+  z-index:999;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  }
+
+.login_form > h3  {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 2em 0;
+}
+
+.login_form > label {
+  font-size: 0.7em;
+  display: block;
+  margin: 0.5em 0;
+}
+
+.login_form > input[type=text], .login_form > input[type=password] {
+ width: auto;
+ margin-bottom: 1em;
+ display: block;
+}
+
+.li-button {
+  font-size: 0.75em;
+  background-color:#003399;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  width: 219px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.search-button {
+  font-size: 1em;
+  background-color:#003399;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  width: 219px;
+  padding: 1em;
+}
+
+.forgot-pwd {
+  font-size: 0.75em;
+  display: block;
+  width: 219px;
+  text-align: center;
+}
+
+
 
 }

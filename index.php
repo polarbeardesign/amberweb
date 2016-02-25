@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+<div class="title-bar Login">LOG&nbsp;IN</div>
 <div id="container">
 
 <header>
