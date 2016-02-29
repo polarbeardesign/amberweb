@@ -158,17 +158,19 @@
 
 
 <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span3">
+    <div class="row">
+      <div class="span8">
         <a href='how_we_work.php'><img src="img/button_hww_585_390.jpg" width="100%" alt="How we work" /></a>
        </div>
-      <div class="span3">
+      <div class="span4">
         <a href='request_information.php'><img src="img/button_ri_365_390.jpg" width="100%" alt="Request information" /></a>
       </div>
-      <div class="span3">
+    </div>
+    <div class="row">
+      <div class="span4">
         <a href='about_amber_lodging.php'><img src="img/button_aa_365_390.jpg" width="100%" alt="About Amber" /></a>
       </div>
-      <div class="span3">
+      <div class="span8">
         <a href='current_resident_request.php'><img src="img/button_cr_585_390.jpg" width="100%" alt="Current resident request" /></a>
       </div>
     </div>

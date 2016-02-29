@@ -107,6 +107,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #808285;
+  background: #333;
   }
 
 #container {
@@ -564,11 +565,7 @@ Medium Width Style 600 <=> 900
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-<<<<<<< HEAD
   margin: 1em auto 2em;
-=======
-  margin: 1em 0;
->>>>>>> bootstrap_slider
   width: 100%;
   background: #fff;
   }
