@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<div class="title-bar Login">LOG&nbsp;IN</div>
 <div id="container">
 
 <header>
@@ -119,32 +119,18 @@
 					// binds form submission and fields to the validation engine
 					jQuery("#formID").validationEngine();
 			});
-	</script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.your-class').slick({
-        swipe: true,
-        arrows: true
+
+  $(document).ready(function() {
+      $(".Login").click(function() {
+        var h = $("body").height() + 'px';
+        $("#black_overlay").css({"height":h,"visibility":"visible"});
+        $(".login_form").css('display','block');
       });
+      $(".close, #submit").click(function() {
+      $(".login_form").css('display','none');
+      $("#black_overlay").css("visibility","hidden");
     });
-  </script>
-
-  <script type="text/javascript" language="javascript">
-
-  $(document).ready(function() {
-    $(".show_menu").click(function () {
-      $(this).siblings($(this)).toggle();
-    });
-  });
-
-  $(document).ready(function() {
-    $(".show_detail").click(function () {
-      $(this).siblings($(this)).toggle(duration = 10);
-    });
-//    $(".show_detail").mouseleave(function () {
-//      $(this).siblings($(this)).toggle(duration = 10);
-//    });
   });
 
   </script>

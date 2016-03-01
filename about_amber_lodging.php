@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<div class="title-bar Login">LOG&nbsp;IN</div>
 <div id="container">
 
 <header>
@@ -69,30 +69,18 @@
 <script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="inc/slick/slick.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.your-class').slick({
-        swipe: true,
-        arrows: true
-      });
-    });
-  </script>
-
   <script type="text/javascript" language="javascript">
 
   $(document).ready(function() {
-    $(".show_menu").click(function () {
-      $(this).siblings($(this)).toggle();
+      $(".Login").click(function() {
+        var h = $("body").height() + 'px';
+        $("#black_overlay").css({"height":h,"visibility":"visible"});
+        $(".login_form").css('display','block');
+      });
+      $(".close, #submit").click(function() {
+      $(".login_form").css('display','none');
+      $("#black_overlay").css("visibility","hidden");
     });
-  });
-
-  $(document).ready(function() {
-    $(".show_detail").click(function () {
-      $(this).siblings($(this)).toggle(duration = 10);
-    });
-//    $(".show_detail").mouseleave(function () {
-//      $(this).siblings($(this)).toggle(duration = 10);
-//    });
   });
 
   </script>

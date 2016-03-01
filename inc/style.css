@@ -49,6 +49,10 @@ strong {
   font-weight: 800;
   }
 
+em {
+  font-style: italic;
+  }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
@@ -75,7 +79,7 @@ table {
 }
 
 input {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, fontAwesome, sans-serif;
   font-size: 1.25em;
   background: #ebeced;
   border: 1px solid #ddd;
@@ -348,7 +352,7 @@ footer {
   font-size: 0.75em; /* 12/16 = 0.75 */
   }
 
-.row {
+.flex-row {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -373,11 +377,6 @@ footer {
 .resident-request {
   width: 95%;
   }
-
-/*----------------------------------------------------
-  Slider Elements [Mobile]
--------------------------------------------------------*/
-
 
             /* BOOTSTRAP 3.x GLOBAL STYLES
 -------------------------------------------------- */
@@ -809,6 +808,143 @@ Wide Style 900 <=> 1280
   float: right;
 }
 
+.info-bar {
+  display: inline;
+  color: #333;
+  padding: 1.25em 0;
+  background: #faefdb;
+}
+
+.info-back {
+margin: 0 2em;
+padding-right: 2em;
+border-right: 1px solid #ddd;
+}
+
+.location {
+margin: 0 2em;
+padding-right: 2em;
+}
+
+.dates {
+margin: 0 2em;
+padding-right: 2em;
+}
+
+.update-search {
+}
+
+.property-detail, .properties-nearby {
+margin: 2em 0;
+}
+
+.location-title {
+text-transform: uppercase;
+font-weight: 600;
+font-size: 1.6em;
+color: #333;
+margin: 0 0 0.5em 0;
+}
+
+.location-id, .location-address {
+display: block;
+font-size: 0.9em;
+line-height: 1.1em;
+}
+
+.property-numbers {
+margin: 2em 0;
+}
+
+.reserve-now {
+text-transform: uppercase;
+background: #003399;
+border-radius: 1px;
+width: 100%;
+}
+
+.daily-price, .min-stay {
+display: inline;
+font-size: 1.6em;
+color: #333;
+}
+
+h2.property-about, h2.property-amenities {
+font-size: 1.25em;
+text-transform: uppercase;
+font-weight: 600;
+margin: 1em 0 1em;
+}
+
+ul.property-features, ul.property-amenities {
+font-size: 0.75em;
+list-style: disc inside none;
+line-height: 2em;
+-moz-column-count: 2;
+-webkit-column-count: 2;
+column-count: 2;
+margin: 0 0 2em;
+}
+
+.row-spacing {
+margin: 1.5em 0;
+}
+
+.cal-section {
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+}
+
+.cal-section > h3{
+margin: 1em 0 0;
+}
+
+.cal-body {
+border: 1px solid #ddd;
+font-size: 0.75em;
+text-align: center;
+padding: 1em 1.25em;
+}
+
+.cal-key {
+display: inline-block;
+width: 1em;
+height: 1em;
+border: 1px solid #ddd;
+}
+
+.requested_dates {
+background: #003399;
+}
+
+.pending_dates {
+background: #999;
+}
+
+.nearby-box {
+border: 1px solid #ddd;
+padding: 1em;
+margin: 1em 0;
+font-size: 0.75em;
+border-radius: 2px;
+}
+
+h1.nearby {
+font-size: 1.4em;
+font-weight: bold;
+color: #333;
+margin: 0;
+}
+
+.neighborhood {
+margin: 0.25em 0;
+}
+
+.nearby-address {
+color: #333;
+line-height: 1.45em;
+}
+
 .client-home {
   position: relative;
   background: #fff;
@@ -838,7 +974,7 @@ Wide Style 900 <=> 1280
 .banner .search-banner {
 text-align: center;
 color: #333;
-letter-spacing: 0.04em;
+letter-spacing: 0.03em;
 background: #fff;
 font-size: 2em;
 }
@@ -857,30 +993,55 @@ margin-bottom: 3em;
 
 .search-bar {
 padding: 1em;
-background: #edeeef ;
+background: #edeeef;
+z-index: 20;
 }
 
-.xyz {
+.feature-area {
 font-size: 1.9em;
 text-align: center;
-letter-spacing: 0.04em;
+letter-spacing: 0.03em;
 }
 
-article h1.xyz  {
+article h1.feature-area  {
 text-transform: uppercase;
 font-weight: bold;
 margin-top: 3em;
 }
 
-article h2.xyz  {
+article h2.feature-area  {
 font-weight: lighter;
 margin-top: 0.7em;
 margin-bottom: 3em;
 }
 
+h1.feature-location {
+font-weight: bold;
+color: #333;
+}
+
+.feature-properties {
+margin-bottom: 4em;
+}
+
+.small-print {
+font-size: 0.75em;
+line-height: 1.5em;
+}
+
+.location-price {
+font-size: 1.5em;
+color: #333;
+}
+
+.denomination {
+font-size: 1rem;
+}
+
 .preview-tile {
  border: 1px solid #edeeef; 
 }
+
 
 /*----------------------------------------------------
    Lightbox Forms
@@ -955,6 +1116,23 @@ cursor: pointer;
   margin: 1em 0;
 }
 
+.forgot-pwd {
+  font-size: 0.75em;
+  display: block;
+  width: 219px;
+  text-align: center;
+}
+
+/*----------------------------------------------------
+   Search Forms
+-------------------------------------------------------*/
+
+#destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
+#move_in::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f133'; color: #003399; font-size: 1.2em; }
+#move_out::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f133'; color: #003399; font-size: 1.2em; }
+#Destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
+#Destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
+
 .search-button {
   font-size: 1em;
   background-color:#003399;
@@ -964,14 +1142,6 @@ cursor: pointer;
   width: 219px;
   padding: 1em;
 }
-
-.forgot-pwd {
-  font-size: 0.75em;
-  display: block;
-  width: 219px;
-  text-align: center;
-}
-
 
 
 }

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
 
 </head>
-
+<div class="title-bar Login">LOG&nbsp;IN</div>
 <body>
 
 <div id="container">
@@ -107,37 +107,22 @@
 <script src="inc/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
 <script src="inc/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 
-	<script>
-			jQuery(document).ready(function(){
-					// binds form submission and fields to the validation engine
-					jQuery("#formID").validationEngine();
-			});
-	</script>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.your-class').slick({
-        swipe: true,
-        arrows: true
+  <script>
+      jQuery(document).ready(function(){
+          // binds form submission and fields to the validation engine
+          jQuery("#formID").validationEngine();
       });
-    });
-  </script>
-
-  <script type="text/javascript" language="javascript">
-
+    
   $(document).ready(function() {
-    $(".show_menu").click(function () {
-      $(this).siblings($(this)).toggle();
+      $(".Login").click(function() {
+        var h = $("body").height() + 'px';
+        $("#black_overlay").css({"height":h,"visibility":"visible"});
+        $(".login_form").css('display','block');
+      });
+      $(".close, #submit").click(function() {
+      $(".login_form").css('display','none');
+      $("#black_overlay").css("visibility","hidden");
     });
-  });
-
-  $(document).ready(function() {
-    $(".show_detail").click(function () {
-      $(this).siblings($(this)).toggle(duration = 10);
-    });
-//    $(".show_detail").mouseleave(function () {
-//      $(this).siblings($(this)).toggle(duration = 10);
-//    });
   });
 
   </script>

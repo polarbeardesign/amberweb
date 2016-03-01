@@ -158,7 +158,7 @@
 
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="flex-row">
       <div class="span8">
         <a href='how_we_work.php'><img src="img/button_hww_585_390.jpg" width="100%" alt="How we work" /></a>
        </div>
@@ -166,7 +166,7 @@
         <a href='request_information.php'><img src="img/button_ri_365_390.jpg" width="100%" alt="Request information" /></a>
       </div>
     </div>
-    <div class="row">
+    <div class="flex-row">
       <div class="span4">
         <a href='about_amber_lodging.php'><img src="img/button_aa_365_390.jpg" width="100%" alt="About Amber" /></a>
       </div>
