@@ -19,6 +19,8 @@
 
 <body>
 <div class="title-bar Login">LOG&nbsp;IN</div>
+<?php include('inc/form_login.php') ?>
+
 <div id="container">
 
 <header>
@@ -223,18 +225,6 @@
   });
 
   $(document).ready(function() {
-      $(".Login").click(function() {
-        var h = $("body").height() + 'px';
-        $("#black_overlay").css({"height":h,"visibility":"visible"});
-        $(".login_form").css('display','block');
-      });
-      $(".close, #submit").click(function() {
-      $(".login_form").css('display','none');
-      $("#black_overlay").css("visibility","hidden");
-    });
-  });
- 
-  $(document).ready(function() {
      $(".glyphicon").click(function () {
        $(description_1).hide();
     });
@@ -295,6 +285,8 @@
   });
 
   </script>
+
+<?php include("inc/form_scripts.php") ?>
 
 </body>
 

@@ -675,8 +675,8 @@ nav > .menu-link > ul > li > a {
   top: 0;
   left: 0;
   position: fixed;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+/*  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;*/
   }
 
 /* Declare heights because of positioning of img element */
@@ -1110,8 +1110,12 @@ padding: 0 0 0 5px;
    Lightbox Forms
 -------------------------------------------------------*/
 
-.Login, .close {
+.Login, .close, .pet_link, .request-info-link {
 cursor: pointer;
+}
+
+.request-info-link {
+color: #337ab7;
 }
 
 .Login {
@@ -1124,11 +1128,11 @@ cursor: pointer;
   text-align: right;
   font-size: 4em;
   font-weight: 100;
-    float: none;
-margin: 0;
+  float: none;
+  margin: 0;
   }
 
-#black_overlay {
+#grey_overlay {
   background-color: #ebeced;
   left: 0;
   opacity: 1;
@@ -1152,6 +1156,32 @@ margin: 0;
   transform:translate(-50%,-50%);
   }
 
+.pet_form  {
+  width:550px;
+  height:500px;
+  padding:20px;
+  background-color:#ebeced;
+  display: none;
+  z-index:999;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  }
+
+.request_info_form  {
+  width:550px;
+  height:500px;
+  padding:20px;
+  background-color:#ebeced;
+  display: none;
+  z-index:999;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  }
+
 .reserve_now_form  {
   width: 500px;
   height: 800px;
@@ -1163,11 +1193,15 @@ margin: 0;
   -webkit-overflow-scrolling: none;
   }
 
-.login_form > h1, .reserve_now_form * h1  {
+.login_form > h1, .reserve_now_form * h1, .request_info_form h1  {
   font-size: 1.2em;
   text-transform: uppercase;
   font-weight: 500;
   margin: 0 0 1em 0;
+}
+
+.reserve_now_form * h2, .pet_form * h2, .request_info_form * h2  {
+  margin: 0 0 1.5em 0;
 }
 
 .login_form > label, .reserve_now_form * label {
@@ -1176,17 +1210,97 @@ margin: 0;
   margin: 0.5em 0;
 }
 
+.textarea-label, .cb-label {
+  font-size: 0.8em;
+}
+
+.cb-label {
+  margin-left: 4px;
+  vertical-align: 4px;
+  display: inline;
+}
+
+.textarea-label {
+  margin: 1.5em 0 0.5em;
+}
+
+/* make fake checkbox in label to control appearance (as flat) */
+.request_info_form label, .pet_form label {
+	cursor: pointer;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 0;
+  left: 0;
+	background: #fff;
+	border:1px solid #ddd;
+}
+
+/* make fake checkmark for checked state */
+.request_info_form label:after, .pet_form label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 7px;
+	background: #transparent;
+	top: 0px;
+	left: 2px;
+	border: 2px solid #003399;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+.request_info_form label:hover::after, .pet_form label:hover::after {
+	opacity: 0.1;
+}
+
+.request_info_form input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+.pet_form input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+
 .login_form > input[type=text], .login_form > input[type=password] {
  width: auto;
  margin-bottom: 1em;
  display: block;
 }
 
-.reserve_now_form * input[type=text] {
+.reserve_now_form * input[type=text], .pet_form * input[type=text] {
 background: #fff;
 padding: 6px;
 font-size: 0.9em;
 color: #333;
+}
+
+.pet-row, .info-row {
+font-size: 0.9em;
+margin: 0.1em;
+}
+
+.pet-row {
+background: #ddd;
+padding: 1.5em;
+}
+
+.info-row {
+padding: 0.3em 0;
+}
+
+.pet-row * i {
+color: #003399;
+}
+
+.pet-row * input[type="checkbox"], .info-row * input[type="checkbox"] {
+visibility: hidden;
+}
+.dog-extra, .cat-extra, .other-pet-extra {
+  display: none;
 }
 
 .boxsizingBorder {

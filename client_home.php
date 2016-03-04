@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
 </head>
@@ -16,13 +20,15 @@
 <div class="title-bar alc">Amber Lodging Company</div>
 <div class="title-bar client-name">Johnny Washington</div>
 
+<?php include 'inc/form_pets.php' ?>
+
 <div id="container">
 
 <div class="banner client-home">
 
 <h1 class="search-banner">We Hold Leases On 5 Continents.</h1>
 <h2 class="search-banner">And if you want to book something in Antarctica, that makes 6.</h2>
-
+</div>
 <div class="search-bar container-fluid">
 <form action="#" name="search" id="search">
 <div class="row">
@@ -58,8 +64,8 @@
 </div>
 </form>
 </div>
-</div>
 
+<div class="pet_link text-right">Pets Form </div>
 
 <section class="main">
 
@@ -145,4 +151,6 @@
 
 </body>
 
+<?php include 'inc/form_scripts.php' ?>
+  
 </html>

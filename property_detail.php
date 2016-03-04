@@ -72,8 +72,8 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
@@ -84,79 +84,9 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <div class="title-bar alc">Amber Lodging Company</div>
 <div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
 
-<div id="black_overlay" style="width: 100%;">
-</div>
-
-
-  <div class="reserve_now_form">
-  <form action="" method="post">
-  <p class="close">&times;</p>
-  <h1>Guest Details For Reservation</h1>
-  <p class="small-print"><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.</em></p>
-  <p class="small-print"><em>Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
-<section class="container-fluid no-padding">
-  <div class="row">
-      <div class="col-md-6">
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" />
-      </div>
-      <div class="col-md-6">
-        <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" />
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-6">
-        <label for="reference_no">File # / Reference # / Employee ID</label>
-        <input type="text" id="reference_no" name="reference_no" />
-      </div>
-      <div class="col-md-6">
-        <label for="department">Department</label>
-        <input type="text" id="department" name="department" />
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-6">
-        <label for="client_id">Employer / Client</label>
-        <input type="text" id="client_id" name="client_id" />
-      </div>
-      <div class="col-md-6">
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email">
-      </div>
-  </div>
-  <label for="email">Important Notes</label>
-  <textarea id="notes" rows="7" class="boxsizingBorder" ></textarea>
-
-
-  <hr class="form-hr"/>
-  <h2>Agent requesting information</h2>
-  <div class="row">
-      <div class="col-md-6">
-        <label for="guest_first_name">First Name</label>
-        <input type="text" id="guest_first_name" name="guest_first_name">
-      </div>
-      <div class="col-md-6">
-        <label for="guest_last_name">Last Name</label>
-        <input type="text" id="guest_last_name" name="guest_last_name">
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-6">
-        <label for="guest_email">Email</label>
-        <input type="text" id="guest_email" name="guest_email">
-      </div>
-      <div class="col-md-6">
-        <label for="guest_phone">Phone Number</label>
-        <input type="text" id="guest_phone" name="guest_phone">
-      </div>
-
-  </div>
-  <div class="text-center" style="margin: 0 auto;">
-    <input type="submit" value="Confirm Reservation" id="submit" class="li-button">
-  </div>
-</form>
-</div>
+<!-- include popup forms -->
+<?php include 'inc/form_reserve_now.php' ?>
+<?php include 'inc/form_request_info.php' ?>
 
 <div id="container">
 
@@ -222,7 +152,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
       <div class="row">
       <div class="btn btn-primary reserve-now">Reserve This Property Now</div>
         <p class="small-print text-center">or</br />
-          <a href="#">Request Info</a>
+          <div class="small-print text-center request-info-link">Request Info</div>
         </p>
         <p class="small-print"><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.</em></p>
         <p class="small-print"><em>Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
@@ -408,17 +338,6 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 </body>
 
-  <script type="text/javascript" language="javascript">
-    $(document).ready(function() {
-        $(".reserve-now").click(function() {
-          var h = $("body").height() + 'px';
-          $("#black_overlay").css({"height":h,"visibility":"visible"});
-          $(".reserve_now_form").css('display','block');
-        });
-        $(".close, #submit").click(function() {
-        $(".reserve_now_form").css('display','none');
-        $("#black_overlay").css("visibility","hidden");
-      });
-    });
-  </script>
+<?php include("inc/form_scripts.php") ?>
+
 </html>
