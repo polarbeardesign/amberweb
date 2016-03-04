@@ -4,12 +4,14 @@
   <form action="client_home.php" method="post">
     <div class="login_form">
     <p class="close">&times;</p>
-    <h3>Log In</h3>
-    <label for="vemail">Email</label>
-    <input type="text" id="vemail" name="email" size="19.2" placeholder="Your Email">
-    <label for="vpwd">Password</label>
-    <input type="password" id="vpwd" name="Password" size="19" placeholder="Your Password">
-    <label><input type="checkbox" /> Remember me</label>
+    <h1>Log In</h1>
+    <div class="text-input-label">Email</div>
+    <input type="text" id="vemail" name="email" placeholder="Your Email">
+    <div class="text-input-label">Password</div>
+    <input type="password" id="vpwd" name="Password" placeholder="Your Password">
+    <div class="flat-cb-container">
+    <input type="checkbox" id="remember_me" /><label for="remember_me"></label><div class="cb-label"> Remember me</div>
+    </div>
     <input type="submit" value="Log In" id="submit" class="li-button">
     <a href="#" class="forgot-pwd">Forgot Password?</a>
     </div>

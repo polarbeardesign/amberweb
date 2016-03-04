@@ -88,7 +88,7 @@ input {
   -moz-border-radius: 3px;
   }
 
-input[type=text] {
+input[type=text], input[type=password] {
  width: 100%;
 }
 
@@ -1145,7 +1145,7 @@ color: #337ab7;
 
 .login_form  {
   width:290px;
-  height:338px;
+  height:400px;
   padding:20px;
   background-color:#ebeced;
   display: none;
@@ -1210,7 +1210,7 @@ color: #337ab7;
   margin: 0.5em 0;
 }
 
-.textarea-label, .cb-label {
+.textarea-label, .cb-label, .text-input-label {
   font-size: 0.8em;
 }
 
@@ -1220,12 +1220,17 @@ color: #337ab7;
   display: inline;
 }
 
-.textarea-label {
+.textarea-label, .text-input-label {
   margin: 1.5em 0 0.5em;
 }
 
-/* make fake checkbox in label to control appearance (as flat) */
-.request_info_form label, .pet_form label {
+/* hide checkbox' to override (hide) browsers appearance */
+.login_form * input[type="checkbox"], .pet-row * input[type="checkbox"], .info-row * input[type="checkbox"] {
+visibility: hidden;
+}
+
+/* make fake checkbox in label to control appearance (as flat) using label selector to apply a flat square */
+.login_form label, .request_info_form label, .pet_form label {
 	cursor: pointer;
 	position: absolute;
 	width: 15px;
@@ -1236,8 +1241,12 @@ color: #337ab7;
 	border:1px solid #ddd;
 }
 
+.flat-cb-container {
+position: relative;
+}
+
 /* make fake checkmark for checked state */
-.request_info_form label:after, .pet_form label:after {
+.login_form label:after, .request_info_form label:after, .pet_form label:after {
 	opacity: 0;
 	content: '';
 	position: absolute;
@@ -1252,23 +1261,25 @@ color: #337ab7;
 	transform: rotate(-45deg);
 }
 
-.request_info_form label:hover::after, .pet_form label:hover::after {
+.login_form label:hover::after, .request_info_form label:hover::after, .pet_form label:hover::after {
 	opacity: 0.1;
 }
 
-.request_info_form input[type=checkbox]:checked + label:after {
+.request_info_form input[type=checkbox]:checked + label:after, 
+.pet_form input[type=checkbox]:checked + label:after, 
+.login_form input[type=checkbox]:checked + label:after {
 	opacity: 1;
 }
 
-.pet_form input[type=checkbox]:checked + label:after {
-	opacity: 1;
-}
 
 
 .login_form > input[type=text], .login_form > input[type=password] {
- width: auto;
  margin-bottom: 1em;
  display: block;
+background: #fff;
+padding: 6px;
+font-size: 0.9em;
+color: #333;
 }
 
 .reserve_now_form * input[type=text], .pet_form * input[type=text] {
@@ -1296,9 +1307,6 @@ padding: 0.3em 0;
 color: #003399;
 }
 
-.pet-row * input[type="checkbox"], .info-row * input[type="checkbox"] {
-visibility: hidden;
-}
 .dog-extra, .cat-extra, .other-pet-extra {
   display: none;
 }
@@ -1325,7 +1333,7 @@ border-radius: 3px;
   text-transform: uppercase;
   display: block;
   text-align: center;
-  width: 50%;
+  width: 100%;
   padding: 1em;
   margin: 2em auto;
 }
