@@ -59,7 +59,7 @@
   </select>
   </div>
   <div class="col-md-1">
-  <input type="submit" value="Search" id="submit" class="btn btn-primary">
+  <input type="submit" value="Search" id="submit" class="btn btn-primary search-button">
   </div>
 </div>
 </form>
@@ -75,62 +75,71 @@
 <h2 class="feature-area">You want to stay in a castle? We've made that happen.</h2>
 
 <div class="container-fluid">
+
 <div class="row feature-properties">
-  <div class="col-md-3 container-fluid">
-    <img src="img/clients/room_0.jpg" width="100%" />
+  <div class="col-md-3">
     <div class="row">
-      <div class="col-md-8">
+      <img src="img/clients/room_0.jpg" width="100%" />
+    </div>
+    <div class="row feature-details">
+      <div class="col-md-7">
         <h1 class="feature-location">Brazos Place</h1>
-        ID# 987654 <br />
-        1 BR / 1 BA
+        <div class="feature-id">ID# 987654</div>
+        <div class="feature-size">1 BR / 1 BA</div>
       </div>
-      <div class="col-md-4 text-right">
-        <div class="location-price">$198 <span class="denomination">USD</span></div>
+      <div class="col-md-5 text-right">
+        <div class="location-price">$198 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
       </div>
     </div>
   </div>
 
-  <div class="col-md-3 container-fluid">
-    <img src="img/clients/room_1.jpg" width="100%" />
-    <div class="row">
-      <div class="col-md-8">
+  <div class="col-md-3">
+        <div class="row">
+        <img src="img/clients/room_1.jpg" width="100%" />
+    </div>
+    <div class="row feature-details">
+      <div class="col-md-7">
         <h1 class="feature-location">AMLI Downtown</h1>
-        ID# 987654 <br />
-        2 BR / 1.5 BA
+        <div class="feature-id">ID# 987654</div>
+        <div class="feature-size">2 BR / 1.5 BA</div>
       </div>
-      <div class="col-md-4 text-right">
-        <div class="location-price">$198 <span class="denomination">USD</span></div>
+      <div class="col-md-5 text-right">
+        <div class="location-price">$198 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
       </div>
     </div>
   </div>
 
-  <div class="col-md-3 container-fluid">
-    <img src="img/clients/room_2.jpg" width="100%" />
+  <div class="col-md-3">
     <div class="row">
-      <div class="col-md-8 ">
+        <img src="img/clients/room_2.jpg" width="100%" />
+    </div>
+    <div class="row feature-details" >
+      <div class="col-md-7 ">
         <h1 class="feature-location">The Ashton Austin</h1>
-        ID# 987654 <br />
-        1 BR / 1 BA
+        <div class="feature-id">ID# 987654</div>
+        <div class="feature-size">1 BR / 1 BA</div>
       </div>
-      <div class="col-md-4 text-right">
-        <div class="location-price">$198 <span class="denomination">USD</span></div>
+      <div class="col-md-5 text-right">
+        <div class="location-price">$198 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
       </div>
     </div>
   </div>
 
-  <div class="col-md-3 container-fluid">
-    <img src="img/clients/room_3.jpg" width="100%" />
+  <div class="col-md-3">
     <div class="row">
+      <img src="img/clients/room_3.jpg" width="100%" />
+    </div>
+    <div class="row feature-details">
       <div class="col-md-8 ">
         <h1 class="feature-location">Gables West Avenue</h1>
-        ID# 987654<br />
-        3 BR / 2 BA
+        <div class="feature-id">ID# 987654</div>
+        <div class="feature-size">3 BR / 2 BA</div>
       </div>
       <div class="col-md-4 text-right">
-        <div class="location-price">$202 <span class="denomination">USD</span></div>
+        <div class="location-price">$202 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
       </div>
     </div>

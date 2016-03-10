@@ -96,7 +96,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
   <span class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
   <span class="update-search"><a href="#">edit search</a></span>
 </div>
-
+<div class="property-detail-screen">
 <section class="property-detail container-fluid">
   <div class="row padded">
     <div class="col-md-8">
@@ -358,7 +358,10 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
     
   </div>    
 </section>
-
+</div>
+<footer>
+  <?php include('inc/footer.php') ?>
+</footer>
 </div>
 
 

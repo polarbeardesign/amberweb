@@ -79,7 +79,7 @@ table {
 }
 
 .form-control {
-  padding: 2.5em 0.75em;
+  padding: 1.5em 0.75em;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -831,6 +831,11 @@ Wide Style 900 <=> 1280
 /*----------------------------------------------------
    Client Pages
 -------------------------------------------------------*/
+.property-detail-screen {
+max-width: 1200px;
+margin: 0 auto;
+}
+
 
 /* black bar at top of page */
 .title-bar {
@@ -907,6 +912,10 @@ margin: 0;
 margin-top: 1.5em;
 }
 
+.property-detail * .min-stay {
+font-size: 1.4em;
+}
+
 .location-title {
 text-transform: uppercase;
 font-weight: 500;
@@ -951,12 +960,12 @@ border-radius: 1px;
 padding: 0.9em 1.8em;
 }
 
-.daily-price, .min-stay {
+.daily-price, .location-price, .min-stay {
 display: inline;
 color: #333;
 }
 
-.daily-price {
+.daily-price, .location-price {
 font-size: 1.4em;
 }
 
@@ -965,13 +974,20 @@ font-size: 0.6875em;
 }
 
 a.currency-denominator {
-font-size: 1.1em;
+line-height: 0;
 border-bottom: 1px dotted #337ab7;
-margin-bottom: 10em;
+}
+
+a.currency-denominator {
+font-size: 0.75em;
 }
 
 a.currency-denominator:hover {
 text-decoration: none;
+}
+
+.feature-details * .small-print {
+margin-top: 0.25em;
 }
 
 .price-unit {
@@ -1128,10 +1144,10 @@ margin: 0 0 1.5em;
 
 .banner .search-banner {
 text-align: center;
-color: #333;
+color: #424242;
 letter-spacing: 0.03em;
 background: #fff;
-font-size: 2em;
+font-size: 1.607142857em;
 }
 
 .banner h1.search-banner  {
@@ -1141,53 +1157,81 @@ margin-top: 3em;
 }
 
 .banner h2.search-banner  {
-font-weight: lighter;
+font-weight: 100;
 margin-top: 0.7em;
 margin-bottom: 3em;
 }
 
 .search-bar {
 padding: 1em;
-background: #edeeef;
+background: #ebeced;
+margin: 0;
 z-index: 20;
 }
 
+.search-button {
+font-size: 0.75em;
+font-weight: 600;
+text-transform: uppercase;
+background: #003399;
+border-radius: 1px;
+}
+
 .feature-area {
-font-size: 1.9em;
+font-size: 1.28em;
 text-align: center;
 letter-spacing: 0.03em;
+color: #929497;
 }
 
 article h1.feature-area  {
 text-transform: uppercase;
-font-weight: bold;
+font-weight: 500;
 margin-top: 3em;
 }
 
 article h2.feature-area  {
-font-weight: lighter;
+font-weight: 100;
 margin-top: 0.7em;
 margin-bottom: 3em;
 }
 
 h1.feature-location {
-font-weight: bold;
-color: #333;
+font-size: 0.8125em;
+font-weight: 600;
+color: #424242;
 }
 
 .feature-properties {
-margin-bottom: 4em;
+margin: 0 2em 4em;
+}
+
+.feature-properties * .row {
+margin: 0;
+}
+
+.feature-column {
+padding: 0 0.5em;
+border-box: box-sizing;
+}
+
+.feature-properties * .row.feature-details {
+margin-top: -10px;
+padding: 1em; 
+border-left: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+}
+
+.feature-id, .feature-size {
+font-size: 0.6875em;
+line-height: 1.4em;
 }
 
 .small-print {
 font-size: 0.6875em;
 line-height: 1.5em;
 color: #929497;
-}
-
-.location-price {
-font-size: 1.5em;
-color: #333;
 }
 
 .denomination {
@@ -1471,13 +1515,12 @@ border-top: 1px solid #ddd;
 #Destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
 
 .search-button {
-  font-size: 1em;
-  background-color:#003399;
-  color: #fff;
-  text-transform: uppercase;
-  display: block;
-  width: 219px;
-  padding: 1em;
+font-size: 0.75em;
+font-weight: 600;
+text-transform: uppercase;
+background: #003399;
+border-radius: 1px;
+padding: 1em;
 }
 
 
