@@ -69,7 +69,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
   <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
@@ -91,15 +91,15 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <div id="container">
 
 <div class="info-bar">
-  <span class="info-back"><i class="fa fa-long-arrow-left"></i> Back to properties</span>
+  <span class="info-back">&larr; Back to properties</span>
   <span class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></span>
   <span class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
   <span class="update-search"><a href="#">edit search</a></span>
 </div>
 
 <section class="property-detail container-fluid">
-  <div class="row">
-    <div class="col-md-7">
+  <div class="row padded">
+    <div class="col-md-8">
 
       <div id="feature_property-carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -151,16 +151,20 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
       </div>
       <div class="row">
       <div class="btn btn-primary reserve-now">Reserve This Property Now</div>
-        <p class="small-print text-center">or</br />
-          <div class="small-print text-center request-info-link">Request Info</div>
-        </p>
-        <p class="small-print"><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.</em></p>
-        <p class="small-print"><em>Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
+        <div class="small-print text-center">or</br />
+          <div class="text-center request-info-link">Request Info</div>
+        </div>
+       </div>
+      <div class="row">
+        <div class="col-md-12 disclaimers">
+          <p><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.</em></p>
+          <p><em>Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-7">
+  <div class="row padded">
+    <div class="col-md-8">
       <h2 class="property-about">About This Rental</h2>
         <ul class="property-features">
           <?php foreach($selected_property[features] as $value) { echo '<li>'.$value.'</li>'; } ?>
@@ -276,13 +280,13 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
       </div>
       <div class="row row-spacing">
         <div class="col-md-4" style="padding: 0;">
-          <div class="cal-key requested_dates"></div> <span class="small">Move in / out</span>
+          <div class="cal-key requested_dates"></div> <span class="date-key">Move in / out</span>
         </div>
         <div class="col-md-4" style="padding: 0;">
-          <div class="cal-key"></div> <span class="small">Available</span>
+          <div class="cal-key"></div> <span class="date-key">Available</span>
         </div>
         <div class="col-md-4" style="padding: 0;">
-          <div class="cal-key pending_dates"></div> <span class="small">Pending</span>
+          <div class="cal-key pending_dates"></div> <span class="date-key">Pending</span>
         </div>
       </div>
       <p class="small-print"><em><strong>Note:</strong> Calendar shows the standard nightly rate. See pricing above for the best average price based on the dates you have selected.</em></p>
@@ -291,8 +295,8 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 </section>
 
 <section class="properties-nearby container-fluid">
-  <div class="row">
-    <div class="col-md-7">
+  <div class="row padded">
+    <div class="col-md-8">
     <h2 class="property-about">Nearby Rentals Like This One</h2>
  
  
@@ -303,20 +307,42 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
           <div class="col-sm-12 col-md-3">
             <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" />
           </div>
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-6 nearby-details">
           <h1 class="nearby">'.$inner[property_name].'</h1>
           <p class="neighborhood">'.$inner[neighborhood].'</p>
-          <p>ID# '.$inner[id] . ' | ' . $inner[size].'</p>
+          <p class="neighborhood">ID# '.$inner[id] . ' | ' . $inner[size].'</p>
           <p class="nearby-address">'.$inner[property_address] . '<br />
           ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="">USD</a>
-          <div class="small-print">avg/night</div>
+          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" >USD</a>
+          <div class="price-unit">avg/night</div>
           <div class="btn btn-primary view-details">View Details</div>
           </div>
           </div>
+        <div class="row row-spacing">
+          <div class="col-md-1 no-padding">
+            <div class="move-date">'
+            . $search_parameters[move_in] . '
+            </div>
+          </div>
+          <div class="col-md-10 duration">
+          &nbsp;
+          </div>
+          <div class="col-md-1 text-right no-padding">
+            <div class="move-date">'
+            . $search_parameters[move_out] . '
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center no-padding nearby-availability">
+            Currently Available
+          </div>
+        </div>
+
+
       </div>
       '
 

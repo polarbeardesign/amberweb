@@ -17,7 +17,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
+  font-size: 100%; /* is 16px or 12pt */
   font: inherit;
   vertical-align: baseline;
   }
@@ -46,7 +46,7 @@ blockquote, q {
   }
 
 strong {
-  font-weight: 800;
+  font-weight: 600;
   }
 
 em {
@@ -76,6 +76,13 @@ del {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.form-control {
+  padding: 2.5em 0.75em;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
 }
 
 input {
@@ -109,7 +116,6 @@ Mobile Style
 body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
   color: #808285;
   background: #333;
   }
@@ -124,7 +130,6 @@ body {
   margin: 1em auto;
   width: 100%;
   background: #fff;
-  /*border: 1px solid #cc0000;*/
   }
 
 header {
@@ -432,8 +437,12 @@ width: 300px;
   cursor: pointer;
 }
 
-#feature_property-carousel > .carousel-indicators {
+#feature_property-carousel {
   margin: 0;
+}
+
+#feature_property-carousel > .carousel-indicators {
+  margin: 0 10em 0 0;
   left: 0%;
   text-align: left;
   }
@@ -442,8 +451,8 @@ width: 300px;
   margin: 0 0.2em;
   border: none;
   background-color: #ddd;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   }
 
 #feature_property-carousel > .carousel-indicators .active {
@@ -572,7 +581,7 @@ text-align: right;
 }
 
 /*----------------------------------------------------
-Medium Width Style 600 <=> 900
+Medium Width Style 500 <=> 900
 -------------------------------------------------------*/
 @media only screen and (min-width: 600px) {
 
@@ -828,11 +837,14 @@ Wide Style 900 <=> 1280
   margin: 0.85em;
   display: inline;
   color: #fefefe;
+  font-size: 0.8em;
 }
 
 .alc {
+  text-transform: uppercase;
   margin-left: 2em;
   float: left;
+  font-weight: 500;
 }
 
 .client-name {
@@ -842,9 +854,10 @@ Wide Style 900 <=> 1280
 
 .info-bar {
   display: inline;
-  color: #333;
+  color: #424242;
   padding: 1.25em 0;
   background: #faefdb;
+  font-size: 0.75em;
 }
 
 .info-back {
@@ -854,78 +867,142 @@ border-right: 1px solid #ddd;
 }
 
 .location {
-margin: 0 2em;
+margin: 0 1em 0 0;
 padding-right: 2em;
+}
+
+.location > .fa-map-marker {
+  font-size: 1.2em;
+  margin-right: 0.4em;
 }
 
 .dates {
-margin: 0 2em;
-padding-right: 2em;
+margin: 0 4em 0 0;
+
+}
+
+.dates > .fa-calendar {
+  font-size: 1.2em;
+  margin-right: 0.4em;
 }
 
 .update-search {
+  font-size: 0.9em;
+}
+
+.update-search a:link, .update-search a:visited, .update-search a:hover {
+text-decoration: underline;
+color: #424242;
+}
+
+.padded {
+padding: 0 4em;
 }
 
 .property-detail, .properties-nearby {
-margin: 2em 0 0;
+margin: 0;
+}
+
+.property-detail {
+margin-top: 1.5em;
 }
 
 .location-title {
 text-transform: uppercase;
-font-weight: 600;
-font-size: 1.6em;
-color: #333;
-margin: 0 0 0.5em 0;
+font-weight: 500;
+font-size: 1.28em;
+color: #424242;
+margin: 0 0 0.2em 0;
 }
 
 .location-id, .location-address {
 display: block;
-font-size: 0.9em;
-line-height: 1.1em;
+font-size: 0.6875em;
+line-height: 1.5em;
+color: #929497;
 }
 
 .property-numbers {
-margin: 2em 0;
+margin: 1.6em 0;
+}
+
+.col-md-4, .col-md-5, .col-md-8 {
+padding: 0;
 }
 
 .reserve-now, .reserve-now:hover {
+font-size: 0.75em;
+font-weight: 600;
 text-transform: uppercase;
 background: #003399;
 border-radius: 1px;
 width: 100%;
-margin-bottom: 2em;
+padding: 0.9em;
+margin: 0 2em 1.25em 1em;
 }
 
 .view-details, .view-details:hover {
 margin: 2em 0 0 0;
 text-transform: uppercase;
-font-size: 0.9em;
+font-size: 0.75em;
+font-weight: 600;
 background: #003399;
 border-radius: 1px;
+padding: 0.9em 1.8em;
 }
 
 .daily-price, .min-stay {
 display: inline;
-font-size: 1.6em;
 color: #333;
+}
+
+.daily-price {
+font-size: 1.4em;
+}
+
+.min-stay {
+font-size: 0.6875em;
+}
+
+a.currency-denominator {
+font-size: 1.1em;
+border-bottom: 1px dotted #337ab7;
+margin-bottom: 10em;
+}
+
+a.currency-denominator:hover {
+text-decoration: none;
+}
+
+.price-unit {
+font-size: 0.625em;
+color: #797979;
+margin: 0.5em 0 0 0;
 }
 
 .nearby-box * .min-stay {
-font-size: 0.9em;
+color: #333;
+font-size: 0.6875em;
 font-style: italic;
 font-weight: 600;
-color: #333;
+}
+
+.move-date {
+font-size: 0.6875em;
+color: #424242;
 }
 
 h2.property-about, h2.property-amenities {
-font-size: 1.25em;
+font-size: 1.2857em;
+color: #929497;
 text-transform: uppercase;
-font-weight: 600;
+font-weight: 500;
 margin: 1em 0 1em;
 }
 
 ul.property-features, ul.property-amenities {
 font-size: 0.75em;
+color: #929497;
 list-style: disc inside none;
 line-height: 2em;
 -moz-column-count: 2;
@@ -945,6 +1022,7 @@ border-bottom: 1px solid #ddd;
 
 .cal-section > h3{
 margin: 1em 0 0;
+color: #929497;
 }
 
 .cal-body {
@@ -961,6 +1039,12 @@ height: 1em;
 border: 1px solid #ddd;
 }
 
+.date-key {
+font-size: 0.625em;
+color: #424242;
+vertical-align: 30%;
+}
+
 .requested_dates {
 background: #003399;
 }
@@ -970,30 +1054,49 @@ background: #999;
 }
 
 .nearby-box {
-border: 1px solid #ddd;
-padding: 1em;
-margin: 1em 0;
-font-size: 0.75em;
-border-radius: 2px;
+border: 1px solid #ececec;
+padding: 1.5em;
+margin: 1em 2em 2em 0;
+}
+
+.nearby-details {
+margin-left: 0px;
+padding: 0;
 }
 
 h1.nearby {
-font-size: 1.4em;
-font-weight: bold;
+font-size: 0.8125em;
+font-weight: 600;
 color: #333;
-margin: 0;
+margin: 0.4em 0 0.1em;
 }
 
 .neighborhood {
-margin: 0.25em 0;
+font-size: 0.625em;
+margin: 0 0 0.7em;
 }
 
 .nearby-address {
 color: #333;
-line-height: 1.45em;
+font-size: 0.6875em;
+margin: 1.6em 0 1em;
+line-height: 1.5em;
+}
+
+.duration {
+border-bottom: 1px solid #ececec;
+line-height: 0.5em;
+}
+
+.nearby-availability {
+text-transform: uppercase;
+color: #929497;
+font-size: 0.625em;
+margin-top: -2em;
 }
 
 h3.map-header {
+color: #929497;
 margin: 0 0 1.5em;
 }
 
@@ -1077,8 +1180,9 @@ margin-bottom: 4em;
 }
 
 .small-print {
-font-size: 0.75em;
+font-size: 0.6875em;
 line-height: 1.5em;
+color: #929497;
 }
 
 .location-price {
@@ -1115,7 +1219,14 @@ cursor: pointer;
 }
 
 .request-info-link {
-color: #337ab7;
+color: #0047aa;
+font-size: 0.75rem;
+margin: 0.5em 0 2em 0;
+}
+
+.disclaimers {
+font-size: 0.75em;
+line-height: 1.4em;
 }
 
 .Login {
