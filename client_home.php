@@ -1,3 +1,6 @@
+<?php
+$client = "Johnny Washington";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +21,7 @@
 
 <body>
 <div class="title-bar alc">Amber Lodging Company</div>
-<div class="title-bar client-name">Johnny Washington</div>
+<div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
 
 <?php include 'inc/form_pets.php' ?>
 
@@ -30,7 +33,7 @@
 <h2 class="search-banner">And if you want to book something in Antarctica, that makes 6.</h2>
 </div>
 <div class="search-bar container-fluid">
-<form action="#" name="search" id="search">
+<form action="search_results.php" name="search" id="search">
 <div class="row">
   <div class="col-md-3">
     <input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" />

@@ -91,7 +91,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <div id="container">
 
 <div class="info-bar">
-  <span class="info-back">&larr; Back to properties</span>
+  <span class="info-back"><a href="search_results.php">&larr; Back to properties</a></span>
   <span class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></span>
   <span class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
   <span class="update-search"><a href="#">edit search</a></span>

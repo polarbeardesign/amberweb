@@ -4,6 +4,18 @@ $client = "Johnny Washington";
 $search_parameters = array('city' => "Austin", 'state' => "TX", 'move_in' => "Mar 01", 'move_out' => "Mar 31");
 
 $result_properties = array(0 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Gables West Avenue", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "987654", 
+                                      'size' => "1BD / 1BA", 
+                                      'property_address' => "300 West Avenue", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78701", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "260",
+                                      'min_stay' => "30"),
+                           1 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Green Pastures", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "987654", 
@@ -15,7 +27,7 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_country_code' => "US",
                                       'daily_price' => "198",
                                       'min_stay' => "30"),
-                           1 => array('property_thumb' => "property_987654_thumb.jpg", 
+                           2 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Travis Heights Arms", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "123456", 
@@ -26,32 +38,8 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_postal_code' => "78704", 
                                       'property_country_code' => "US",
                                       'daily_price' => "198",
-                                      'min_stay' => "30"),
-                           2 => array('property_thumb' => "property_987654_thumb.jpg", 
-                                      'property_name' => "Lakeside Apartments", 
-                                      'neighborhood' => "Downtown", 
-                                      'id' => "234567", 
-                                      'size' => "2BD / 1BA", 
-                                      'property_address' => "85 Trinity Street", 
-                                      'property_city' => "Austin", 
-                                      'property_state' => "TX", 
-                                      'property_postal_code' => "78701", 
-                                      'property_country_code' => "US",
-                                      'daily_price' => "295",
                                       'min_stay' => "30"),
                            3 => array('property_thumb' => "property_987654_thumb.jpg", 
-                                      'property_name' => "Travis Heights Arms", 
-                                      'neighborhood' => "Downtown", 
-                                      'id' => "123456", 
-                                      'size' => "2BD / 1BA", 
-                                      'property_address' => "1136 Travis Heights Boulevard", 
-                                      'property_city' => "Austin", 
-                                      'property_state' => "TX", 
-                                      'property_postal_code' => "78704", 
-                                      'property_country_code' => "US",
-                                      'daily_price' => "198",
-                                      'min_stay' => "30"),
-                           4 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Lakeside Apartments", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "234567", 
@@ -63,7 +51,7 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_country_code' => "US",
                                       'daily_price' => "295",
                                       'min_stay' => "30"),
-                           5 => array('property_thumb' => "property_987654_thumb.jpg", 
+                           4 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Travis Heights Arms", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "123456", 
@@ -75,7 +63,31 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_country_code' => "US",
                                       'daily_price' => "198",
                                       'min_stay' => "30"),
+                           5 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Lakeside Apartments", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "234567", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "85 Trinity Street", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78701", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "295",
+                                      'min_stay' => "30"),
                            6 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Travis Heights Arms", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "123456", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "1136 Travis Heights Boulevard", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78704", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "198",
+                                      'min_stay' => "30"),
+                           7 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Lakeside Apartments", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "234567", 
@@ -91,7 +103,6 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 ?>
 
 
-<!DOCTYPE html>
 <html>
 <head>
   <title>Search Results :: Amber Lodging</title>
@@ -99,62 +110,13 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
   <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyA2CUo-V9LEi2YuJvh6F_Sf7NkmpXnC4yE"
-      type="text/javascript"></script>
-    <script type="text/javascript">
-    var map;
-    //<![CDATA[
-
-    function load() {
-      if (GBrowserIsCompatible()) {
-        map = new GMap2(document.getElementById("map"));
-        map.addControl(new GMapTypeControl());
-        map.addControl(new GSmallMapControl());
-        map.addControl(new GScaleControl());
-        map.setCenter(new GLatLng(30.3, -98), 11, G_NORMAL_MAP);
-
-
-	var marker1 = new GMarker(new GLatLng(30.8856944,-97.0349444));
-	GEvent.addListener(marker1, 'click', function() { marker1.openInfoWindowHtml("<div style='width: 205px; height: 55;'><div style='width: 205px; height: 55px;'><strong>10th Annual Jasper Air Show & Fly-In</strong><br />Jasper, TX</div></div>"); });
-	map.addOverlay(marker1);
-
-	
-      }
-    }
-
-    //]]>
-    </script>
-
-</head>
-
-
-<body  onload="load(); startList();" onunload="GUnload()">
+  </head>
+  <body>
 <div class="title-bar alc">Amber Lodging Company</div>
 <div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
-
-<script language="JavaScript" type="text/JavaScript">
-startList = function() {
-if (document.all&&document.getElementById) {
-navRoot = document.getElementById("nav");
-for (i=0; i<navRoot.childNodes.length; i++) {
-node = navRoot.childNodes[i];
-if (node.nodeName=="LI") {
-node.onmouseover=function() {
-this.className+=" over";
-  }
-  node.onmouseout=function() {
-  this.className=this.className.replace(" over", "");
-   }
-   }
-  }
- }
-}
-
-</script>
 
 <div id="container">
 <div class="info-bar">
@@ -164,15 +126,40 @@ this.className+=" over";
   <span class="update-search"><a href="#">edit search</a></span>
 </div>
 
-<div id="map" style="width: 100%; min-height: 1000px"></div>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+  // Specify features and elements to define styles.
+  var styleArray = [
+    {
+      featureType: "all",
+      stylers: [
+       { saturation: -100 }
+      ]
+    }
+  ];
 
+  // Create a map object and specify the DOM element for display.
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 30.3, lng: -98},
+          // Apply the map style array to the map.
+          styles: styleArray,
+          zoom: 11
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2CUo-V9LEi2YuJvh6F_Sf7NkmpXnC4yE&callback=initMap"
+    async defer></script>
 <div class="results-list-header">
 <h1>We found XX options for you in Austin, TX</h1>
 
 <p class="small-print"><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.
-reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
+Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
 
 </div>
+
 
 <div class="results-list">
 <?php 
@@ -193,7 +180,7 @@ reservations are not set until confirmed. Confirmations are sent Mon-Fri between
           <div class="col-sm-12 col-md-3 text-right">
           <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" >USD</a>
           <div class="price-unit">avg/night</div>
-          <div class="btn btn-primary view-details">View Details</div>
+          <a href="property_detail.php" class="btn btn-primary view-details">View Details</a>
           </div>
           </div>
         <div class="row row-spacing">
@@ -224,10 +211,5 @@ reservations are not set until confirmed. Confirmations are sent Mon-Fri between
   ; } 
   ?>  
 </div>
-
-</div>
-
-
-</body>
-
-</html>
+  </body>
+  </html>
