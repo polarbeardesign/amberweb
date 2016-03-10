@@ -302,16 +302,16 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
  
  <?php 
  foreach($nearby_properties as $inner) { echo    
-      '<div class="nearby-box  container-fluid">
+      '<div class="results-box  container-fluid">
         <div class="row">
           <div class="col-sm-12 col-md-3">
             <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" />
           </div>
-          <div class="col-sm-12 col-md-6 nearby-details">
-          <h1 class="nearby">'.$inner[property_name].'</h1>
+          <div class="col-sm-12 col-md-6 results-details">
+          <h1 class="results">'.$inner[property_name].'</h1>
           <p class="neighborhood">'.$inner[neighborhood].'</p>
           <p class="neighborhood">ID# '.$inner[id] . ' | ' . $inner[size].'</p>
-          <p class="nearby-address">'.$inner[property_address] . '<br />
+          <p class="results-address">'.$inner[property_address] . '<br />
           ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
@@ -337,7 +337,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center no-padding nearby-availability">
+          <div class="col-md-12 text-center no-padding results-availability">
             Currently Available
           </div>
         </div>

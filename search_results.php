@@ -1,3 +1,96 @@
+<?php
+$client = "Johnny Washington";
+
+$search_parameters = array('city' => "Austin", 'state' => "TX", 'move_in' => "Mar 01", 'move_out' => "Mar 31");
+
+$result_properties = array(0 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Green Pastures", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "987654", 
+                                      'size' => "1BD / 1BA", 
+                                      'property_address' => "800 Brazos Street", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78701", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "198",
+                                      'min_stay' => "30"),
+                           1 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Travis Heights Arms", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "123456", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "1136 Travis Heights Boulevard", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78704", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "198",
+                                      'min_stay' => "30"),
+                           2 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Lakeside Apartments", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "234567", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "85 Trinity Street", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78701", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "295",
+                                      'min_stay' => "30"),
+                           3 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Travis Heights Arms", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "123456", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "1136 Travis Heights Boulevard", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78704", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "198",
+                                      'min_stay' => "30"),
+                           4 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Lakeside Apartments", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "234567", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "85 Trinity Street", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78701", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "295",
+                                      'min_stay' => "30"),
+                           5 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Travis Heights Arms", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "123456", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "1136 Travis Heights Boulevard", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78704", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "198",
+                                      'min_stay' => "30"),
+                           6 => array('property_thumb' => "property_987654_thumb.jpg", 
+                                      'property_name' => "Lakeside Apartments", 
+                                      'neighborhood' => "Downtown", 
+                                      'id' => "234567", 
+                                      'size' => "2BD / 1BA", 
+                                      'property_address' => "85 Trinity Street", 
+                                      'property_city' => "Austin", 
+                                      'property_state' => "TX", 
+                                      'property_postal_code' => "78701", 
+                                      'property_country_code' => "US",
+                                      'daily_price' => "295",
+                                      'min_stay' => "30"));
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +134,7 @@
 
 <body  onload="load(); startList();" onunload="GUnload()">
 <div class="title-bar alc">Amber Lodging Company</div>
-<div class="title-bar client-name">Johnny Washington</div>
+<div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
 
 <script language="JavaScript" type="text/JavaScript">
 startList = function() {
@@ -64,8 +157,73 @@ this.className+=" over";
 </script>
 
 <div id="container">
+<div class="info-bar">
+  <span class="info-back">&larr; Back to properties</span>
+  <span class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></span>
+  <span class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
+  <span class="update-search"><a href="#">edit search</a></span>
+</div>
 
-<div id="map" style="width: 100%; min-height: 800px"></div>
+<div id="map" style="width: 100%; min-height: 1000px"></div>
+
+<div class="results-list-header">
+<h1>We found XX options for you in Austin, TX</h1>
+
+<p class="small-print"><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.
+reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
+
+</div>
+
+<div class="results-list">
+<?php 
+ foreach($result_properties as $inner) { echo    
+      '<div class="results-box  container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-3">
+            <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" />
+          </div>
+          <div class="col-sm-12 col-md-6 results-details">
+          <h1 class="results">'.$inner[property_name].'</h1>
+          <p class="neighborhood">'.$inner[neighborhood].'</p>
+          <p class="neighborhood">ID# '.$inner[id] . ' | ' . $inner[size].'</p>
+          <p class="results-address">'.$inner[property_address] . '<br />
+          ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
+           <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
+          </div>
+          <div class="col-sm-12 col-md-3 text-right">
+          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" >USD</a>
+          <div class="price-unit">avg/night</div>
+          <div class="btn btn-primary view-details">View Details</div>
+          </div>
+          </div>
+        <div class="row row-spacing">
+          <div class="col-md-1 no-padding">
+            <div class="move-date">'
+            . $search_parameters[move_in] . '
+            </div>
+          </div>
+          <div class="col-md-10 duration">
+          &nbsp;
+          </div>
+          <div class="col-md-1 text-right no-padding">
+            <div class="move-date">'
+            . $search_parameters[move_out] . '
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center no-padding results-availability">
+            Currently Available
+          </div>
+        </div>
+
+
+      </div>
+      '
+
+  ; } 
+  ?>  
+</div>
 
 </div>
 
