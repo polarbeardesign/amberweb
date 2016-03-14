@@ -104,45 +104,23 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 
 <html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
 <head>
   <title>Search Results :: Amber Lodging</title>
   
 
-
-
-  <script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="inc/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="inc/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css" media="screen">
-
   <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-  <script>
-  $(function() {
-    $( document ).tooltip({
-      position: {
-        my: "center bottom-20",
-        at: "center top",
-        using: function( position, feedback ) {
-          $( this ).css( position );
-          $( "<div>" )
-            .addClass( "arrow" )
-            .addClass( feedback.vertical )
-            .addClass( feedback.horizontal )
-            .appendTo( this );
-        }
-      }
-    });
-  });
-  </script>
-
-</head>
-<body>
-
+  </head>
+  <body>
 <div class="title-bar alc">Amber Lodging Company</div>
 <div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
 
@@ -206,7 +184,7 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
+          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" >USD</a>
           <div class="price-unit">avg/night</div>
           <a href="property_detail.php" class="btn btn-primary view-details">View Details</a>
           </div>
@@ -240,4 +218,4 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
   ?>  
 </div>
   </body>
-  </html>
+</html>

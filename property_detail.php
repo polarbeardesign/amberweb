@@ -65,17 +65,48 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <html>
 <head>
   <title>Property Detail :: Amber Lodging</title>
-  
 
-  <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
+<!-- for imported fonts and icons -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<!-- for JQuery -->
+  <script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
+
+<!-- for property slider -->
   <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
+
+<!-- for JQuery'd UI elements: tooltips, etc -->
+  <script type="text/javascript" src="inc/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="inc/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css" media="screen">
+
+<!-- for custom styling -->
+  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
 
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <script>
+  $(function() {
+    $( document ).tooltip({
+      position: {
+        my: "center bottom-20",
+        at: "center top",
+        using: function( position, feedback ) {
+          $( this ).css( position );
+          $( "<div>" )
+            .addClass( "arrow" )
+            .addClass( feedback.vertical )
+            .addClass( feedback.horizontal )
+            .appendTo( this );
+        }
+      }
+    });
+  });
+  </script>
+
+</head>
+
 
 </head>
 
@@ -316,7 +347,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" >USD</a>
+          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
           <div class="price-unit">avg/night</div>
           <div class="btn btn-primary view-details">View Details</div>
           </div>
