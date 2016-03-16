@@ -903,20 +903,20 @@ margin: 0 auto;
 
 .alc {
   text-transform: uppercase;
-  margin-left: 2em;
+  margin-left: 8%;
   float: left;
   font-weight: 500;
 }
 
 .client-name {
-  margin-right: 2em;
+  margin-right: 8%;
   float: right;
 }
 
 .info-bar {
   display: inline;
   color: #424242;
-  padding: 1.25em 0;
+  padding: 0;
   background: #faefdb;
   font-size: 0.75em; /* as original design's 14pt */
 }
@@ -930,9 +930,21 @@ margin: 0 auto;
 }
 
 .info-back {
-margin: 0 2em;
-padding-right: 2em;
+margin: 0 2em 0 8%;
+padding: 1em 2em 1em 0;
 border-right: 1px solid #ddd;
+line-height: 3.5em;
+}
+
+.pending-reservation-alert {
+color: #fff;
+background: #818181;
+font-size: 0.75em;
+text-align: center;
+line-height: 6em;
+
+margin: 0 0 2em 0;
+
 }
 
 .location {
@@ -1013,7 +1025,7 @@ font-weight: 600;
 text-transform: uppercase;
 background: #003399;
 border-radius: 1px;
-width: 100%;
+width: 93%;
 padding: 0.9em;
 margin: 0 2em 1.25em 1em;
 }
@@ -1041,7 +1053,7 @@ font-size: 1.6em; /* as original design's 30pt */
 font-size: 0.7em; /* as original design's 13pt */
 }
 
-a.currency-denominator {
+a.tool-tip {
 line-height: 0;
 border-bottom: 1px dotted #337ab7;
 }
@@ -1050,7 +1062,7 @@ a.currency-denominator {
 font-size: 0.75em; /* as original design's 14pt */
 }
 
-a.currency-denominator:hover {
+a.tool-tip:hover {
 text-decoration: none;
 }
 

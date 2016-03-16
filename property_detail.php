@@ -129,6 +129,15 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 </div>
 <div class="property-detail-screen">
 <section class="property-detail container-fluid">
+
+  <div class="row padded">
+    <div class="col-md-12 no-padding">
+      <div class="pending-reservation-alert">
+        <p>This property has XX number of pending reservation(s). Reservations often cancel/change. If you wish to be waitlisted &#8211; please continue by reserving now.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="row padded">
     <div class="col-md-8">
 
@@ -136,14 +145,14 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
         <!-- Indicators -->
         <ol class="carousel-indicators">
 
-<?php
-           foreach($selected_property[images] as $key => $value) {  echo 
-              '<li data-target="#feature_property-carousel" data-slide-to="' . $key . '"';
-              if ($key == 0) { 
-                 echo ' class="active"';
-                 } 
-              echo '></li>';
-              }
+          <?php
+             foreach($selected_property[images] as $key => $value) {  echo 
+                '<li data-target="#feature_property-carousel" data-slide-to="' . $key . '"';
+                if ($key == 0) { 
+                   echo ' class="active"';
+                   } 
+                echo '></li>';
+                }
           ?>
         </ol>
  
@@ -172,7 +181,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
       <div class="location-address"><?php echo $selected_property[property_address], " | ", $selected_property[property_city], ", ", $selected_property[property_state], " ", $selected_property[property_postal_code], ", ", $selected_property[property_country_code] ?></div>
       <div class="row property-numbers">
         <div class="col-md-5">
-          <div class="daily-price">$<?php echo $selected_property[daily_price] ?></div> USD
+          <div class="daily-price">$<?php echo $selected_property[daily_price] ?></div><a href="#" class="tool-tip" title="Prices quoted in USD, pricing may change due to currency fluctuations." > USD</a>
           <div class="small-print">avg/night</div>
         </div>
         <div class="col-md-7">
@@ -347,7 +356,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
+          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="#" class="tool-tip currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
           <div class="price-unit">avg/night</div>
           <div class="btn btn-primary view-details">View Details</div>
           </div>
