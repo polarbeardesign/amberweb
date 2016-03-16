@@ -130,6 +130,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <div class="property-detail-screen">
 <section class="property-detail container-fluid">
 
+  <!-- for pending reservations warning - should be conditional based on properties availability -->
   <div class="row padded">
     <div class="col-md-12 no-padding">
       <div class="pending-reservation-alert">
