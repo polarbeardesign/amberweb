@@ -147,11 +147,14 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
 
 <div id="container">
-<div class="info-bar">
-  <span class="info-back">&larr; Back to properties</span>
+<div class="filter-bar">
+  <div class="search-area"><input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" /></div>
   <span class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></span>
-  <span class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
-  <span class="update-search"><a href="#">edit search</a></span>
+  <span class="dates grey-separator"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
+  <span class="filter-br">1 Bed <span class="caret"></span></span>
+  <span class="filter-ba grey-separator">1 Bath <span class="caret"></span></span>
+  <span class="filter-nbhd">Neighborhood <span class="caret"></span></span>
+  <span class="filter-price">Price <span class="caret"></span></span>
 </div>
 
     <div id="map"></div>
