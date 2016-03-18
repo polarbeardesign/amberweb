@@ -1548,7 +1548,7 @@ position: relative;
 	position: absolute;
 	width: 12px;
 	height: 7px;
-	background: #transparent;
+	background: transparent;
 	top: 0px;
 	left: 2px;
 	border: 2px solid #003399;
@@ -1666,8 +1666,6 @@ border-radius: 1px;
 padding: 1em;
 }
 
-
-}
 /*-----------------------------------------------------
 Extra Wide Style
 -------------------------------------------------------*/
@@ -1727,4 +1725,4 @@ Extra Wide Style
 .carousel-caption-one p.main, .carousel-caption p.last {
   font-size: 2.0rem;
   }
-
+}
