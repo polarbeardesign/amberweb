@@ -11,8 +11,9 @@ $client = "Johnny Washington";
   <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="inc/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css" media="screen">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -21,9 +22,16 @@ $client = "Johnny Washington";
 
 <body>
 <div class="title-bar alc">Amber Lodging Company</div>
-<div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
-
-<?php include 'inc/form_pets.php' ?>
+<div class="title-bar client-name">
+  <div class="user_dropdown_menu">
+    <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
+    <ul id="userDropdown" class="dropdown-content">
+      <li><a href="./client_home.php">Search Properties</a></li>
+      <li><a href="/">Amber Home</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</div>
 
 <div id="container">
 
@@ -36,15 +44,26 @@ $client = "Johnny Washington";
 <form action="search_results.php" name="search" id="search">
 <div class="row">
   <div class="col-md-3">
-    <input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" />
+    <div class=" input-group">
+      <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+      <input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" />
+    </div>
   </div>
   <div class="col-md-2">
-    <input type="text" class="form-control" id="move_in" name="move_in" placeholder=" Move In?" />
+    <div class=" input-group">
+      <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+      <input type="text" class="form-control form_datetime" id="move_in" name="move_in" placeholder=" Move In?" />
+    </div>
   </div>
   <div class="col-md-2">
-    <input type="text" class="form-control" id="move_out" name="move_out" placeholder=" Move Out?" />
+    <div class=" input-group">
+      <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+      <input type="text" class="form-control form_datetime" id="move_out" name="move_out" placeholder=" Move Out?" />
+    </div>
   </div>
   <div class="col-md-2">
+    <div class=" input-group">
+    <div class="input-group-addon"><i class="fa fa-home"></i></div>
   <select id="size" class="form-control">
       <option value="-1" disabled selected>1+ Bedrooms</option>
       <option value="1">1+ Bedrooms</option>
@@ -53,13 +72,17 @@ $client = "Johnny Washington";
       <option value="4">Other</option>
   </select>
   </div>
+  </div>
   <div class="col-md-2">
+    <div class=" input-group">
+    <div class="input-group-addon"><i class="fa fa-user"></i></div>
   <select id="guests" class="form-control">
-      <option value="-1" selected>1 Guest</option>
-      <option value="1">Adult +/-</option>
-      <option value="2">Children +/-</option>
-      <option value="3">Pets +/-</option>
+      <option value="-1" disabled selected>1+ Guests</option>
+      <option value="1">1+ Guests</option>
+      <option value="2">2+ Guests</option>
+      <option value="3">3+ Guests</option>
   </select>
+  </div>
   </div>
   <div class="col-md-1">
   <input type="submit" value="Search" id="submit" class="btn btn-primary search-button">
@@ -67,8 +90,6 @@ $client = "Johnny Washington";
 </div>
 </form>
 </div>
-
-<div class="pet_link text-right">Pets Form </div>
 
 <section class="main">
 
@@ -159,7 +180,6 @@ $client = "Johnny Washington";
 </footer>
 
 </div>
-
 
 </body>
 

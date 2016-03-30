@@ -82,24 +82,16 @@ table {
   border-spacing: 0;
 }
 
-.form-control {
-  padding: 1.5em 0.75em;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-}
 
-input {
+.resident-request * input {
   font-family: Helvetica, Arial, fontAwesome, sans-serif;
   font-size: 1.25em;
   background: #ebeced;
   border: 1px solid #ddd;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+
   }
 
-input[type=text], input[type=password] {
+.resident-request * input[type=text], input[type=password] {
  width: 100%;
 }
 
@@ -839,6 +831,17 @@ Wide Style 900 <=> 1280
 
 /* ---   Client Pages - tooltips... -------------------*/
 
+select#guests, select#size {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  -webkit-appearance: none;
+}
+
+#ui-datepicker-div {
+margin-top: 1em;
+
+}
+
 .ui-tooltip, .arrow:after {
   background: #333;
   border: none;
@@ -911,6 +914,11 @@ margin: 0 auto;
 .client-name {
   margin-right: 8%;
   float: right;
+}
+
+.client-name a:link, .client-name a:visited, .client-name a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .info-bar {
@@ -1465,6 +1473,48 @@ line-height: 1.4em;
   transform:translate(-50%,-50%);
   }
 
+/*===================*/
+
+.droplink {
+    color: #fff;
+    cursor: pointer;
+}
+
+.droplink:hover, .droplink:focus {
+
+}
+
+.user_dropdown_menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 0.75em 0;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index:999;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
+
+/*===================*/
+
+.user_dropdown * a:link, .user_dropdown * a:visited {
+color: #fff;
+}
+
 .request_info_form  {
   width:550px;
   height:500px;
@@ -1649,21 +1699,24 @@ border-top: 1px solid #ddd;
    Search Forms
 -------------------------------------------------------*/
 
-#destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
-#search::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f002'; color: #003399; font-size: 1.2em; }
+.destination::webkit-input-placeholder::before { 
+  font-family: fontAwesome; 
+  content: '\f041';
+  color: #003399;
+  font-size: 1.2em;
+  }
 
-#move_in::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f133'; color: #003399; font-size: 1.2em; }
-#move_out::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f133'; color: #003399; font-size: 1.2em; }
-#Destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
-#Destination::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f041'; color: #003399; font-size: 1.2em; }
+.input-group-addon {
+  color: #003399;
+  font-size: 1.2em;
+  background-color: #fff;
+}
 
 .search-button {
 font-size: 0.75em; /* as original design's 14pt */
 font-weight: 600;
 text-transform: uppercase;
 background: #003399;
-border-radius: 1px;
-padding: 1em;
 }
 
 /*-----------------------------------------------------

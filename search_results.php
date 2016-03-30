@@ -144,7 +144,16 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <body>
 
 <div class="title-bar alc">Amber Lodging Company</div>
-<div class="title-bar client-name"><?php echo $client ?> <span class="caret"></span></div>
+<div class="title-bar client-name">
+  <div class="user_dropdown_menu">
+    <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
+    <ul id="userDropdown" class="dropdown-content">
+      <li><a href="./client_home.php">Search Properties</a></li>
+      <li><a href="/">Amber Home</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</div>
 
 <div id="container">
 <div class="filter-bar">
@@ -243,4 +252,6 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
   ?>  
 </div>
   </body>
+
+<?php include("inc/form_scripts.php") ?>
   </html>
