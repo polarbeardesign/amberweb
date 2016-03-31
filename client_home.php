@@ -17,9 +17,9 @@ $client = "Johnny Washington";
     <div class=" client-name col-sm-6 text-right">
       <div class="user_dropdown_menu">
         <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
-        <ul id="userDropdown" class="dropdown-content">
-          <li><a href="./client_home.php">Search Properties</a></li>
-          <li><a href="/">Amber Home</a></li>
+        <ul id="userDropdown" class="dropdown-content text-left">
+          <li><a href="./client_home.php">New Search</a></li>
+          <li><a href="/">AMBER Home</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </div>
