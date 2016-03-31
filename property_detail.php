@@ -112,15 +112,19 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 
 <body>
-<div class="title-bar alc">Amber Lodging Company</div>
-<div class="title-bar client-name">
-  <div class="user_dropdown_menu">
-    <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
-    <ul id="userDropdown" class="dropdown-content">
-      <li><a href="./client_home.php">Search Properties</a></li>
-      <li><a href="/">Amber Home</a></li>
-      <li><a href="#">Logout</a></li>
-    </ul>
+<div class="container-fluid">
+  <div class="row title-bar" >
+    <div class="alc col-sm-6">Amber Lodging Company</div>
+    <div class=" client-name col-sm-6 text-right">
+      <div class="user_dropdown_menu">
+        <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
+        <ul id="userDropdown" class="dropdown-content">
+          <li><a href="./client_home.php">Search Properties</a></li>
+          <li><a href="/">Amber Home</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -128,14 +132,15 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <?php include 'inc/form_reserve_now.php' ?>
 <?php include 'inc/form_request_info.php' ?>
 
-<div id="container">
+<div class="container-fluid white-page">
 
-<div class="info-bar">
-  <span class="info-back"><a href="search_results.php">&larr; Back to properties</a></span>
-  <span class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></span>
-  <span class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
-  <span class="update-search"><a href="#">edit search</a></span>
+<div class="row info-bar">
+  <div class="info-back"><a href="search_results.php">&larr; Back to properties</a></div>
+  <div class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></div>
+  <div  class="dates"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></div>
+  <div class="update-search"><a href="#">edit search</a></div>
 </div>
+
 <div class="property-detail-screen">
 <section class="property-detail container-fluid">
 

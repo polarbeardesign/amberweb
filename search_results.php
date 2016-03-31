@@ -107,19 +107,7 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <head>
   <title>Search Results :: Amber Lodging</title>
   
-
-
-
-  <script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="inc/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="inc/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css" media="screen">
-
-  <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<?php include('inc/head_includes.php') ?>
 
   <script>
   $(function() {
@@ -143,30 +131,37 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 </head>
 <body>
 
-<div class="title-bar alc">Amber Lodging Company</div>
-<div class="title-bar client-name">
-  <div class="user_dropdown_menu">
-    <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
-    <ul id="userDropdown" class="dropdown-content">
-      <li><a href="./client_home.php">Search Properties</a></li>
-      <li><a href="/">Amber Home</a></li>
-      <li><a href="#">Logout</a></li>
-    </ul>
+<div class="container-fluid">
+  <div class="row title-bar" >
+    <div class="alc col-sm-6">Amber Lodging Company</div>
+    <div class=" client-name col-sm-6 text-right">
+      <div class="user_dropdown_menu">
+        <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
+        <ul id="userDropdown" class="dropdown-content">
+          <li><a href="./client_home.php">Search Properties</a></li>
+          <li><a href="/">Amber Home</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
-<div id="container">
-<div class="filter-bar">
+<div class="container-fluid">
+
+<div class="row filter-bar">
   <div class="search-area"><input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" /></div>
-  <span class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></span>
-  <span class="dates grey-separator"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></span>
-  <span class="filter-br">1 Bed <span class="caret"></span></span>
-  <span class="filter-ba grey-separator">1 Bath <span class="caret"></span></span>
-  <span class="filter-nbhd">Neighborhood <span class="caret"></span></span>
-  <span class="filter-price">Price <span class="caret"></span></span>
+  <div class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></div>
+  <div class="dates grey-separator"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></div>
+  <div class="filter-br">1 Bed <span class="caret"></span></div>
+  <div class="filter-ba grey-separator">1 Bath <span class="caret"></span></div>
+  <div class="filter-nbhd">Neighborhood <span class="caret"></span></div>
+  <div class="filter-price">Price <span class="caret"></span></div>
 </div>
 
-    <div id="map"></div>
+<div class="row">
+  <div id="map"></div>
+</div>
     <script>
       var map;
       function initMap() {
@@ -251,7 +246,8 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
   ; } 
   ?>  
 </div>
-  </body>
-
 <?php include("inc/form_scripts.php") ?>
+</body>
+
+
   </html>

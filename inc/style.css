@@ -895,25 +895,27 @@ max-width: 1200px;
 margin: 0 auto;
 }
 
+.white-page {
+background: white;
+}
 
 /* black bar at top of page */
 .title-bar {
   margin: 0.85em;
-  display: inline;
-  color: #fefefe;
-  font-size: 0.75em; /* as original design's 14pt */
 }
 
 .alc {
   text-transform: uppercase;
-  margin-left: 8%;
-  float: left;
+  padding-left: 8%;
   font-weight: 500;
+  color: #fefefe;
+  font-size: 0.75em; /* as original design's 14pt */
 }
 
 .client-name {
-  margin-right: 8%;
-  float: right;
+  padding-right: 8%;
+  color: #fefefe;
+  font-size: 0.75em; /* as original design's 14pt */
 }
 
 .client-name a:link, .client-name a:visited, .client-name a:hover {
@@ -921,16 +923,8 @@ margin: 0 auto;
   text-decoration: none;
 }
 
-.info-bar {
-  display: inline;
-  color: #424242;
-  padding: 0;
-  background: #faefdb;
-  font-size: 0.75em; /* as original design's 14pt */
-}
-
-.filter-bar {
-  display: inline;
+.info-bar, .filter-bar {
+  display: block;
   color: #424242;
   padding: 0;
   background: #faefdb;
@@ -938,20 +932,22 @@ margin: 0 auto;
 }
 
 .info-back {
+position: relative;
+float: left;
 margin: 0 2em 0 8%;
 padding: 1em 2em 1em 0;
 border-right: 1px solid #ddd;
-line-height: 3.5em;
 }
 
 .grey-separator {
 display: inline-block;
-padding: 1em 2em 1em 0;
+
 border-right: 1px solid #ddd;
 }
 
 .search-area {
-display: inline-block;
+position: relative;
+float: left;
 width: 20em;
 margin: 0 2em 0 0;
 }
@@ -968,8 +964,10 @@ margin: 0 0 2em 0;
 }
 
 .location {
+position: relative;
+float: left;
+padding: 1em 2em 1em 0;
 margin: 0 1em 0 0;
-padding-right: 2em;
 }
 
 .location > .fa-map-marker {
@@ -978,11 +976,16 @@ padding-right: 2em;
 }
 
 .dates {
+position: relative;
+float: left;
 margin: 0;
+padding: 1em 2em 1em 0;
 }
 
 .filter-br, .filter-ba, .filter-nbhd, .filter-price {
-padding: 0 1em;
+position: relative;
+float: left;
+padding: 1em 1em 1em 1em;
 }
 
 
@@ -993,7 +996,10 @@ padding: 0 1em;
 
 .update-search {
   font-size: 0.9em;
-  margin: 0 0 0 4em;
+position: relative;
+float: left;
+margin: 0;
+padding: 1em 2em 1em 4em;
 }
 
 .update-search a:link, .update-search a:visited, .update-search a:hover {
@@ -1367,8 +1373,8 @@ padding: 0 0 0 5px;
   width:650px;
   height: 80px;
   position:fixed;
-  top:100px;
-  left:130px;
+  top: 8em;
+  left: 5%;
 padding: 1em;
 background: #333;
 color: #fefefe;
@@ -1392,12 +1398,13 @@ margin: 0 0 0.5em 0;
   display: block;
   z-index:999;
   position:fixed;
-  top:180px;
-  left:130px;
+  top:13em;
+  left:5%;
 -webkit-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
 box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
 }
+
 
 #map {
 height: 90%;
