@@ -671,6 +671,10 @@ nav > .menu-link > ul > li > a {
   max-width: 950px;
   }
 
+.resident-request * td.label {
+color: #808285;
+  }
+
 .reserve_now_form  {
   width: 100%;
   height: 100%;
