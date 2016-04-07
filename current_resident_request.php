@@ -3,16 +3,13 @@
 <head>
   <title>Current Resident Request :: Amber Lodging</title>
   
-  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-	<link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
+<?php include('inc/head_includes.php') ?>
 
 </head>
-<div class="title-bar Login">LOG&nbsp;IN</div>
+
 <body>
+<div class="title-bar Login">LOG&nbsp;IN</div>
+<?php include('inc/form_login.php') ?>
 
 <div id="container">
 
@@ -101,30 +98,14 @@
 
 </div>
 
-<script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="inc/slick/slick.min.js"></script>
 
-<script src="inc/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
-<script src="inc/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<?php include("inc/form_scripts.php") ?>
 
   <script>
       jQuery(document).ready(function(){
           // binds form submission and fields to the validation engine
           jQuery("#formID").validationEngine();
       });
-    
-  $(document).ready(function() {
-      $(".Login").click(function() {
-        var h = $("body").height() + 'px';
-        $("#black_overlay").css({"height":h,"visibility":"visible"});
-        $(".login_form").css('display','block');
-      });
-      $(".close, #submit").click(function() {
-      $(".login_form").css('display','none');
-      $("#black_overlay").css("visibility","hidden");
-    });
-  });
-
   </script>
 
 </body>

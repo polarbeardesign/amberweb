@@ -13,7 +13,7 @@ $client = "Johnny Washington";
 <body>
 <div class="container-fluid">
   <div class="row title-bar" >
-    <div class="alc col-sm-6">Amber Lodging Company</div>
+    <div class="alc col-sm-6"><a href="client_home.php">Amber Lodging Company</a></div>
     <div class=" client-name col-sm-6 text-right">
       <div class="user_dropdown_menu">
         <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>

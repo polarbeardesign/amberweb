@@ -2,18 +2,8 @@
 <html>
 <head>
   <title>Amber Lodging</title>
-  <link href="inc/bootstrap.min.css" rel="stylesheet">
-  <link href="inc/bootstrap-responsive.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-<!--[if lt IE 9]>
-          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
+<?php include('inc/head_includes.php') ?>
 
 </head>
 
@@ -187,16 +177,10 @@
 </div>
 
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
   <script type="text/javascript" language="javascript">
 
-  $(document).ready(function() {
-    $(".show_menu").click(function () {
-      $(this).siblings($(this)).toggle();
-    });
-  });
+
 
   $(document).ready(function() {
     $(".show_detail_1").click(function () {

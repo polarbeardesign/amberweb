@@ -133,7 +133,7 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 <div class="container-fluid">
   <div class="row title-bar" >
-    <div class="alc col-sm-6">Amber Lodging Company</div>
+    <div class="alc col-sm-6"><a href="client_home.php">Amber Lodging Company</a></div>
     <div class=" client-name col-sm-6 text-right">
       <div class="user_dropdown_menu">
         <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
@@ -147,17 +147,60 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
   </div>
 </div>
 
+<div class="filter-bar container-fluid">
+<form action="search_results.php" name="search" id="search">
+<div class="row">
+  <div class="col-md-3">
+    <div class=" input-group">
+      <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+      <input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" />
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class=" input-group">
+      <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+      <input type="text" class="form-control form_datetime" id="move_in" name="move_in" placeholder=" Move In?" />
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class=" input-group">
+      <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+      <input type="text" class="form-control form_datetime" id="move_out" name="move_out" placeholder=" Move Out?" />
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class=" input-group">
+    <div class="input-group-addon"><i class="fa fa-home"></i></div>
+  <select id="size" class="form-control">
+      <option value="-1" disabled selected>1+ Bedrooms</option>
+      <option value="1">1+ Bedrooms</option>
+      <option value="2">2+ Bedrooms</option>
+      <option value="3">3+ Bedrooms</option>
+      <option value="4">Other</option>
+  </select>
+  </div>
+  </div>
+  <div class="col-md-2">
+    <div class=" input-group">
+    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+  <select id="guests" class="form-control">
+      <option value="-1" disabled selected>1+ Guests</option>
+      <option value="1">1+ Guests</option>
+      <option value="2">2+ Guests</option>
+      <option value="3">3+ Guests</option>
+  </select>
+  </div>
+  </div>
+  <div class="col-md-1">
+  <input type="submit" value="Search" id="submit" class="btn btn-primary search-button">
+  </div>
+</div>
+</form>
+</div>
+
+<!--------------------------------------------------------  ---->
 <div class="container-fluid">
 
-<div class="row filter-bar">
-  <div class="search-area"><input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" /></div>
-  <div class="location"><i class="fa fa-map-marker"></i> <?php echo $search_parameters[city], ", ", $search_parameters[state] ?></div>
-  <div class="dates grey-separator"><i class="fa fa-calendar"></i> <?php echo $search_parameters[move_in], " - ", $search_parameters[move_out] ?></div>
-  <div class="filter-br">1 Bed <span class="caret"></span></div>
-  <div class="filter-ba grey-separator">1 Bath <span class="caret"></span></div>
-  <div class="filter-nbhd">Neighborhood <span class="caret"></span></div>
-  <div class="filter-price">Price <span class="caret"></span></div>
-</div>
 
 <div class="row">
   <div id="map"></div>
@@ -187,6 +230,7 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2CUo-V9LEi2YuJvh6F_Sf7NkmpXnC4yE&callback=initMap"
     async defer></script>
+
 <div class="results-list-header">
 <h1>We found XX options for you in Austin, TX</h1>
 
@@ -245,6 +289,7 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
 
   ; } 
   ?>  
+</div>
 </div>
 <?php include("inc/form_scripts.php") ?>
 </body>

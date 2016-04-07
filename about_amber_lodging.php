@@ -3,15 +3,14 @@
 <head>
   <title>About Amber Lodging :: Amber Lodging</title>
   
-  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css'>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<?php include('inc/head_includes.php') ?>
 
 </head>
 
 <body>
 <div class="title-bar Login">LOG&nbsp;IN</div>
+<?php include('inc/form_login.php') ?>
+
 <div id="container">
 
 <header>
@@ -66,24 +65,7 @@
 
 </div>
 
-<script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="inc/slick/slick.min.js"></script>
-
-  <script type="text/javascript" language="javascript">
-
-  $(document).ready(function() {
-      $(".Login").click(function() {
-        var h = $("body").height() + 'px';
-        $("#black_overlay").css({"height":h,"visibility":"visible"});
-        $(".login_form").css('display','block');
-      });
-      $(".close, #submit").click(function() {
-      $(".login_form").css('display','none');
-      $("#black_overlay").css("visibility","hidden");
-    });
-  });
-
-  </script>
+<?php include("inc/form_scripts.php") ?>
 
 </body>
 

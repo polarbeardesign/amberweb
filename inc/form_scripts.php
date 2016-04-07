@@ -19,7 +19,6 @@ window.onclick = function(event) {
   }
 }
 
-
     $(document).ready(function() {
       $(".Login").click(function() {
           var h = $("body").height() + 'px';
@@ -29,6 +28,10 @@ window.onclick = function(event) {
         $(".close, #submit").click(function() {
         $(".login_form").css('display','none');
         $("#grey_overlay").css("visibility","hidden");
+      });
+
+      $(".show_menu").click(function () {
+        $(this).siblings($(this)).toggle();
       });
 
       $(".pet_link").click(function() {

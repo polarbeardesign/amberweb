@@ -66,25 +66,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 <head>
   <title>Property Detail :: Amber Lodging</title>
 
-<!-- for imported fonts and icons -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-<!-- for JQuery -->
-  <script type="text/javascript" src="inc/jquery-1.11.3.min.js"></script>
-
-<!-- for property slider -->
-  <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="inc/bootstrap.min.css" type="text/css" media="screen">
-
-<!-- for JQuery'd UI elements: tooltips, etc -->
-  <script type="text/javascript" src="inc/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="inc/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css" media="screen">
-
-<!-- for custom styling -->
-  <link rel="stylesheet" href="inc/style.css" type="text/css" media="screen">
-
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<?php include('inc/head_includes.php') ?>
 
   <script>
   $(function() {
@@ -112,9 +94,10 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 
 <body>
+<?php include("inc/form_scripts.php") ?>
 <div class="container-fluid">
   <div class="row title-bar" >
-    <div class="alc col-sm-6">Amber Lodging Company</div>
+    <div class="alc col-sm-6"><a href="client_home.php">Amber Lodging Company</a></div>
     <div class=" client-name col-sm-6 text-right">
       <div class="user_dropdown_menu">
         <a onclick="myFunction()" class="droplink"><?php echo $client ?> <span class="caret"></span></a>
@@ -422,6 +405,6 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 </body>
 
-<?php include("inc/form_scripts.php") ?>
+
 
 </html>
