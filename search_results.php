@@ -14,7 +14,9 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_postal_code' => "78701", 
                                       'property_country_code' => "US",
                                       'daily_price' => "260",
-                                      'min_stay' => "30"),
+                                      'min_stay' => "30",
+                                      'pending_periods' => array(0 => array('start_date' => '2016-03-02', 'end_date' => '2016-03-09'),
+                                                                 1 => array('start_date' => '2016-03-13', 'end_date' => '2016-03-17'))),
                            1 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Green Pastures", 
                                       'neighborhood' => "Downtown", 
@@ -269,7 +271,13 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
             </div>
           </div>
           <div class="col-md-10 duration">
-          &nbsp;
+          &nbsp; '; 
+ 
+  foreach($inner[pending_periods] as $dates) { echo  
+          ' '
+          . $dates[start_date] . ' - ' . $dates[end_date]  . '<br />
+          ';}
+          echo '
           </div>
           <div class="col-md-1 text-right no-padding">
             <div class="move-date">'
@@ -281,7 +289,7 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
           <div class="col-md-12 text-center no-padding results-availability">
             Currently Available
           </div>
-        </div>
+        </div>' . $inner[pending_periods][0][start_date]  . ' - ' . $inner[pending_periods][0][end_date]  . '
 
 
       </div>
