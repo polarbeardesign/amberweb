@@ -1192,9 +1192,33 @@ vertical-align: 30%;
 background: #003399;
 }
 
+.available_dates {
+background: #dde9ff;
+}
+
 .pending_dates {
 background: #999;
 }
+
+/* for highlighting calendar dates on property details page */
+td.pending a {
+background: #999 !important;
+color: #fff !important;
+}
+
+td.move-in-out a {
+background: #003399 !important;
+color: #fff !important;
+}
+
+td.available a {
+background: #dde9ff !important;
+}
+
+#calendar > .ui-datepicker {
+width: 100%;
+}
+/* end */
 
 .results-box {
 border: 1px solid #ececec;
@@ -1231,8 +1255,9 @@ line-height: 1.5em;
 }
 
 .duration {
-border-bottom: 1px solid #ececec;
-line-height: 0.5em;
+margin: 6px 0 0 0;
+border-top: 2px solid #ececec;
+overflow: hidden;
 }
 
 .results-availability {

@@ -1,8 +1,10 @@
 <?php
 
+date_default_timezone_set('America/Denver');
+
 $client = "Johnny Washington";
 
-$search_parameters = array('city' => "Austin", 'state' => "TX", 'move_in' => "Mar 01", 'move_out' => "Mar 31");
+$search_parameters = array('city' => "Austin", 'state' => "TX", 'move_in' => "05/01/2016", 'move_out' => "06/15/2016");
 
 $selected_property = array('property_name' => "Gables West Avenue", 
                            'neighborhood' => "Downtown", 
@@ -32,7 +34,10 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_postal_code' => "78701", 
                                       'property_country_code' => "US",
                                       'daily_price' => "198",
-                                      'min_stay' => "30"),
+                                      'min_stay' => "30",
+                                      'pending_periods' => array(0 => array('start_date' => '2016-05-10', 'end_date' => '2016-05-17'),
+                                                                 1 => array('start_date' => '2016-06-10', 'end_date' => '2016-06-25'),
+                                                                 2 => array('start_date' => '2016-05-22', 'end_date' => '2016-05-25'))),
                            1 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Travis Heights Arms", 
                                       'neighborhood' => "Downtown", 
@@ -56,7 +61,8 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_postal_code' => "78701", 
                                       'property_country_code' => "US",
                                       'daily_price' => "295",
-                                      'min_stay' => "30"));
+                                      'min_stay' => "30",
+                                      'pending_periods' => array(0 => array('start_date' => '2016-05-20', 'end_date' => '2016-06-10'))));
 
 ?>
 
@@ -86,9 +92,6 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
     });
   });
   </script>
-
-</head>
-
 
 </head>
 
@@ -215,105 +218,65 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
     <div class="col-md-4 cal-section">
     <h3>Confirm your dates are available</h3>
     <div class="row row-spacing">
-        <script language="javascript" type="text/javascript">
 
-          var day_of_week = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
-          var month_of_year = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+<!--- Calendar section -->
 
-          //  Declare And Initialize Variables
-          var Calendar = new Date();
-
-          var year = Calendar.getFullYear();     // Returns year
-          var month = Calendar.getMonth();       // Returns month (0-11)
-          var today = Calendar.getDate();        // Returns day (1-31)
-          var weekday = Calendar.getDay();       // Returns day (1-31)
-
-          var DAYS_OF_WEEK = 7;                  // "constant" for number of days in a week
-          var DAYS_OF_MONTH = 31;                // "constant" for number of days in a month
-          var cal;                               // Used for printing
-
-          Calendar.setDate(1);                   // Start the calendar day at '1'
-          Calendar.setMonth(month);              // Start the calendar month at now
+<div id="calendar"></div>
 
 
-          // Variables For Formatting
 
-          var tr_start = '<tr>';
-          var tr_end = '</tr>';
-          var td_start = '<td width="45" class="cal-body">';
-          var td_end = '</td>';
+<script>
+$(document).ready(function() {
 
-          // Begin Code For Calendar
+    var pendingDates = ['05/05/2016', '05/06/2016', '05/07/2016', '05/08/2016', '05/09/2016', '05/10/2016', '05/11/2016'];
+    var moveinDate = '05/01/2016';
+    var moveoutDate = '06/15/2016';
+            //tips are optional but good to have
+    var tips  = ['some description','some other description']; 
 
-          cal =  '<table class="calendar"><tr><td>';
-          cal += '<table class="">' + tr_start;
-          cal += '<td colspan="' + DAYS_OF_WEEK + '" bgcolor="#efefef"><center><b>';
-          cal += month_of_year[month]  + '   ' + year + '</b>' + td_end + tr_end;
-          cal += tr_start;
 
-          // Loops For Each Day Of Week
-          for(index=0; index < DAYS_OF_WEEK; index++)
-          {
+    $('#calendar').datepicker({
+        inline: true,
+        dateFormat: 'mm/dd/yyyy',
+        beforeShowDay: highlightDates,
+        firstDay: 0,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    });
 
-          // Bold Today's Day Of Week
-          if(weekday == index)
-          cal += td_start + '<B>' + day_of_week[index] + '</B>' + td_end;
+    function highlightDates(date) {
 
-          // Prints Day
-          else
-          cal += td_start + day_of_week[index] + td_end;
-          }
-
-          cal += td_end + tr_end;
-          cal += tr_start;
-
-          // Fill In Blank Gaps Until Today's Day
-          for(index=0; index < Calendar.getDay(); index++)
-          cal += td_start + '  ' + td_end;
-
-          // Loops For Each Day In Calendar
-          for(index=0; index < DAYS_OF_MONTH; index++)
-          {
-          if( Calendar.getDate() > index )
-          {
-            // Returns The Next Day To Print
-            week_day =Calendar.getDay();
-
-            // Start New Row For First Day Of Week
-            if(week_day == 0)
-            cal += tr_start;
-
-            if(week_day != DAYS_OF_WEEK)
-            {
-
-            // Set Variable Inside Loop For Incrementing Purposes
-            var day  = Calendar.getDate();
-
-            // Highlight Today's Date
-            if( today==Calendar.getDate() )
-            cal += td_start + day + td_end + td_end;
-
-            // Prints Day
-            else
-            cal += td_start + day + td_end;
+        // Mark pending dates
+        for (var i = 0; i < pendingDates.length; i++) {
+            if (new Date(pendingDates[i]).toString() == date.toString()) {              
+                return [true, 'pending', 'reservation pending'];
+            }
+        }
+        // Mark Move In
+           if (new Date(moveinDate).toString() == date.toString()) {              
+                return [true, 'move-in-out', 'Your Requested Move In'];
+            }
+        // Mark Move Out
+           if (new Date(moveoutDate).toString() == date.toString()) {              
+                return [true, 'move-in-out', 'Your Requested Move Out'];
+            }
+        // Mark Requested dates in between move in and move out
+           if (new Date(moveinDate) < date && new Date(moveoutDate) > date) {                
+                return [true, 'available'];
             }
 
-            // End Row For Last Day Of Week
-            if(week_day == DAYS_OF_WEEK)
-            cal += tr_end;
-            }
+        return [true, ''];
+     } 
 
-            // Increments Until End Of The Month
-            Calendar.setDate(Calendar.getDate()+1);
+// Set the calendar in the requested dates time scope
+ $("#calendar").datepicker("setDate", new Date(moveinDate));
 
-          }// end for loop
 
-          cal += '</td></tr></table></table>';
+});
+</script>
 
-          //  Print Calendar
-          document.write(cal);
+<!--- Calendar section -->
 
-      </script>
 
       </div>
       <div class="row row-spacing">
@@ -321,7 +284,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
           <div class="cal-key requested_dates"></div> <span class="date-key">Move in / out</span>
         </div>
         <div class="col-md-4" style="padding: 0;">
-          <div class="cal-key"></div> <span class="date-key">Available</span>
+          <div class="cal-key available_dates"></div> <span class="date-key">Available</span>
         </div>
         <div class="col-md-4" style="padding: 0;">
           <div class="cal-key pending_dates"></div> <span class="date-key">Pending</span>
@@ -354,38 +317,72 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
           <div class="col-sm-12 col-md-3 text-right">
-          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="#" class="tool-tip currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
+          <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
           <div class="price-unit">avg/night</div>
-          <div class="btn btn-primary view-details">View Details</div>
+          <a href="property_detail.php" class="btn btn-primary view-details">View Details</a>
           </div>
           </div>
         <div class="row row-spacing">
           <div class="col-md-1 no-padding">
             <div class="move-date">'
-            . $search_parameters[move_in] . '
+            . date_format(new DateTime($search_parameters[move_in]), "M d") . '
             </div>
           </div>
           <div class="col-md-10 duration">
-          &nbsp;
+          &nbsp; '; 
+ 
+ // Count total days - 100% = 460px 
+
+  $total_days = floor(abs(strtotime($search_parameters[move_in]) - strtotime($search_parameters[move_out]))/(60*60*24));
+
+//  graphic width 460px = 100%
+
+  $graphic_width = 460;
+ 
+ if ($inner[pending_periods] != "")
+
+  {foreach($inner[pending_periods] as $dates) {   
+// find position ($position)
+           $days_in = floor(abs(strtotime($dates[start_date]) - strtotime($search_parameters[move_in]))/(60*60*24));
+           $position = number_format($graphic_width * ($days_in/$total_days), 0) - 15;
+// and duration ($length) of pending days
+           $pending_length = floor(abs(strtotime($dates[start_date]) - strtotime($dates[end_date]))/(60*60*24));
+           $length = number_format($graphic_width * ($pending_length/$total_days), 0);
+            echo '<div style="float: left; position: absolute; left: ' . $position . 'px; top: 0px; ;border-top: 2px dotted #003399; border-bottom: 2px dotted #003399; width: ' . $length . 'px"></div>'
+          ;}
+	};
+
+          echo ' 
           </div>
           <div class="col-md-1 text-right no-padding">
             <div class="move-date">'
-            . $search_parameters[move_out] . '
+            . date_format(new DateTime($search_parameters[move_out]), "M d") . '
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center no-padding results-availability">
-            Currently Available
+          <div class="col-md-12 text-center no-padding results-availability">';
+
+							if ($inner[pending_periods] != "" && ($pending_length/$total_days) < 1) 
+								{
+									echo 'Pending Some Days' ;
+								}
+							elseif ($inner[pending_periods] != "" && $pending_length/$total_days >= 1) 
+								{
+									echo 'Currently Pending' ;
+								}
+							else 
+								{
+									 echo 'Currently Available' ;
+								}
+
+          echo '
           </div>
         </div>
-
-
-      </div>
-      '
+</div>'
 
   ; } 
-  ?>  
+  ?> 
     
     </div>
     <div class="col-md-4">

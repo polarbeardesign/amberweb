@@ -1,7 +1,10 @@
 <?php
+
+date_default_timezone_set('America/Denver');
+
 $client = "Johnny Washington";
 
-$search_parameters = array('city' => "Austin", 'state' => "TX", 'move_in' => "Mar 01", 'move_out' => "Mar 31");
+$search_parameters = array('city' => "Austin", 'state' => "TX", 'move_in' => "05/01/2016", 'move_out' => "06/15/2016");
 
 $result_properties = array(0 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Gables West Avenue", 
@@ -15,8 +18,9 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_country_code' => "US",
                                       'daily_price' => "260",
                                       'min_stay' => "30",
-                                      'pending_periods' => array(0 => array('start_date' => '2016-03-02', 'end_date' => '2016-03-09'),
-                                                                 1 => array('start_date' => '2016-03-13', 'end_date' => '2016-03-17'))),
+                                      'pending_periods' => array(0 => array('start_date' => '2016-05-10', 'end_date' => '2016-05-17'),
+                                                                 1 => array('start_date' => '2016-06-10', 'end_date' => '2016-06-25'),
+                                                                 2 => array('start_date' => '2016-05-22', 'end_date' => '2016-05-25'))),
                            1 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Green Pastures", 
                                       'neighborhood' => "Downtown", 
@@ -40,7 +44,8 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
                                       'property_postal_code' => "78704", 
                                       'property_country_code' => "US",
                                       'daily_price' => "198",
-                                      'min_stay' => "30"),
+                                      'min_stay' => "30",
+                                      'pending_periods' => array(0 => array('start_date' => '2016-05-01', 'end_date' => '2016-06-17'))),
                            3 => array('property_thumb' => "property_987654_thumb.jpg", 
                                       'property_name' => "Lakeside Apartments", 
                                       'neighborhood' => "Downtown", 
@@ -267,32 +272,62 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
         <div class="row row-spacing">
           <div class="col-md-1 no-padding">
             <div class="move-date">'
-            . $search_parameters[move_in] . '
+            . date_format(new DateTime($search_parameters[move_in]), "M d") . '
             </div>
           </div>
           <div class="col-md-10 duration">
           &nbsp; '; 
  
-  foreach($inner[pending_periods] as $dates) { echo  
-          ' '
-          . $dates[start_date] . ' - ' . $dates[end_date]  . '<br />
-          ';}
-          echo '
+ // Count total days - 100% = 460px 
+
+  $total_days = floor(abs(strtotime($search_parameters[move_in]) - strtotime($search_parameters[move_out]))/(60*60*24));
+
+//  graphic width 460px = 100%
+
+  $graphic_width = 460;
+ 
+ if ($inner[pending_periods] != "")
+
+  {foreach($inner[pending_periods] as $dates) {   
+// find position ($position)
+           $days_in = floor(abs(strtotime($dates[start_date]) - strtotime($search_parameters[move_in]))/(60*60*24));
+           $position = number_format($graphic_width * ($days_in/$total_days), 0) - 15;
+// and duration ($length) of pending days
+           $pending_length = floor(abs(strtotime($dates[start_date]) - strtotime($dates[end_date]))/(60*60*24));
+           $length = number_format($graphic_width * ($pending_length/$total_days), 0);
+            echo '<div style="float: left; position: absolute; left: ' . $position . 'px; top: 0px; ;border-top: 2px dotted #003399; border-bottom: 2px dotted #003399; width: ' . $length . 'px"></div>'
+          ;}
+	};
+
+          echo ' 
           </div>
           <div class="col-md-1 text-right no-padding">
             <div class="move-date">'
-            . $search_parameters[move_out] . '
+            . date_format(new DateTime($search_parameters[move_out]), "M d") . '
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center no-padding results-availability">
-            Currently Available
+          <div class="col-md-12 text-center no-padding results-availability">';
+
+							if ($inner[pending_periods] != "" && ($pending_length/$total_days) < 1) 
+								{
+									echo 'Pending Some Days' ;
+								}
+							elseif ($inner[pending_periods] != "" && $pending_length/$total_days >= 1) 
+								{
+									echo 'Currently Pending' ;
+								}
+							else 
+								{
+									 echo 'Currently Available' ;
+								}
+
+          echo '
           </div>
-        </div>' . $inner[pending_periods][0][start_date]  . ' - ' . $inner[pending_periods][0][end_date]  . '
-
-
-      </div>
+        </div>
+' . $length . '
+</div>
       '
 
   ; } 
