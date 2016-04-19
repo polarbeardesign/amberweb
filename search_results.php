@@ -326,7 +326,6 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
           echo '
           </div>
         </div>
-' . $length . '
 </div>
       '
 
