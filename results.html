@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Search Results :: Amber Lodging</title>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Content/themes/base/all.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/style.css" type="text/css" media="screen" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+        <div class="container-fluid">
+        <div class="row title-bar">
+            <div class="alc col-sm-6"><a href="/">Amber Lodging Company</a></div>
+            <div class="client-name col-sm-6 text-right">
+                <div class="user_dropdown_menu">
+                    <a onclick="myFunction()" class="droplink">Jim Ivanoff <span class="caret"></span></a>
+                    <ul id="userDropdown" class="dropdown-content text-left">
+                        <li><a href="/ReserveNow">New Search</a></li>
+                        <li><a href="/ReserveNowAdmin">Admin Home</a></li>
+                        <li><a href="/ReserveNowAdmin/ViewUsers">View Users</a></li>
+                        <li><a href="/ReserveNow/Logout">LOG OFF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<div class="filter-bar container-fluid">
+<form action="/ReserveNow/Results" id="search" method="post" name="search">    <div class="row">
+        <div class="col-md-3">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+                <input type="text" class="form-control" id="destination" name="Destination" placeholder="Destination?" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                <input type="text" class="form-control form_datetime" id="move_in" name="move_in" placeholder="Move In?" value="4/22/2016" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                <input type="text" class="form-control form_datetime" id="move_out" name="move_out" placeholder="Move Out?" value="4/29/2016" />
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                <select class="form-control" id="size" name="size"><option selected="selected" value="1">1+ Bedrooms</option>
+<option value="2">2+ Bedrooms</option>
+<option value="3">3+ Bedrooms</option>
+</select>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                <select class="form-control" id="guests" name="guests"><option selected="selected" value="1">1+ Guests</option>
+<option value="2">2+ Guests</option>
+<option value="3">3+ Guests</option>
+</select>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <input type="submit" value="Search" id="submit" class="btn btn-primary search-button">
+        </div>
+    </div>
+    <input type="hidden" id="zipCode" name="zipCode" />
+    <input type="hidden" id="geoCode.Latitude" name="geoCode.Latitude" />
+    <input type="hidden" id="geoCode.Longitude" name="geoCode.Longitude" />
+</form></div>
+<div class="container-fluid" style="height: 100%;">
+    <div class="row" style="height: 100%;">
+        <div id="map"></div>
+    </div>
+        <div class="results-list-header">
+            <h1>We found 17 options for you in Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States</h1>
+            <p class="small-print">
+                <em>
+                    All reservations are subject to availability. Changes to the reservation may alter pricing and availability.
+                    Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST
+                </em>
+            </p>
+        </div>
+        <div class="results-list">
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">AMLI on 2nd</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 1659 | 1/1</p>
+                            <p class="results-address">421 West 3rd Street, Apt. No. 1901, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$99.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/1659" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Available                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Ashton Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 3163 | 1/1</p>
+                            <p class="results-address">101 Colorado Street, Apt. No. 3106, Austin TX 78701 </p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/3163" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Available                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Ashton Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 4415 | 1/1</p>
+                            <p class="results-address">101 Colorado Street, Apt. No. 1509, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$285.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/4415" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Available                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Ashton Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 4415 | 1/1</p>
+                            <p class="results-address">101 Colorado Street, Apt. No. 1509, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$285.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/4415" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Available                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">404 Rio Grande</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 248 | 1/1</p>
+                            <p class="results-address">404 Rio Grande, Apt. No. 124, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/248" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">AMLI on 2nd</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 340 | 1/1</p>
+                            <p class="results-address">421 West 3rd Street, Apt. No. 1807, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/340" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Extended Stay America-Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 632 | 1/1</p>
+                            <p class="results-address">600 Guadalupe, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/632" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Driskill Hotel Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 1190 | 1/1</p>
+                            <p class="results-address">604 Brazos Street, Apt. No. TBA, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/1190" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Residences at the Four Seasons</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 2246 | 1/1</p>
+                            <p class="results-address">98 San Jacinto, Apt. No. #1702, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/2246" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Ashton Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 2357 | 2/2</p>
+                            <p class="results-address">101 Colorado Street, Apt. No. 3101, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/2357" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Ashton Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 2476 | 1/1</p>
+                            <p class="results-address">101 Colorado Street, Apt. No. 2806, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/2476" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Sheraton Austin Hotel at the Capitol</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 2548 | 1/1</p>
+                            <p class="results-address">701 East 11th Street, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/2548" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">404 Rio Grande</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 2586 | 1/1</p>
+                            <p class="results-address">404 Rio Grande, Apt. No. 434, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/2586" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">404 Rio Grande</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 3463 | 2/2</p>
+                            <p class="results-address">404 Rio Grande, Apt. No. 321, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/3463" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">Ashton Austin</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 3464 | 1/1</p>
+                            <p class="results-address">101 Colorado St, Apt. No. 3006, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/3464" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">AMLI Uptown</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 4556 | 2/2</p>
+                            <p class="results-address">201 Lavaca, Apt. No. 412, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/4556" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+                <div class="results-box container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3">
+                            <img src="/Content/img/property/temp/121x121.jpg" alt="<##>" />
+                        </div>
+                        <div class="col-sm-12 col-md-6 results-details">
+                            <h1 class="results">AMLI Downtown</h1>
+                            <p class="neighborhood">Unknown</p>
+                            <p class="neighborhood">ID# 5234 | 1/1</p>
+                            <p class="results-address">201 Lavaca Street, Apt. No. 533, Austin TX 78701 USA</p>
+                            <p class="min-stay">minimum # day stay</p>
+                        </div>
+                        <div class="col-sm-12 col-md-3 text-right">
+                            <div class="daily-price">$0.00</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                            <div class="price-unit">avg/night</div>
+<form action="/ReserveNow/Details/5234" method="post">                            <input type="hidden" name="Destination" value="Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States" />
+                            <input type="hidden" name="zipCode" value="78701" />
+                            <input type="hidden" name="geoCode.Latitude" value="30.2635686" />
+                            <input type="hidden" name="geoCode.Longitude" value="-97.7396059" />
+                            <input type="hidden" name="move_in" value="4/22/2016" />
+                            <input type="hidden" name="move_out" value="4/29/2016" />
+                            <input type="hidden" name="guests" value="1" />
+                            <input type="hidden" name="size" value="1" />
+                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+</form>                        </div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-md-1 no-padding">
+                            <div class="move-date">4/22/2016</div>
+                        </div>
+                        <div class="col-md-10 duration">&nbsp;</div>
+                        <div class="col-md-1 text-right no-padding">
+                            <div class="move-date">4/29/2016</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center no-padding results-availability">
+                            Currently Unavailable                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+
+    <script type="text/javascript" src="/Scripts/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.11.4.min.js"></script>
+    
+<script>
+    function initGoogleGoodness() {
+        initAutocomplete();
+        initMap();
+    }
+    function initMap() {
+        // Specify features and elements to define styles.
+        var styleArray = [{ featureType: "all", stylers: [{ saturation: -100 }] }];
+        var markerArray = [{"Title":"AMLI on 2nd","Latitude":30.2661798,"Longitude":-97.7480738,"Description":"AMLI on 2nd\u003cbr /\u003e421 West 3rd Street, Apt. No. 1901, Austin TX 78701 USA","Label":"A"},{"Title":"Ashton Austin","Latitude":30.2641637,"Longitude":-97.7453287,"Description":"Ashton Austin\u003cbr /\u003e101 Colorado Street, Apt. No. 3106, Austin TX 78701 ","Label":"B"},{"Title":"Ashton Austin","Latitude":30.2641637,"Longitude":-97.7453287,"Description":"Ashton Austin\u003cbr /\u003e101 Colorado Street, Apt. No. 1509, Austin TX 78701 USA","Label":"C"},{"Title":"Ashton Austin","Latitude":30.2641637,"Longitude":-97.7453287,"Description":"Ashton Austin\u003cbr /\u003e101 Colorado Street, Apt. No. 1509, Austin TX 78701 USA","Label":"D"},{"Title":"404 Rio Grande","Latitude":30.2686799,"Longitude":-97.7505473,"Description":"404 Rio Grande\u003cbr /\u003e404 Rio Grande, Apt. No. 124, Austin TX 78701 USA","Label":"E"},{"Title":"AMLI on 2nd","Latitude":30.2661798,"Longitude":-97.7480738,"Description":"AMLI on 2nd\u003cbr /\u003e421 West 3rd Street, Apt. No. 1807, Austin TX 78701 USA","Label":"F"},{"Title":"Extended Stay America-Austin","Latitude":30.2694405,"Longitude":-97.7465265,"Description":"Extended Stay America-Austin\u003cbr /\u003e600 Guadalupe, Austin TX 78701 USA","Label":"G"},{"Title":"Driskill Hotel Austin","Latitude":30.2729209,"Longitude":-97.744386300000016,"Description":"Driskill Hotel Austin\u003cbr /\u003e604 Brazos Street, Apt. No. TBA, Austin TX 78701 USA","Label":"H"},{"Title":"Residences at the Four Seasons","Latitude":30.2616179,"Longitude":-97.7422804,"Description":"Residences at the Four Seasons\u003cbr /\u003e98 San Jacinto, Apt. No. #1702, Austin TX 78701 USA","Label":"I"},{"Title":"Ashton Austin","Latitude":30.2641637,"Longitude":-97.7453287,"Description":"Ashton Austin\u003cbr /\u003e101 Colorado Street, Apt. No. 3101, Austin TX 78701 USA","Label":"J"},{"Title":"Ashton Austin","Latitude":30.2641637,"Longitude":-97.7453287,"Description":"Ashton Austin\u003cbr /\u003e101 Colorado Street, Apt. No. 2806, Austin TX 78701 USA","Label":"K"},{"Title":"Sheraton Austin Hotel at the Capitol","Latitude":30.2704142,"Longitude":-97.7341958,"Description":"Sheraton Austin Hotel at the Capitol\u003cbr /\u003e701 East 11th Street, Austin TX 78701 USA","Label":"L"},{"Title":"404 Rio Grande","Latitude":30.2686799,"Longitude":-97.7505473,"Description":"404 Rio Grande\u003cbr /\u003e404 Rio Grande, Apt. No. 434, Austin TX 78701 USA","Label":"M"},{"Title":"404 Rio Grande","Latitude":30.2686799,"Longitude":-97.7505473,"Description":"404 Rio Grande\u003cbr /\u003e404 Rio Grande, Apt. No. 321, Austin TX 78701 USA","Label":"N"},{"Title":"Ashton Austin","Latitude":30.2641637,"Longitude":-97.7453287,"Description":"Ashton Austin\u003cbr /\u003e101 Colorado St, Apt. No. 3006, Austin TX 78701 USA","Label":"O"},{"Title":"AMLI Uptown","Latitude":30.265281,"Longitude":-97.746356699999993,"Description":"AMLI Uptown\u003cbr /\u003e201 Lavaca, Apt. No. 412, Austin TX 78701 USA","Label":"P"},{"Title":"AMLI Downtown","Latitude":30.265281,"Longitude":-97.746356699999993,"Description":"AMLI Downtown\u003cbr /\u003e201 Lavaca Street, Apt. No. 533, Austin TX 78701 USA","Label":"Q"},{"Title":"Austin Convention Center, East Cesar Chavez Street, Austin, TX, United States","Latitude":30.2635686,"Longitude":-97.739605900000015,"Description":"The center of your search.","Label":null}];
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 30.2635686, lng: -97.7396059 },
+            // Apply the map style array to the map.
+            styles: styleArray,
+            zoom: 11 });
+
+        for (i = 0; i < markerArray.length; i++){
+            var data = markerArray[i];
+            if (data === null) { continue; }
+            createMarker(data);
+        }
+        function createMarker(data) {
+            var markerPosition = {lat: data.Latitude, lng: data.Longitude};
+            var infoWindow = new google.maps.InfoWindow({
+                content: data.Description
+            });
+            var marker = new google.maps.Marker({
+                position: markerPosition,
+                map: map,
+                title: data.Title,
+                label: data.Label
+            });
+            marker.addListener('click', function() {
+                infoWindow.open(map, marker);
+            });
+        }
+    }
+    var myAutoComplete;
+    function initAutocomplete() {
+        myAutoComplete = new google.maps.places.Autocomplete((document.getElementById("destination")), { types: [] });
+        myAutoComplete.addListener('place_changed', setGeoCodeAndZip);
+    }
+    function setGeoCodeAndZip() {
+        var place = myAutoComplete.getPlace();
+        var hasPostalCode = false;
+        var zipCode = '';
+        if (place.address_components) {
+            for (i = 0; i < place.address_components.length; i++ ) {
+                if (place.address_components[i].types == "postal_code") {
+                    hasPostalCode = true;
+                    zipCode = place.address_components[i].short_name;
+                }
+            }
+        }
+        var latitude = place.geometry.location.lat();
+        var longitude = place.geometry.location.lng();
+        document.getElementById("geoCode.Latitude").value = latitude;
+        document.getElementById("geoCode.Longitude").value = longitude;
+        document.getElementById("zipCode").value = (hasPostalCode) ? zipCode : "UnknownZip";
+    }
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                myAutoComplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGQkszG5eR_cCeqcFqXtFR7qZJ8_jq9I4&libraries=places&callback=initGoogleGoodness" async defer></script>
+<script>
+    $(function () { $("#move_in").datepicker(); });
+    $(function () { $("#move_out").datepicker(); });
+    $(function () {
+        $(document).tooltip({
+            position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function (position, feedback) {
+                    $(this).css(position);
+                    $("<div>")
+                      .addClass("arrow")
+                      .addClass(feedback.vertical)
+                      .addClass(feedback.horizontal)
+                      .appendTo(this);
+                }
+            }
+        });
+    });
+</script>
+
+    <script>
+        function myFunction() { document.getElementById("userDropdown").classList.toggle("show"); }
+        window.onclick = function (event) {
+            if (!event.target.matches('.droplink')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
