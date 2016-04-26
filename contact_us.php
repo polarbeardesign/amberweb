@@ -33,11 +33,11 @@
 
 </div>
 
-<section class="main">
+<section class="main container-fluid">
 
   <article>
 
-  <table>
+  <table class="contact-table">
     <tr>
       <td class='label'><h3>Address:</h3></td>
       <td>2905 San Gabriel Ste 214 Austin, TX 78705</td>

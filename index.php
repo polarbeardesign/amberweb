@@ -21,7 +21,7 @@
   <?php include('inc/nav.php') ?>
 </nav>
 
-<section class="main">
+<section class="home-main">
 
 
 <!-- Carousel
@@ -46,7 +46,7 @@
     <p class='main'>Where do they want to go?</p>
     <p class='main'>How long will they live there?</p>
     <p class='last'>What's their favorite color?</p>
-    <p class='last'><span class="show_detail_1" >More ...</span></p>
+    <!-- <p class='last'><span class="show_detail_1" >More ...</span></p> -->
 
           </div>
       </div>
@@ -59,7 +59,7 @@
 
     <p class='main'>You want to stay<br />in a castle?</p>
     <p class='last'>We've made that happen.</p>
-    <p class='last'><span class="show_detail_2" >More ...</span></p>
+    <!-- <p class='last'><span class="show_detail_2" >More ...</span></p> -->
 
         </div>
       </div>
@@ -69,8 +69,8 @@
 
       <div class="container">
         <div class="carousel-caption carousel-caption-three">
-          <p class='last'>Because that's where<br />you're usually going.</p>
-    <p class='last'><span class="show_detail_3" >More ...</span></p>
+    <p class='last'>Because that's where<br />you're usually going.</p>
+    <!-- <p class='last'><span class="show_detail_3" >More ...</span></p> -->
     
         </div>
       </div>
@@ -83,7 +83,7 @@
           
     <p class='main'>We hold leases<br />on 5 continents.</p>
     <p class='last'>And if you want to book something<br />in Antartica, that makes it 6.</p>
-     <p class='last'><span class="show_detail_4" >More ...</span></p>         
+     <!-- <p class='last'><span class="show_detail_4" >More ...</span></p> -->
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
 
     <p class='main'>Real humans<br />call us 24/7.</p>
     <p class='last'>So it makes sense<br />real humans<br />answer 24/7.</p>
-    <p class='last'><span class="show_detail_5" >More ...</span></p>
+    <!-- <p class='last'><span class="show_detail_5" >More ...</span></p> -->
         </div>
       </div>
     </div>
@@ -149,7 +149,7 @@
   </article>
 
 
-<div class="container-fluid">
+<div class="main container-fluid">
     <div class="flex-row">
       <div class="span8">
         <a href='how_we_work.php'><img src="img/button_hww_585_390.jpg" width="100%" alt="How we work" /></a>

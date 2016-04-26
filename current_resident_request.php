@@ -33,7 +33,7 @@
 
 </div>
 
-<section class="main">
+<section class="main container-fluid">
 
   <article>
 
@@ -75,7 +75,7 @@
 </table>
 
 <div class="center">
-  <input  type="submit" name="Submit" value="Submit">
+  <input class="btn btn-default" type="submit" value="Submit">
 </div>
 </form>
 

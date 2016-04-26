@@ -33,7 +33,7 @@
 
 </div>
 
-<section class="main">
+<section class="main container-fluid">
 
   <article>
 
