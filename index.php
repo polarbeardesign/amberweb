@@ -42,9 +42,9 @@
       <div class="container " >
         <div class="carousel-caption carousel-caption-one dark" >
 
-    <p class='main'>Who do you need to send?</p>
-    <p class='main'>Where do they want to go?</p>
-    <p class='main'>How long will they live there?</p>
+    <p class='slider-title'>Who do you need to send?</p>
+    <p class='slider-title'>Where do they want to go?</p>
+    <p class='slider-title'>How long will they live there?</p>
     <p class='last'>What's their favorite color?</p>
     <!-- <p class='last'><span class="show_detail_1" >More ...</span></p> -->
 
@@ -57,7 +57,7 @@
       <div class="container">
         <div class="carousel-caption carousel-caption-two dark">
 
-    <p class='main'>You want to stay<br />in a castle?</p>
+    <p class='slider-title'>You want to stay<br />in a castle?</p>
     <p class='last'>We've made that happen.</p>
     <!-- <p class='last'><span class="show_detail_2" >More ...</span></p> -->
 
@@ -69,6 +69,7 @@
 
       <div class="container">
         <div class="carousel-caption carousel-caption-three">
+    <p class='slider-title'>We go above and beyond.</p>
     <p class='last'>Because that's where<br />you're usually going.</p>
     <!-- <p class='last'><span class="show_detail_3" >More ...</span></p> -->
     
@@ -81,7 +82,7 @@
       <div class="container">
         <div class="carousel-caption carousel-caption-four">
           
-    <p class='main'>We hold leases<br />on 5 continents.</p>
+    <p class='slider-title'>We hold leases<br />on 5 continents.</p>
     <p class='last'>And if you want to book something<br />in Antartica, that makes it 6.</p>
      <!-- <p class='last'><span class="show_detail_4" >More ...</span></p> -->
         </div>
@@ -93,7 +94,7 @@
       <div class="container">
         <div class="carousel-caption carousel-caption-five">
 
-    <p class='main'>Real humans<br />call us 24/7.</p>
+    <p class='slider-title'>Real humans<br />call us 24/7.</p>
     <p class='last'>So it makes sense<br />real humans<br />answer 24/7.</p>
     <!-- <p class='last'><span class="show_detail_5" >More ...</span></p> -->
         </div>

@@ -172,6 +172,9 @@ nav > .menu-link > ul {
   -ms-flex-direction: column;
   flex-direction: column;
   background: #fff; /* background for nav dropdown */
+  -webkit-box-shadow: 11px 10px 19px -6px rgba(143,143,143,1);
+  -moz-box-shadow: 11px 10px 19px -6px rgba(143,143,143,1);
+  box-shadow: 11px 10px 19px -6px rgba(143,143,143,1);
   }
 
 nav > .menu-link > ul > li {
@@ -214,10 +217,13 @@ nav > .menu-link > ul > li > a {
   -ms-flex-pack: flex-start;
   justify-content: flex-start;
   z-index: 1;
-  width: 100%;
-  padding: 0.5em 0 0.5em 0em;
-  top: 0;
+  width: 65%;
+  padding: 0 0 0.5em 0em;
+  top: -20px;
   left: 0;
+overflow-y: scroll;
+max-height: 100%;
+
   }
 
 .menu-link {
@@ -265,9 +271,9 @@ nav > .menu-link > ul.main-navigation {
   Page Elements [Mobile]
 -------------------------------------------------------*/
 
-.main, .home-main, .specials {
+.main, .home-main, .specials, . {
   display: -webkit-flex;
-  display: -ms-flexbox;
+  dispslider-titlelay: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -525,7 +531,7 @@ width: 300px;
   font-style: italic;
   }
 
-.carousel-caption p.main {
+.carousel-caption p.slider-title {
   font-weight: bold;
   font-size: 1rem;
   }
@@ -535,7 +541,7 @@ width: 300px;
   font-size: 1.3rem;
   }
 
-.carousel-caption-one p.main, .carousel-caption p.last {
+.carousel-caption-one p.slider-title, .carousel-caption p.last {
   font-size: 0.75rem;
   }
 
@@ -631,6 +637,10 @@ color: #424242;
 vertical-align: 30%;
 }
 
+/*----------------------------------------------------
+   Custom Calendar styles
+-------------------------------------------------------*/
+
 .requested_dates {
 background: #003399;
 }
@@ -662,7 +672,14 @@ background: #dde9ff !important;
 width: 100%;
 }
 
+/*----------------------------------------------------
+  Bootstrap UI overrides
+-------------------------------------------------------*/
 
+.btn {
+-webkit-border-radius: 0;
+border-radius: 0;
+}
 
 /*----------------------------------------------------
 Medium Width Style 500 <=> 900
@@ -683,57 +700,8 @@ Medium Width Style 500 <=> 900
 
 .main {
 max-width: 950px;
+min-height: 250px;
 }
-
-/*----------------------------------------------------
-  Navigation [Desktop]
--------------------------------------------------------*/
-
-.show_menu {
-  display: none;
-  }
-
-nav > .menu-link > ul.main-navigation {
-	display: block;
-	}
- 
-nav > .menu-link > ul {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: left;
-  -ms-flex-pack: left;
-  justify-content: left;
-  margin: 0 0 1em 1.5em;
-  }
-
-nav > .menu-link > ul > li {
-	display: inline;
-	flex: 0 1 auto;
-	margin: 0;
-	padding: 0;
-	position: relative;
-  border: none;
-  }
-
-nav > .menu-link > ul > li > a {
-	display: inline;
-  padding: 0 0.75em;
-  cursor: pointer;
-  font-size: 0.75rem;
-  }
-
-.menu-link {
-  position: relative;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: flex-start;
-  justify-content: flex-start;
-  z-index: 1;
-  padding: 0;
-  }
 
 /*----------------------------------------------------
   Page Elements
@@ -827,7 +795,7 @@ color: #808285;
   padding-bottom: 50px;
   }
 
-.carousel-caption p.main {
+.carousel-caption p.slider-title {
   font-size: 1.6rem;
   }
 
@@ -835,7 +803,7 @@ color: #808285;
   font-size: 1.6rem;
   }
 
-.carousel-caption-one p.main, .carousel-caption p.last {
+.carousel-caption-one p.slider-title, .carousel-caption p.last {
   font-size: 1.2rem;
   }
 
@@ -849,7 +817,60 @@ Wide Style 900 <=> 1280
 -------------------------------------------------------*/
 @media only screen and (min-width: 900px) {
 
+/*----------------------------------------------------
+  Navigation [Desktop]
+-------------------------------------------------------*/
 
+.show_menu {
+  display: none;
+  }
+
+nav > .menu-link > ul.main-navigation {
+	display: block;
+	}
+ 
+nav > .menu-link > ul {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  margin: 0 0 1em 1.5em;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  }
+
+nav > .menu-link > ul > li {
+	display: inline;
+	flex: 0 1 auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+  border: none;
+  }
+
+nav > .menu-link > ul > li > a {
+	display: inline;
+  padding: 0 0.75em;
+  cursor: pointer;
+  font-size: 0.75rem;
+  }
+
+.menu-link {
+  position: relative;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  z-index: 1;
+  padding: 0;
+  }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
@@ -876,7 +897,7 @@ Wide Style 900 <=> 1280
   padding-bottom: 50px;
   }
 
-.carousel-caption p.main {
+.carousel-caption p.slider-title {
   font-size: 2.3rem;
   }
 
@@ -884,7 +905,7 @@ Wide Style 900 <=> 1280
   font-size: 1.3rem;
   }
 
-.carousel-caption-one p.main, .carousel-caption p.last {
+.carousel-caption-one p.slider-title, .carousel-caption p.last {
   font-size: 1.8rem;
   }
 
@@ -1419,7 +1440,7 @@ border-bottom: 1px solid #ddd;
 }
 
 .feature-details > .col-md-7, .feature-details > .col-md-5 {
-padding: 0;
+padding: 0 0.5em;
 }
 
 .highlight-feature {
@@ -1863,7 +1884,7 @@ Extra Wide Style
   }
 
 .carousel-caption-three {
-  padding-bottom: 125px;
+  padding-bottom: 70	px;
   }
 
 .carousel-caption-four {
@@ -1874,7 +1895,7 @@ Extra Wide Style
   padding-bottom: 20px;
   }
 
-.carousel-caption p.main {
+.carousel-caption p.slider-title {
   font-size: 3.3rem;
   }
 
@@ -1882,7 +1903,7 @@ Extra Wide Style
   font-size: 2.3rem;
   }
 
-.carousel-caption-one p.main, .carousel-caption p.last {
+.carousel-caption-one p.slider-title, .carousel-caption p.last {
   font-size: 2.0rem;
   }
 }
