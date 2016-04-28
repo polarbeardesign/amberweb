@@ -105,6 +105,13 @@ table {
 clear: both;
 }
 
+.boxsizingBorder {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
 /*----------------------------------------------------
 Mobile Style
 -------------------------------------------------------*/
@@ -680,6 +687,34 @@ width: 100%;
 -webkit-border-radius: 0;
 border-radius: 0;
 }
+
+
+
+
+
+.modal-content {
+background: #ebeced;
+}
+
+.modal-header, .modal-footer {
+border: none;
+padding: 0 15px;
+}
+
+.modal-title {
+text-transform: uppercase;
+font-size: 1.2em;
+}
+
+.modal-body {
+padding: 0 15px;
+}
+
+.modal-footer {
+text-align: center;
+padding-bottom: 15px;
+}
+
 
 /*----------------------------------------------------
 Medium Width Style 500 <=> 900
@@ -1575,18 +1610,7 @@ line-height: 1.4em;
   z-index: 50;
   }
 
-.login_form  {
-  width:290px;
-  height:400px;
-  padding:20px;
-  background-color:#ebeced;
-  display: none;
-  z-index:999;
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  }
+
 
 .pet_form  {
   width:550px;
@@ -1716,6 +1740,7 @@ visibility: hidden;
 }
 
 .flat-cb-container {
+margin: 2em 0 0 0;
 position: relative;
 }
 
@@ -1814,9 +1839,6 @@ border-radius: 3px;
 
 .forgot-pwd {
   font-size: 0.75em; /* as original design's 14pt */
-  display: block;
-  width: 219px;
-  text-align: center;
 }
 
 .form-hr {

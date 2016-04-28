@@ -115,7 +115,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 </div>
 
 <!-- include popup forms -->
-<?php include 'inc/form_reserve_now.php' ?>
+<?php include 'inc/bootstrap_reserve_now.html' ?>
 <?php include 'inc/form_request_info.php' ?>
 
 <div class="container-fluid white-page">
@@ -363,18 +363,18 @@ $(document).ready(function() {
         <div class="row">
           <div class="col-md-12 text-center no-padding results-availability">';
 
-							if ($inner[pending_periods] != "" && ($pending_length/$total_days) < 1) 
-								{
-									echo 'Pending Some Days' ;
-								}
-							elseif ($inner[pending_periods] != "" && $pending_length/$total_days >= 1) 
-								{
-									echo 'Currently Pending' ;
-								}
-							else 
-								{
-									 echo 'Currently Available' ;
-								}
+              if ($inner[pending_periods] != "" && ($pending_length/$total_days) < 1) 
+                {
+                  echo 'Pending Some Days' ;
+                }
+              elseif ($inner[pending_periods] != "" && $pending_length/$total_days >= 1) 
+                {
+                  echo 'Currently Pending' ;
+                }
+              else 
+                {
+                   echo 'Currently Available' ;
+                }
 
           echo '
           </div>

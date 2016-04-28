@@ -8,8 +8,13 @@
 </head>
 
 <body>
-<div class="title-bar Login">LOG&nbsp;IN</div>
-<?php include('inc/form_login.php') ?>
+
+
+<div class="title-bar Login" data-toggle="modal" data-target="#myModal">LOG&nbsp;IN</div>
+
+<form action="client_home.php" method="post">
+  <?php include('inc/bootstrap_login.html') ?>
+</form>
 
 <div id="container">
 
@@ -69,7 +74,7 @@
 
       <div class="container">
         <div class="carousel-caption carousel-caption-three">
-    <p class='slider-title'>We go above and beyond.</p>
+    <p class='slider-title'>We go above <br />and beyond.</p>
     <p class='last'>Because that's where<br />you're usually going.</p>
     <!-- <p class='last'><span class="show_detail_3" >More ...</span></p> -->
     
