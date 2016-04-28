@@ -1495,6 +1495,12 @@ td.available a {
 	padding: 0 15px;
 	}
 
+.modal-header * .close {
+	font-size: 3em;
+	float: none;
+	font-weight: 100;
+	}
+
 .modal-title {
 	text-transform: uppercase;
 	font-size: 1.2em;
