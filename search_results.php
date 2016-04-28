@@ -206,7 +206,7 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 </div>
 
 <!--------------------------------------------------------  ---->
-<div class="container-fluid">
+<div id="container-fluid">
 
 
 <div class="row">
@@ -253,9 +253,9 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
       '<div class="results-box  container-fluid">
         <div class="row">
           <div class="col-sm-12 col-md-3">
-            <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" />
+            <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" width="100%" />
           </div>
-          <div class="col-sm-12 col-md-6 results-details">
+          <div class="col-xs-6 col-sm-6 results-details">
           <h1 class="results">'.$inner[property_name].'</h1>
           <p class="neighborhood">'.$inner[neighborhood].'</p>
           <p class="neighborhood">ID# '.$inner[id] . ' | ' . $inner[size].'</p>
@@ -263,7 +263,7 @@ Reservations are not set until confirmed. Confirmations are sent Mon-Fri between
           ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
-          <div class="col-sm-12 col-md-3 text-right">
+          <div class="col-xs-6 col-sm-3 text-right">
           <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
           <div class="price-unit">avg/night</div>
           <a href="property_detail.php" class="btn btn-primary view-details">View Details</a>

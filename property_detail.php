@@ -116,7 +116,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
 
 <!-- include popup forms -->
 <?php include 'inc/bootstrap_reserve_now.html' ?>
-<?php include 'inc/form_request_info.php' ?>
+<?php include 'inc/bootstrap_request_info.html' ?>
 
 <div class="container-fluid white-page">
 
@@ -191,9 +191,9 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
         </div>
       </div>
       <div class="row">
-      <div class="btn btn-primary reserve-now">Reserve This Property Now</div>
+      <div class="btn btn-primary reserve-now" data-toggle="modal" data-target="#reserveModal">Reserve This Property Now</div>
         <div class="small-print text-center">or</br />
-          <div class="text-center request-info-link">Request Info</div>
+          <div class="text-center request-info-link" data-toggle="modal" data-target="#infoModal">Request Info</div>
         </div>
        </div>
       <div class="row">
@@ -297,7 +297,7 @@ $(document).ready(function() {
 
 <section class="properties-nearby container-fluid">
   <div class="row padded">
-    <div class="col-md-8">
+    <div class="col-sm-12 col-md-8">
     <h2 class="property-about">Nearby Rentals Like This One</h2>
  
  
@@ -305,10 +305,10 @@ $(document).ready(function() {
  foreach($nearby_properties as $inner) { echo    
       '<div class="results-box  container-fluid">
         <div class="row">
-          <div class="col-sm-12 col-md-3">
-            <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" />
+          <div class="col-xs-12 col-sm-3">
+            <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" width="100%" />
           </div>
-          <div class="col-sm-12 col-md-6 results-details">
+          <div class="col-xs-6 col-sm-6 results-details">
           <h1 class="results">'.$inner[property_name].'</h1>
           <p class="neighborhood">'.$inner[neighborhood].'</p>
           <p class="neighborhood">ID# '.$inner[id] . ' | ' . $inner[size].'</p>
@@ -316,7 +316,7 @@ $(document).ready(function() {
           ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
-          <div class="col-sm-12 col-md-3 text-right">
+          <div class="col-xs-6 col-sm-3 text-right">
           <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
           <div class="price-unit">avg/night</div>
           <a href="property_detail.php" class="btn btn-primary view-details">View Details</a>

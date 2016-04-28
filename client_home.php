@@ -95,22 +95,25 @@ $client = "Johnny Washington";
 <div class="container-fluid">
 
 <div class="row feature-properties">
+
   <div class="col-md-3">
     <div class="row">
         <div class="highlight-feature"><p>Lake Austin View</p></div>
       <a href="property_detail.php"><img src="img/clients/room_0.jpg" width="100%" /></a>
     </div>
     <div class="row feature-details">
-      <div class="col-md-7">
+      <div class="col-xs-6">
         <h1 class="feature-location">Brazos Place</h1>
         <div class="feature-id">ID# 987654</div>
         <div class="feature-size">1 BR / 1 BA</div>
       </div>
-      <div class="col-md-5 text-right">
+      <div class="col-xs-6 text-right">
         <div class="location-price">$198 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
-        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
       </div>
+        <div class="text-right">
+        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
+    </div>
     </div>
   </div>
 
@@ -119,17 +122,18 @@ $client = "Johnny Washington";
         <a href="property_detail.php"><img src="img/clients/room_1.jpg" width="100%" /></a>
     </div>
     <div class="row feature-details">
-      <div class="col-md-7">
+      <div class="col-xs-6">
         <h1 class="feature-location">AMLI Downtown</h1>
         <div class="feature-id">ID# 987654</div>
         <div class="feature-size">2 BR / 1.5 BA</div>
       </div>
-      <div class="col-md-5 text-right">
+      <div class="col-xs-6 text-right">
         <div class="location-price">$198 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
-        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
-
       </div>
+        <div class="text-right">
+        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
+    </div>
     </div>
   </div>
 
@@ -139,16 +143,18 @@ $client = "Johnny Washington";
         <a href="property_detail.php"><img src="img/clients/room_2.jpg" width="100%" /></a>
     </div>
     <div class="row feature-details" >
-      <div class="col-md-7 ">
+      <div class="col-xs-6">
         <h1 class="feature-location">The Ashton Austin</h1>
         <div class="feature-id">ID# 987654</div>
         <div class="feature-size">1 BR / 1 BA</div>
       </div>
-      <div class="col-md-5 text-right">
+      <div class="col-xs-6 text-right">
         <div class="location-price">$198 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
-        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
       </div>
+        <div class="text-right">
+        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
+    </div>
     </div>
   </div>
 
@@ -157,16 +163,18 @@ $client = "Johnny Washington";
       <a href="property_detail.php"><img src="img/clients/room_3.jpg" width="100%" /></a>
     </div>
     <div class="row feature-details">
-      <div class="col-md-7 ">
+      <div class="col-xs-6">
         <h1 class="feature-location">Gables West Avenue</h1>
         <div class="feature-id">ID# 987654</div>
         <div class="feature-size">3 BR / 2 BA</div>
       </div>
-      <div class="col-md-5 text-right">
+      <div class="col-xs-6 text-right">
         <div class="location-price">$202 <a href="#" class="currency-denominator">USD</a></div>
         <div class="small-print">avg/night</div>
-        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
       </div>
+      <div class="text-right">
+        <a href="property_detail.php" class="btn btn-primary view-details-sm">View Details</a>
+    </div>
     </div>
   </div>
 

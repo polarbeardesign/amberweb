@@ -1,24 +1,80 @@
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-sm" role="document">
+<div class="modal fade reserve_now_form" id="reserveModal" tabindex="-1" role="dialog" aria-labelledby="reserveModalLabel">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
       <div class="text-right">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
-      <h4 class="modal-title" id="myModalLabel">Log In</h4>
+      <h4 class="modal-title" id="myModalLabel">Guest Details For Reservation</h4>
+				<p class="small-print"><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.</em></p>
+				<p class="small-print"><em>Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
       </div>
       <div class="modal-body">
-        <div class="text-input-label">Email</div>
-        <input type="text" id="vemail" name="email" class="boxsizingBorder" placeholder="Your Email">
-        <div class="text-input-label">Password</div>
-        <input type="password" id="vpwd" name="Password" class="boxsizingBorder" placeholder="Your Password">
-        <div class="flat-cb-container">
-        <input type="checkbox" id="remember_me" /><label for="remember_me"></label><div class="cb-label"> Remember me</div></div>
-      </div>
+				<section class="container-fluid no-padding">
+					<div class="row">
+							<div class="col-md-6">
+								<div class="text-input-label" for="first_name">First Name</div>
+								<input type="text" id="first_name" name="first_name" class="boxsizingBorder" />
+							</div>
+							<div class="col-md-6">
+								<div class="text-input-label" for="last_name">Last Name</div>
+								<input type="text" id="last_name" name="last_name" class="boxsizingBorder" />
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="text-input-label" for="reference_no">File # / Reference # / Employee ID</div>
+								<input type="text" id="reference_no" name="reference_no" class="boxsizingBorder" />
+							</div>
+							<div class="col-md-6">
+								<div class="text-input-label" for="department">Department</div>
+								<input type="text" id="department" name="department" class="boxsizingBorder" />
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="text-input-label" for="client_id">Employer / Client</div>
+								<input type="text" id="client_id" name="client_id" class="boxsizingBorder" />
+							</div>
+							<div class="col-md-6">
+								<div class="text-input-label" for="email">Email</div>
+								<input type="text" id="email" name="email" class="boxsizingBorder">
+							</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="text-input-label" for="notes">Important Notes</div>
+							<textarea id="notes" rows="7" class="boxsizingBorder" ></textarea>
+					   </div>
+					</div>
+
+					<hr class="form-hr"/>
+					<h2>Agent requesting information</h2>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="text-input-label" for="guest_first_name">First Name</div>
+								<input type="text" id="guest_first_name" name="guest_first_name" class="boxsizingBorder">
+							</div>
+							<div class="col-md-6">
+								<div class="text-input-label" for="guest_last_name">Last Name</div>
+								<input type="text" id="guest_last_name" name="guest_last_name" class="boxsizingBorder">
+							</div>
+					</div>
+					<div class="row">
+							<div class="col-md-6">
+								<div class="text-input-label" for="guest_email">Email</div>
+								<input type="text" id="guest_email" name="guest_email" class="boxsizingBorder">
+							</div>
+							<div class="col-md-6">
+								<div class="text-input-label" for="guest_phone">Phone Number</div>
+								<input type="text" id="guest_phone" name="guest_phone" class="boxsizingBorder">
+							</div>
+
+					</div>
+			</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary li-button" value="Log In" id="submit">Log In</button>
-        <a href="#" class="forgot-pwd text-center">Forgot Password?</a>
+        <button type="button" class="btn btn-primary li-button" value="Confirm Reservation" id="submit">Confirm Reservation</button>
       </div>
     </div>
   </div>

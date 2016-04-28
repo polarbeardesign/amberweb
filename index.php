@@ -9,8 +9,7 @@
 
 <body>
 
-
-<div class="title-bar Login" data-toggle="modal" data-target="#myModal">LOG&nbsp;IN</div>
+<div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
 
 <form action="client_home.php" method="post">
   <?php include('inc/bootstrap_login.html') ?>

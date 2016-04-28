@@ -1,0 +1,34 @@
+<!-- Modal -->
+<div class="modal fade request_info_form" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <div class="text-right">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <h4 class="modal-title" id="myModalLabel">Thank You For Your Interest In [property name]</h4>
+				<p class="small-print">Please fill in the needed information below and an AMBER Lodging representative will contact you within 24 - 48 hours regarding availability and options in your destination area.</p>
+      </div>
+      <div class="modal-body">
+<hr class="form-hr"/>
+				<h5>I'd like information regarding:</h5>
+				 <div class="row info-row">
+						<div class="col-md-12 no-padding">
+							<input type="checkbox" id="st_availability" name="st_availability" /><label for="st_availability"></label><div class="cb-label"> Short-term Availability (Less than XX days)</div>
+						</div>
+				 </div>
+				 <div class="row info-row">
+						<div class="col-md-12 no-padding">
+							<input type="checkbox" id="lt_availability" name="lt_availability" /><label for="lt_availability"></label><div class="cb-label"> Long-term Availability (More than XX days)</div>
+						</div>
+				 </div>
+				<div class="textarea-label">Additional Information</div>
+				<textarea id="addl_information" rows="7" class="boxsizingBorder" ></textarea>
+
+			</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary li-button" value="Submit Request for Info" id="submit">Submit Request for Info</button>
+      </div>
+    </div>
+  </div>
+</div>

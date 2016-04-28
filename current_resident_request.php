@@ -8,8 +8,9 @@
 </head>
 
 <body>
-<div class="title-bar Login">LOG&nbsp;IN</div>
-<?php include('inc/form_login.php') ?>
+<div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
+
+  <?php include('inc/bootstrap_login.html') ?>
 
 <div id="container">
 
