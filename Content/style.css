@@ -408,7 +408,7 @@ footer {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 200px;
+/*  height: 200px; */
   }
 
 .carousel-indicators {
@@ -444,12 +444,13 @@ footer {
   }
 
 #feature_property-carousel {
-  margin: 0;
+  margin: 0 0 2em 0;
   }
 
 #feature_property-carousel > .carousel-indicators {
   margin: 0 10em 0 0;
   left: 0%;
+  bottom: -20px;
   text-align: left;
   }
 
@@ -575,7 +576,7 @@ footer {
   }
 
 .padded {
-  padding: 0;
+/*  padding: 0; */
   }
 /*----------------------------------------------------
    Table [mobile]
@@ -831,7 +832,7 @@ select#guests, select#size {
   margin: 1.6em 0;
   }
 
-.col-md-4, .col-md-5, .col-md-8 {
+/*.col-md-4,*/ .col-md-5, .col-md-8 {
   padding: 0;
   }
 
@@ -944,18 +945,21 @@ ul.property-features, ul.property-amenities {
   margin: 1em 0 0;
   }
 
+/* to remove padding on picture in results on mobile view */
 .results-box * .col-sm-12 {
 padding-left: 0;
 padding-right: 0;
 }
 
-.results-list > .results-box {
-  margin: 1em 0 2em;
+/* to remove padding on property details in results on mobile view */
+.col-xs-6.col-sm-6.results-details, .col-xs-6.col-md-3.text-right {
+  margin-left: 0px;
+  padding-left: 0;
+  padding-right: 0;
   }
 
-.results-box * .col-xs-6 {
-  margin-left: 0px;
-  padding: 0;
+.results-list > .results-box {
+  margin: 1em 0 2em;
   }
 
 h1.results {
@@ -1166,15 +1170,17 @@ h1.feature-location {
   }
 
 .results-list {
-
   background-color:#fff;
   display: block;
-
   }
 
 #map {
   display: none;
   background: #fff;
+  }
+
+.resident-request * td.label {
+color: #808285;
   }
 
 /*----------------------------------------------------
@@ -1427,6 +1433,12 @@ border-top: 1px solid #ddd;
   color: #929497;
   }
 
+#calendar {
+  max-width: 350px;
+  min-width: 260px;
+  margin: 0 auto;
+  }
+
 .cal-body {
   border: 1px solid #ddd;
   font-size: 0.75em; /* as original design's 14pt */
@@ -1633,10 +1645,6 @@ padding-right: 0;
   max-width: 950px;
   }
 
-.resident-request * td.label {
-color: #808285;
-  }
-
 .feature-properties {
   margin: 0 2em 4em;
   }
@@ -1721,10 +1729,11 @@ padding-left: 1%;
 padding-right: 1%;
 }
 
-/*.results-box * .col-md-3 {
-padding-right: 1em;
-}
-*/
+/* to add padding on property details in results on row view */
+.col-xs-6.col-sm-6.results-details {
+  padding-left: 0.5em;
+  }
+
 /*-------------------------------
   Navigation [Desktop]
 ---------------------------------*/
@@ -1782,7 +1791,7 @@ nav > .menu-link > ul > li > a {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 400px;
+/*  height: 400px; */
   }
 
 /* position overlay text from bottom */

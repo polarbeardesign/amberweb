@@ -140,7 +140,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
   </div>
 
   <div class="row padded">
-    <div class="col-md-8">
+    <div class="col-sm-8">
 
       <div id="feature_property-carousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -166,7 +166,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
                  echo 'active';
                  } 
               echo '">
-                <img src="img/clients/' . $value . '" alt="...">
+                <img src="img/clients/' . $value . '" alt="..." style="width: 100%;">
               </div>';
               }
 
@@ -176,16 +176,16 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
        </div>
 
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-4">
       <h1 class="location-title"><?php echo $selected_property[property_name] ?></h1>
       <div class="location-id">ID# <?php echo $selected_property[id] ?></div> 
       <div class="location-address"><?php echo $selected_property[property_address], " | ", $selected_property[property_city], ", ", $selected_property[property_state], " ", $selected_property[property_postal_code], ", ", $selected_property[property_country_code] ?></div>
       <div class="row property-numbers">
-        <div class="col-md-5">
+        <div class="col-xs-5">
           <div class="daily-price">$<?php echo $selected_property[daily_price] ?></div><a href="#" class="tool-tip" title="Prices quoted in USD, pricing may change due to currency fluctuations." > USD</a>
           <div class="small-print">avg/night</div>
         </div>
-        <div class="col-md-7">
+        <div class="col-xs-7">
           <div class="min-stay"><?php echo $selected_property[min_stay] ?></div> DAY
           <div class="small-print">min stay</div>
         </div>
@@ -205,7 +205,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
     </div>
   </div>
   <div class="row padded">
-    <div class="col-md-8">
+    <div class="col-sm-8">
       <h2 class="property-about">About This Rental</h2>
         <ul class="property-features">
           <?php foreach($selected_property[features] as $value) { echo '<li>'.$value.'</li>'; } ?>
@@ -215,7 +215,7 @@ $nearby_properties = array(0 => array('property_thumb' => "property_987654_thumb
           <?php foreach($selected_property[amenities] as $value) { echo '<li>'.$value.'</li>'; } ?>
         </ul>
     </div>
-    <div class="col-md-4 cal-section">
+    <div class="col-sm-4 cal-section">
     <h3>Confirm your dates are available</h3>
     <div class="row row-spacing">
 
@@ -280,13 +280,13 @@ $(document).ready(function() {
 
       </div>
       <div class="row row-spacing">
-        <div class="col-md-4" style="padding: 0;">
+        <div class="col-xs-4" style="padding: 0;">
           <div class="cal-key requested_dates"></div> <span class="date-key">Move in / out</span>
         </div>
-        <div class="col-md-4" style="padding: 0;">
+        <div class="col-xs-4" style="padding: 0;">
           <div class="cal-key available_dates"></div> <span class="date-key">Available</span>
         </div>
-        <div class="col-md-4" style="padding: 0;">
+        <div class="col-xs-4" style="padding: 0;">
           <div class="cal-key pending_dates"></div> <span class="date-key">Pending</span>
         </div>
       </div>
@@ -301,11 +301,11 @@ $(document).ready(function() {
     <h2 class="property-about">Nearby Rentals Like This One</h2>
  
  
- <?php 
+<?php 
  foreach($nearby_properties as $inner) { echo    
       '<div class="results-box  container-fluid">
         <div class="row">
-          <div class="col-xs-12 col-sm-3">
+          <div class="col-sm-12 col-md-3">
             <img src="img/clients/'.$inner[property_thumb].'" alt="<##>" width="100%" />
           </div>
           <div class="col-xs-6 col-sm-6 results-details">
@@ -316,19 +316,19 @@ $(document).ready(function() {
           ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
            <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
           </div>
-          <div class="col-xs-6 col-sm-3 text-right">
+          <div class="col-xs-6 col-md-3 text-right">
           <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>
           <div class="price-unit">avg/night</div>
           <a href="property_detail.php" class="btn btn-primary view-details">View Details</a>
           </div>
           </div>
         <div class="row row-spacing">
-          <div class="col-md-1 no-padding">
+          <div class="col-xs-1 no-padding">
             <div class="move-date">'
             . date_format(new DateTime($search_parameters[move_in]), "M d") . '
             </div>
           </div>
-          <div class="col-md-10 duration">
+          <div class="col-xs-10 duration">
           &nbsp; '; 
  
  // Count total days - 100% = 460px 
@@ -354,7 +354,7 @@ $(document).ready(function() {
 
           echo ' 
           </div>
-          <div class="col-md-1 text-right no-padding">
+          <div class="col-xs-1 text-right no-padding">
             <div class="move-date">'
             . date_format(new DateTime($search_parameters[move_out]), "M d") . '
             </div>
@@ -363,26 +363,27 @@ $(document).ready(function() {
         <div class="row">
           <div class="col-md-12 text-center no-padding results-availability">';
 
-              if ($inner[pending_periods] != "" && ($pending_length/$total_days) < 1) 
-                {
-                  echo 'Pending Some Days' ;
-                }
-              elseif ($inner[pending_periods] != "" && $pending_length/$total_days >= 1) 
-                {
-                  echo 'Currently Pending' ;
-                }
-              else 
-                {
-                   echo 'Currently Available' ;
-                }
+							if ($inner[pending_periods] != "" && ($pending_length/$total_days) < 1) 
+								{
+									echo 'Pending Some Days' ;
+								}
+							elseif ($inner[pending_periods] != "" && $pending_length/$total_days >= 1) 
+								{
+									echo 'Currently Pending' ;
+								}
+							else 
+								{
+									 echo 'Currently Available' ;
+								}
 
           echo '
           </div>
         </div>
-</div>'
+</div>
+      '
 
   ; } 
-  ?> 
+  ?>  
     
     </div>
     <div class="col-md-4">
@@ -390,14 +391,14 @@ $(document).ready(function() {
     <h3 class="map-header">Getting to the property</h3>
     <img src="http://maps.googleapis.com/maps/api/staticmap?zoom=11&size=350x350&maptype=roadmap&markers=color:red%7Clabel:X%7C<?php echo "$selected_property[property_latitude],$selected_property[property_longitude]" ?>&sensor=false" %>
 
-    
-  </div>    
+    </div></div>
+  </div>
 </section>
 </div>
 <footer>
   <?php include('inc/footer.php') ?>
 </footer>
-</div>
+
 
 
 </body>
