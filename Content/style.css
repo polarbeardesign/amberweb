@@ -1408,8 +1408,21 @@ border-top: 1px solid #ddd;
    JQuery UI overrides
 -------------------------------------------------------*/
 #calendar > .ui-widget {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-family: Helvetica, Arial, fontAwesome, sans-serif;
+
+  max-width: 350px;
+  min-width: 260px;
+  margin: 0 auto;
+  color: #929497;
+  }
+
+#calendar * .ui-datepicker-calendar * th {
+  font-weight: normal;
+}
+
+#calendar * .ui-datepicker-title { /* calendar month year title */
+  color: #929497;
   }
 
 .ui-widget-header {
@@ -1433,18 +1446,17 @@ border-top: 1px solid #ddd;
   color: #929497;
   }
 
-#calendar {
-  max-width: 350px;
-  min-width: 260px;
-  margin: 0 auto;
-  }
-
 .cal-body {
   border: 1px solid #ddd;
-  font-size: 0.75em; /* as original design's 14pt */
+  /*font-size: 0.75em;  as original design's 14pt */
   text-align: center;
   padding: 1em 1.25em;
   }
+
+#calendar * td > a, #calendar * .ui-state-default {
+padding: 0.75em 0.5em;
+  color: #929497;
+}
 
 .cal-key {
   display: inline-block;
