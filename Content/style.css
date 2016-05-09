@@ -1598,7 +1598,8 @@ Medium Width Style 600 <=> 900
   }
 
 
-.filter-bar * .col-sm-3, .filter-bar * .col-sm-2, .filter-bar * .col-sm-1 {
+.filter-bar * .col-sm-3, .filter-bar * .col-sm-2, .filter-bar * .col-sm-1,
+.search-bar * .col-sm-3, .search-bar * .col-sm-2, .search-bar * .col-sm-1 {
 padding-left: 0.1%;
 padding-right: 0;
 }
@@ -1724,7 +1725,8 @@ Wide Style 900 <=> 1280
 -------------------------------------------------------------------------------*/
 @media only screen and (min-width: 900px) {
 
-.filter-bar * .col-sm-3, .filter-bar * .col-sm-2, .filter-bar * .col-sm-1 {
+.filter-bar * .col-sm-3, .filter-bar * .col-sm-2, .filter-bar * .col-sm-1,
+.search-bar * .col-sm-3, .search-bar * .col-sm-2, .search-bar * .col-sm-1 {
 padding-left: 1%;
 padding-right: 1%;
 }
