@@ -206,10 +206,10 @@ $result_properties = array(0 => array('property_thumb' => "property_987654_thumb
 </div>
 
 <!--------------------------------------------------------  ---->
-<div id="container-fluid">
+<div class="container-fluid results-page-height">
 
 
-<div class="row">
+<div class="row results-page-height">
   <div id="map"></div>
 </div>
     <script>
