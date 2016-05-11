@@ -277,9 +277,9 @@ nav > .menu-link > ul.main-navigation {
   Page Elements [Mobile]
 -------------------------------------------------------*/
 
-.main, .home-main, .specials, . {
+.main, .home-main, .specials, .slider-title {
   display: -webkit-flex;
-  dispslider-titlelay: -ms-flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
