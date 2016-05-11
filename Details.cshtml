@@ -1,0 +1,255 @@
+﻿@using AmberLodging.WebUI.Extensions
+@model AmberLodging.WebUI.Models.ReserveNowDetailsViewModel
+@{
+    ViewBag.Title = "Property Details";
+    Layout = "~/Views/Shared/_ReserveNow.cshtml";
+}
+@Html.Partial("_RequestInfo")
+@Html.Partial("_ReserveProperty")
+<div class="container-fluid white-page">
+    <div class="row info-bar">
+        <div class="info-back">&larr; @using (Html.BeginForm("Results", "ReserveNow", FormMethod.Post, new { style = "display:inline;", id = "btr" }))
+        {
+            <input type="hidden" name="Destination" value="@Model.SearchLocation" />
+            <input type="hidden" name="zipCode" value="@Model.Unit.PostalCode" />
+            <input type="hidden" name="geoCode.Latitude" value="@Model.SearchCoordinate.Latitude" />
+            <input type="hidden" name="geoCode.Longitude" value="@Model.SearchCoordinate.Longitude" />
+            <input type="hidden" name="move_in" value="@Model.MoveIn.ToShortDateString()" />
+            <input type="hidden" name="move_out" value="@Model.MoveOut.ToShortDateString()" />
+            <input type="hidden" name="guests" value="@Model.SearchGuests" />
+            <input type="hidden" name="size" value="@Model.SearchSize" />
+            <a href="#" onclick="document.getElementById('btr').submit();">Back to properties</a>
+        }</div>
+        <div class="location"><i class="fa fa-map-marker"></i> @Model.SearchLocation</div>
+        <div class="dates"><i class="fa fa-calendar"></i> @Model.MoveIn.ToShortDateString() &mdash; @Model.MoveOut.ToShortDateString()</div>
+        <div class="update-search">@Html.ActionLink("edit search", "Index")</div>
+    </div>
+    <div class="property-detail-screen">
+        <section class="property-detail container-fluid">
+            @if (Model.Unit.PendingReservations > 0)
+            {
+            <div class="row padded">
+                <div class="col-md-12 no-padding">
+                    <div class="pending-reservation-alert">
+                        <p>This property has @Model.Unit.PendingReservations number of pending reservation(s). Reservations often cancel/change. If you wish to be waitlisted &#8211; please continue by reserving now.</p>
+                    </div>
+                </div>
+            </div>
+            }
+            <div class="row padded">
+                <div class="col-sm-8">
+                    <div id="feature_property-carousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                        @for (int i = 0; i < Model.Unit.DetailImagePaths.Count(); i++)
+                        {
+                            <li data-target="#feature_property-carousel" data-slide-to="@i" @if(i==0){<text> class="active"</text>}></li>
+                        }
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                        @{ int j = 0; }
+                        @foreach (var path in Model.Unit.DetailImagePaths)
+                        {
+                            <div class="item @if (j == 0) { <text>active</text> }"><img src="@Url.Content(path)" alt="..."></div>
+                            j++;
+                        }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="location-title">@Model.Unit.PropertyName</h1>
+                    <div class="location-id">ID# @Model.Unit.UnitID</div>
+                    <div class="location-address">@Model.Unit.StreetAddress | @Model.Unit.City, @Model.Unit.State @Model.Unit.PostalCode, @Model.Unit.Country</div>
+                    <div class="row property-numbers">
+                        <div class="col-xs-5">
+                            <div class="daily-price">$@Model.Unit.Rent</div><a href="#" class="tool-tip" title="Prices quoted in USD, pricing may change due to currency fluctuations."> USD</a>
+                            <div class="small-print">avg/night</div>
+                        </div>
+                        <div class="col-xs-7">
+                            @*<div class="min-stay">X</div> DAY
+                            <div class="small-print">min stay</div>*@
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btn btn-primary reserve-now" data-toggle="modal" data-target="#reserveModal">Reserve This Property Now</div>
+                        <div class="small-print text-center">
+                            or<br />
+                            <div class="text-center request-info-link" data-toggle="modal" data-target="#infoModal">Request Info</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 disclaimers">
+                            <p><em>All reservations are subject to availability. Changes to the reservation may alter pricing and availability.</em></p>
+                            <p><em>Reservations are not set until confirmed. Confirmations are sent Mon-Fri between the hours of 7-7CST</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padded">
+                <div class="col-sm-8">
+                    <h2 class="property-about">About This Rental</h2>
+                    <ul class="property-features">
+                    @foreach (var unitAmenity in Model.Unit.UnitAmenities)
+                    {
+                        <li>@unitAmenity</li>
+                    }
+                    </ul>
+                    <h2 class="property-amenities">Property Amenities</h2>
+                    <ul class="property-amenities">
+                    @foreach (var propertyAmenity in Model.Unit.PropertyAmenities)
+                    {
+                        <li>@propertyAmenity</li>
+                    }
+                    </ul>
+                </div>
+                <div class="col-sm-4 cal-section">
+                    <h3>Confirm your dates are available</h3>
+                    <div class="row row-spacing">
+                        <div id="calendar"></div>
+                    </div>
+                    <div class="row row-spacing">
+                        <div class="col-xs-4" style="padding: 0;">
+                            <div class="cal-key requested_dates"></div> <span class="date-key">Move in / out</span>
+                        </div>
+                        <div class="col-xs-4" style="padding: 0;">
+                            <div class="cal-key"></div> <span class="date-key">Available</span>
+                        </div>
+                        <div class="col-xs-4" style="padding: 0;">
+                            <div class="cal-key pending_dates"></div> <span class="date-key">Pending</span>
+                        </div>
+                    </div>
+                    <p class="small-print"><em><strong>Note:</strong> Calendar shows the standard nightly rate. See pricing above for the best average price based on the dates you have selected.</em></p>
+                </div>
+            </div>
+        </section>
+        <section class="properties-nearby container-fluid">
+            <div class="row padded">
+                <div class="col-sm-12 col-md-8">
+                    <h2 class="property-about">Nearby Rentals Like This One</h2>
+                    @if ((Model.RelatedUnits != null) && (Model.RelatedUnits.Count() > 0))
+                    {
+                        foreach (var unit in Model.RelatedUnits)
+                        {
+                            <div class="results-box container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <img src="@Url.Content(Html.ThumbnailOrDefault(unit.PropertyID, unit.UnitIdText))" alt="<##>" />
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 results-details">
+                                        <h1 class="results">@unit.PropertyName</h1>
+                                        <p class="neighborhood">ID# @unit.UnitID | @unit.UnitType</p>
+                                        <p class="results-address">@unit.PropertyAddress</p>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-3 text-right">
+                                        <div class="daily-price">$@unit.Rent</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations.">USD</a>
+                                        <div class="price-unit">avg/night</div>
+                                        @using (Html.BeginForm("Details", "ReserveNow", new { id = unit.UnitID }))
+                                        {
+                                            <input type="hidden" name="Destination" value="@Model.SearchLocation" />
+                                            <input type="hidden" name="zipCode" value="@Model.Unit.PostalCode" />
+                                            <input type="hidden" name="geoCode.Latitude" value="@Model.SearchCoordinate.Latitude" />
+                                            <input type="hidden" name="geoCode.Longitude" value="@Model.SearchCoordinate.Longitude" />
+                                            <input type="hidden" name="move_in" value="@Model.MoveIn.ToShortDateString()" />
+                                            <input type="hidden" name="move_out" value="@Model.MoveOut.ToShortDateString()" />
+                                            <input type="hidden" name="guests" value="@Model.SearchGuests" />
+                                            <input type="hidden" name="size" value="@Model.SearchSize" />
+                                            <button type="submit" class="btn btn-primary view-details">View Details</button>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="row row-spacing">
+                                    <div class="col-xs-1 no-padding">
+                                        <div class="move-date">@Model.MoveIn.ToShortDateString()</div>
+                                    </div>
+                                    <div class="col-xs-10 duration">&nbsp;</div>
+                                    <div class="col-xs-1 text-right no-padding">
+                                        <div class="move-date">@Model.MoveOut.ToShortDateString()</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-center no-padding results-availability">
+                                        Currently @if (unit.Status == true)
+                                        {<text>Available</text>}
+                                        else
+                                        {<text>Unavailable</text>}
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="col-md-4">
+                    <h3 class="map-header">Getting to the property</h3>
+                    <img src="@Model.Unit.StaticMap" width="350" height="350" />
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+@section scripts {
+<script>
+$(document).ready(function() {
+
+    var pendingDates = ['05/05/2016', '05/06/2016', '05/07/2016', '05/08/2016', '05/09/2016', '05/10/2016', '05/11/2016'];
+    var moveinDate = '@Model.MoveIn.ToShortDateString()';
+    var moveoutDate = '@Model.MoveOut.ToShortDateString()';
+    //tips are optional but good to have
+    var tips  = ['some description','some other description'];
+
+
+    $('#calendar').datepicker({
+        inline: true,
+        dateFormat: 'mm/dd/yyyy',
+        beforeShowDay: highlightDates,
+        firstDay: 0,
+        showOtherMonths: true,
+        dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    });
+
+    function highlightDates(date) {
+
+        // Mark pending dates
+        for (var i = 0; i < pendingDates.length; i++) {
+            if (new Date(pendingDates[i]).toString() == date.toString()) {
+                return [true, 'pending', 'reservation pending'];
+            }
+        }
+        // Mark Move In
+        if (new Date(moveinDate).toString() == date.toString()) {
+            return [true, 'move-in-out', 'Your Requested Move In'];
+        }
+        // Mark Move Out
+        if (new Date(moveoutDate).toString() == date.toString()) {
+            return [true, 'move-in-out', 'Your Requested Move Out'];
+        }
+        // Mark Requested dates in between move in and move out
+        if (new Date(moveinDate) < date && new Date(moveoutDate) > date) {
+            return [true, 'available'];
+        }
+
+        return [true, ''];
+    };
+    // Set the calendar in the requested dates time scope
+    $("#calendar").datepicker("setDate", new Date(moveinDate));
+});
+</script>
+<script>
+    $(function () {
+        $(document).tooltip({
+            position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function (position, feedback) {
+                    $(this).css(position);
+                    $("<div>")
+                      .addClass("arrow")
+                      .addClass(feedback.vertical)
+                      .addClass(feedback.horizontal)
+                      .appendTo(this);
+                }
+            }
+        });
+    });
+</script>
+}

@@ -37,25 +37,25 @@ $client = "Johnny Washington";
 <div class="search-bar container-fluid">
 <form action="search_results.php" name="search" id="search">
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-sm-3">
     <div class=" input-group">
       <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
       <input type="text" class="form-control" id="destination" name="Destination" placeholder=" Destination or property name?" />
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-sm-2">
     <div class=" input-group">
       <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
       <input type="text" class="form-control form_datetime" id="move_in" name="move_in" placeholder=" Move In?" />
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-sm-2">
     <div class=" input-group">
       <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
       <input type="text" class="form-control form_datetime" id="move_out" name="move_out" placeholder=" Move Out?" />
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-sm-2">
     <div class=" input-group">
     <div class="input-group-addon"><i class="fa fa-home"></i></div>
   <select id="size" class="form-control">
@@ -67,7 +67,7 @@ $client = "Johnny Washington";
   </select>
   </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-sm-2">
     <div class=" input-group">
     <div class="input-group-addon"><i class="fa fa-user"></i></div>
   <select id="guests" class="form-control">
@@ -78,7 +78,7 @@ $client = "Johnny Washington";
   </select>
   </div>
   </div>
-  <div class="col-md-1">
+  <div class="col-sm-1">
   <input type="submit" value="Search" id="submit" class="btn btn-primary search-button">
   </div>
 </div>
