@@ -297,7 +297,12 @@ $(document).ready(function() {
 
 <section class="properties-nearby container-fluid">
   <div class="row padded">
-    <div class="col-sm-12 col-md-8">
+    <div class="col-sm-4 col-sm-push-8">
+      &nbsp;
+      <h3 class="map-header">Getting to the property</h3>
+      <img src="http://maps.googleapis.com/maps/api/staticmap?zoom=11&size=350x350&maptype=roadmap&markers=color:red%7Clabel:X%7C<?php echo "$selected_property[property_latitude],$selected_property[property_longitude]" ?>&sensor=false" %>
+    </div>
+    <div class="col-sm-8 col-sm-pull-4">
     <h2 class="property-about">Nearby Rentals Like This One</h2>
  
  
@@ -386,12 +391,7 @@ $(document).ready(function() {
   ?>  
     
     </div>
-    <div class="col-md-4">
-    &nbsp;
-    <h3 class="map-header">Getting to the property</h3>
-    <img src="http://maps.googleapis.com/maps/api/staticmap?zoom=11&size=350x350&maptype=roadmap&markers=color:red%7Clabel:X%7C<?php echo "$selected_property[property_latitude],$selected_property[property_longitude]" ?>&sensor=false" %>
-
-    </div></div>
+   </div>
   </div>
 </section>
 </div>
