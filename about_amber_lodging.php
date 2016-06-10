@@ -54,7 +54,7 @@
       <div class="col-xs-12 col-sm-10">
         <h3 class="hi-light">Alahna Krueger, EVP</h3>
 
-        <p>Alahna guides the global team and has been at the helm of the creative, learn-to-fly-after-takeoff team that is Amber. Under her leadership, the innovative thinking and proprietary methods have made us the only corporate housing name you need. Outside the office Alahna is obsessed with cooking, reading, boating and binge-watching her favorite tv shows from her exercise machine.</p>
+        <p>Alahna guides the global team and has been at the helm of the creative, learn-to-fly-after-takeoff team that is AMBER. Under her leadership, the innovative thinking and proprietary methods have made us the only corporate housing name you need. Outside the office Alahna is obsessed with cooking, reading, boating and binge-watching her favorite tv shows from her exercise machine.</p>
       </div>
     </div>
 
@@ -65,7 +65,7 @@
       <div class="col-xs-12 col-sm-10">
         <h3 class="hi-light">Chris Sands, Global Ops. Mgr.</h3>
 
-        <p>Chris started with Amber Lodging Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
+        <p>Chris started with AMBER LODGING Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
       </div>
     </div>
 
