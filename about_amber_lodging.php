@@ -65,7 +65,7 @@
       <div class="col-xs-12 col-sm-10">
         <h3 class="hi-light">Chris Sands, Global Ops. Mgr.</h3>
 
-        <p>Chris started with AMBER LODGING Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
+        <p>Chris started with AMBER Lodging Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
       </div>
     </div>
 
