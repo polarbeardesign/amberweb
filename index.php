@@ -9,7 +9,15 @@
 
 <body>
 
-<div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
+      <div class="title-bar">
+      <div class="Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div> 
+        <div class="social">
+          <a href="https://www.linkedin.com/company/amber-lodging-company" target="_blank"><img src="Content/img/1467834321_online_social_media_linked_in.png" class="social-icon" /></a>
+          <a href="https://www.instagram.com/amberlodging" target="_blank"><img src="Content/img/1467834290_instagram_online_social_media.png" class="social-icon" /></a>
+          <a href="https://twitter.com/SuitesTweets" target="_blank"><img src="Content/img/1467834415_online_social_media_twitter.png" class="social-icon" /></a>
+          <a href="https://www.facebook.com/AMBERLODGING/" target="_blank"><img src="Content/img/1467834410_facebook_online_social_media.png" class="social-icon" /></a>
+        </div>    
+      </div>
 
 <form action="client_home.php" method="post">
   <?php include('inc/bootstrap_login.html') ?>

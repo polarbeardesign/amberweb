@@ -677,7 +677,9 @@ select#guests, select#size {
 
 /* black bar at top of page */
 .title-bar {
-  margin: 0.85em;
+  margin: 0.5em 0.85em 0.85em 0.85em;
+  display: block;
+  height: 15px;
   }
 
 .alc {
@@ -1203,9 +1205,17 @@ color: #808285;
   }
 
 .Login {
-  display: block;
-  text-align: right;
+  float: right;
   margin-right: 2em;
+  }
+
+.social {
+  float: right;
+  margin-right: 2em;
+  }
+
+.social-icon {
+  margin: 0 0.251em;
   }
 
 .droplink {
