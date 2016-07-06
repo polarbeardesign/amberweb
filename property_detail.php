@@ -319,7 +319,7 @@ $(document).ready(function() {
           <p class="neighborhood">ID# '.$inner[id] . ' | ' . $inner[size].'</p>
           <p class="results-address">'.$inner[property_address] . '<br />
           ' .$inner[property_city] . ', '.$inner[property_state] . ' ' .$inner[property_postal_code] . ', '.$inner[property_country_code] . ' </p>
-           <p class="min-stay">minimum '.$inner[min_stay].' day stay</p>
+
           </div>
           <div class="col-xs-6 col-md-3 text-right">
           <div class="daily-price">$'.$inner[daily_price] . '</div> <a href="" class="currency-denominator" title="Prices quoted in USD, pricing may change due to currency fluctuations." >USD</a>

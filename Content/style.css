@@ -508,7 +508,7 @@ footer {
   width: 35%;
   text-align: center;
   left: 60%;
-  padding-bottom: 35px;
+  padding-bottom: 70px;
   }
 
 .carousel-caption-four {
@@ -677,7 +677,9 @@ select#guests, select#size {
 
 /* black bar at top of page */
 .title-bar {
-  margin: 0.85em;
+  margin: 0.5em 0.85em 0.85em 0.85em;
+  display: block;
+  height: 15px;
   }
 
 .alc {
@@ -1203,9 +1205,17 @@ color: #808285;
   }
 
 .Login {
-  display: block;
-  text-align: right;
+  float: right;
   margin-right: 2em;
+  }
+
+.social {
+  float: right;
+  margin-right: 2em;
+  }
+
+.social-icon {
+  margin: 0 0.251em;
   }
 
 .droplink {
@@ -1672,7 +1682,7 @@ padding-right: 0;
 
 .carousel-caption-three {
   left: 55%;
-  padding-bottom: 70px;
+  padding-bottom: 110px;
   }
 
 .carousel-caption-four {
@@ -1810,7 +1820,7 @@ nav > .menu-link > ul > li > a {
   }
 
 .carousel-caption-three {
-  padding-bottom: 125px;
+  padding-bottom: 175px;
   }
 
 .carousel-caption-four {
@@ -1877,7 +1887,7 @@ Extra Wide Style
   }
 
 .carousel-caption-three {
-  padding-bottom: 70px;
+  padding-bottom: 70  px;
   }
 
 .carousel-caption-four {
