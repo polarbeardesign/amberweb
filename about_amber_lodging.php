@@ -38,23 +38,58 @@
 
   <article>
 
-        <p>We&rsquo;ve been operating globally from our Austin, Texas headquarters since 1998. Right off the bat, we started changing the industry: supporting our first global lease in 1999 and soon offering lease signing all over the world. And now we&rsquo;re housing clients on five continents.<p>
+        <div class="row" style="min-height: 10em;">
+          <div class="col-xs-12 col-sm-2">
+            <img src="img/Group_color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <p>We&rsquo;ve been operating globally from our Austin, Texas headquarters since 1998. Right off the bat, we started changing the industry: supporting our first global lease in 1999 and soon offering lease signing all over the world. And now we&rsquo;re housing clients on five continents.<p>
+          </div>
+        </div>
 
-        <h3 class="hi-light">Alahna Krueger, EVP</h3>
+        <div class="row" style="min-height: 10em;">
+          <div class="col-xs-12 col-sm-2">
+            <img src="img/Alahna_Krueger_Color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <h3 class="hi-light">Alahna Krueger, EVP</h3>
 
-        <p>Alahna guides the global team and has been at the helm of the creative, learn-to-fly-after-takeoff team that is Amber. Under her leadership, the innovative thinking and proprietary methods have made us the only corporate housing name you need. Outside the office Alahna is obsessed with cooking, reading, boating and binge-watching her favorite tv shows from her exercise machine.</p>
+            <p>Alahna guides the global team and has been at the helm of the creative, learn-to-fly-after-takeoff team that is Amber. Under her leadership, the innovative thinking and proprietary methods have made us the only corporate housing name you need. Outside the office Alahna is obsessed with cooking, reading, boating and binge-watching her favorite tv shows from her exercise machine.</p>
+          </div>
+        </div>
 
-        <h3 class="hi-light">Chris Sands, Global Ops. Mgr.</h3>
+        <div class="row" style="min-height: 10em;">
+          <div class="col-xs-12 col-sm-2">
+            <img src="img/ChrisSands_Color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <h3 class="hi-light">Chris Sands, Global Ops. Mgr.</h3>
 
-        <p>Chris started with Amber Lodging Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
+            <p>Chris started with Amber Lodging Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
+          </div>
+        </div>
 
-        <h3 class="hi-light">Tara Guerra, Client & Vendor Services Mgr.</h3>
+        <div class="row" style="min-height: 10em;">
+          <div class="col-xs-12 col-sm-2">
+            <img src="img/Michelle_color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <h3 class="hi-light">Michelle Sandlin, VP of Creative Strategies</h3>
 
-        <p>Tara joined our team in 2011 and has the unique ability to communicate and execute successfully across diverse client, vendor and internal service partner platforms. Translation: She gets stuff done. When she&rsquo;s not rewriting the global manual on process improvement, Tara cherishes every minute with her family, improving their processes as well.</p>
+            <p>Michelle is focused on developing and driving the innovative strategies that keep AMBER moving forward. She is an award-winning writer, columnist, and frequent contributor to Worldwide ERC's Mobility magazine, which has earned her much recognition as the storyteller for the global mobility industry. When not sitting behind her computer, Michelle is most likely sitting behind her drum kit. Ba dum bum ching!</p>
+          </div>
+        </div>
 
-        <h3 class="hi-light">Christopher Barnett, Global Business Development Mgr.</h3>
+         <div class="row" style="min-height: 10em;">
+          <div class="col-xs-12 col-sm-2">
+            <img src="img/ComingSoon_Color_72 copy.jpg" class="center-block" style="margin-bottom: 1em;" />
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <h3 class="hi-light">Christopher Barnett, Global Business Development Mgr.</h3>
 
-        <p>Chris initially joined us in 2010 to develop a Global sales team. Today, Chris leads our global external facing business development team. Chris&rsquo; mobility Savvy pedigree includes international program management experience in everything from tech firms to a global law firms. Chris is a die-hard San Francisco Giants and 49ers fan. His passion for travel and all things World Cup Soccer keeps him constantly in the friendly skies.</p>
+            <p>Chris initially joined us in 2010 to develop a Global sales team. Today, Chris leads our global external facing business development team. Chris&rsquo; mobility Savvy pedigree includes international program management experience in everything from tech firms to a global law firms. Chris is a die-hard San Francisco Giants and 49ers fan. His passion for travel and all things World Cup Soccer keeps him constantly in the friendly skies.</p>
+          </div>
+        </div>
  
 </article>
 

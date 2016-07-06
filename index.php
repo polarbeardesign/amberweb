@@ -72,7 +72,7 @@
     <div class="item carousel-image-three">
 
       <div class="container">
-        <div class="carousel-caption carousel-caption-three">
+        <div class="carousel-caption carousel-caption-three dark">
     <p class='slider-title'>We go above <br />and beyond.</p>
     <p class='last'>Because that's where<br />you're usually going.</p>
     <!-- <p class='last'><span class="show_detail_3" >More ...</span></p> -->

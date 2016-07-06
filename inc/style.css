@@ -497,7 +497,7 @@ width: 300px;
   width: 35%;
   text-align: center;
   left: 60%;
-  padding-bottom: 70px;
+  padding-bottom: 15px;
   }
 
 .carousel-caption-four {
@@ -724,7 +724,7 @@ color: #808285;
 
 .carousel-caption-three {
   left: 55%;
-  padding-bottom: 110px;
+  padding-bottom: 55px;
   }
 
 .carousel-caption-four {
@@ -773,7 +773,7 @@ Wide Style 900 <=> 1280
   }
 
 .carousel-caption-three {
-  padding-bottom: 175px;
+  padding-bottom: 75px;
   }
 
 .carousel-caption-four {
