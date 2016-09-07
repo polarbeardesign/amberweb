@@ -1,235 +1,169 @@
 
-
-
 <!DOCTYPE html>
 
-
-
 <html>
-
 <head>
-
-    <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
-
-    <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
-
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-
     <title>About Us :: Amber Lodging</title>
-
+    <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 </head>
-
 <body>
-
-        <div class="title-bar Login">LOG&nbsp;IN</div>
-
-    <div id="grey_overlay" style="width: 100%;"></div>
-
-<form action="/ReserveNow/Login" method="post"><input name="__RequestVerificationToken" type="hidden" value="FDWYtpt07EGVnjUlyyZvUKPr94B9eJxGybDa7B9MP0CN-oB6JCoqUjD7YZJZOP8bNs0XKClxBSjpD5H6kAxDMf_Rf7IH7GRxT3TkIKjBsZ41" />        <div class="login_form">
-
-            <p class="close">&times;</p>
-
-            <h1>Log In</h1>
-
-            <div class="text-input-label">Email</div>
-
-            <input type="text" id="UserName" name="UserName" placeholder="Your Email">
-
-            <div class="text-input-label">Password</div>
-
-            <input type="password" id="Password" name="Password" placeholder="Your Password">
-
-            <div class="flat-cb-container">
-
-                <input type="checkbox" name="RememberMe" id="RememberMe" /><label for="RememberMe"></label><div class="cb-label"> Remember me</div>
-
+        <div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
+<form action="/ReserveNow/Login" method="post"><input name="__RequestVerificationToken" type="hidden" value="DdpDAC9YXthnatLzqFuvy2xjeQZVMccbfqwFolgX65ZT2VGsOcY57N7j3phopgraij_OXA5hAZyIURLWzBdlrwkVNatFicuIpYhqW116nZg1" />        <div class="modal fade login_form" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="text-right">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Log In</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-input-label">Email</div>
+                        <input type="text" id="UserName" name="UserName" class="boxsizingBorder" placeholder="Your Email">
+                        <div class="text-input-label">Password</div>
+                        <input type="password" id="Password" name="Password" class="boxsizingBorder" placeholder="Your Password">
+                        <div class="flat-cb-container">
+                            <input type="checkbox" id="RememberMe" name="RememberMe" /><label for="RememberMe"></label><div class="cb-label"> Remember me</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-primary li-button" value="Log In" id="submit" />
+                    </div>
+                </div>
             </div>
-
-            <input type="submit" value="Log In" id="submit" class="li-button">
-
-            <a href="#" class="forgot-pwd">Forgot Password?</a>
-
         </div>
-
 </form>
-
-    <div id="container">
-
+    <div id="container-fluid">
         <header>
-
             <div class="logo">
-
-                <a href="/"><img srcset="/Content/img/logo.svg 208w" src="/Content/img/logo.png" alt="Amber Lodging" /></a>
-
+                <a href="/"><img srcset="Content/img/logo.svg 208w" src="Content/img/logo.png" alt="Amber Lodging" /></a>
             </div>
-
             <div class="tagline">
-
                 <span class="heavy-italic">Feel right at home</span>, anywhere on earth.
-
             </div>
-
         </header>
 
-
-
         <nav>
-
             <div class="menu-link">
-
                 <div class="show_menu">
-
                     <div class="bar-icon-wrapper">
-
                         <span class="bar-icon"></span>
-
                         <span class="bar-icon"></span>
-
                         <span class="bar-icon"></span>
-
                     </div>
-
                 </div>
 
-
-
                 <ul class="mobile main-navigation">
-
                     <li><a href="/">Home</a></li>
-
                     <li><a href="/About">About Amber Lodging</a></li>
-
                     <li><a href="/How">How We Work</a></li>
-
                     <li><a href="/CurrentResident">Current Resident Request</a></li>
-
                     <li><a href="/Information">Request Information</a></li>
-
                     <li><a href="/Contact">Contact Us</a></li>
-
                 </ul>
-
             </div>
-
         </nav>
-
-        
-
-
 
 
 
 <div class="banner">
-
-    <img srcset="/Content/img/banner_about_1500.jpg 1500w, /Content/img/banner_about_960.jpg 960w, /Content/img/banner_about_480.jpg 480w"
-
+    <img srcset="Content/img/banner_about_1500.jpg 1500w, Content/img/banner_about_960.jpg 960w, Content/img/banner_about_480.jpg 480w"
          sizes="(min-width: 93.75em) 93.75em, 100vw"
-
-         src="/Content/img/banner_about_960.jpg" width="100%"
-
+         src="Content/img/banner_about_960.jpg" width="100%"
          alt="About Amber" />
-
     <h1 class="banner-text">About Us</h1>
-
 </div>
 
-
-
-<section class="main">
-
-
+<section class="main container-fluid">
 
     <article>
 
+        <div class="row" style="min-height: 10em;">
+            <div class="col-xs-12 col-sm-2">
+                <img src="Content/img/Group_color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <p>We&rsquo;ve been operating globally from our Austin, Texas headquarters since 1998. Right off the bat, we started changing the industry: supporting our first global lease in 1999 and soon offering lease signing all over the world. And now we&rsquo;re housing clients on five continents.<p>
+            </div>
+        </div>
 
+        <div class="row" style="min-height: 10em;">
+            <div class="col-xs-12 col-sm-2">
+                <img src="Content/img/Alahna_Krueger_Color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <h3 class="hi-light">Alahna Krueger, EVP</h3>
 
-        <p>We&rsquo;ve been operating globally from our Austin, Texas headquarters since 1998. Right off the bat, we started changing the industry: supporting our first global lease in 1999 and soon offering lease signing all over the world. And now we&rsquo;re housing clients on five continents.<p>
+                <p>Alahna guides the global team and has been at the helm of the creative, learn-to-fly-after-takeoff team that is AMBER. Under her leadership, the innovative thinking and proprietary methods have made us the only corporate housing name you need. Outside the office Alahna is obsessed with cooking, reading, boating and binge-watching her favorite tv shows from her exercise machine.</p>
+            </div>
+        </div>
 
+        <div class="row" style="min-height: 10em;">
+            <div class="col-xs-12 col-sm-2">
+                <img src="Content/img/ChrisSands_Color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <h3 class="hi-light">Chris Sands, Global Ops. Mgr.</h3>
 
+                <p>Chris started with AMBER Lodging Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
+            </div>
+        </div>
 
-            <h3 class="hi-light">Alahna Krueger, EVP</h3>
+        <div class="row" style="min-height: 10em;">
+            <div class="col-xs-12 col-sm-2">
+                <img src="Content/img/Michelle_color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <h3 class="hi-light">Michelle Sandlin, VP of Creative Strategies</h3>
 
+                <p>Michelle is focused on developing and driving the innovative strategies that keep AMBER moving forward. She is an award-winning writer, columnist, and frequent contributor to Worldwide ERC's <em>Mobility</em> magazine, which has earned her much recognition as the storyteller for the global mobility industry. When not sitting behind her computer, Michelle is most likely sitting behind her drum kit. Ba dum bum ching!</p>
+            </div>
+        </div>
 
+        <div class="row" style="min-height: 10em;">
+            <div class="col-xs-12 col-sm-2">
+                <img src="Content/img/ComingSoon_Color_72.jpg" class="center-block" style="margin-bottom: 1em;" />
+            </div>
+            <div class="col-xs-12 col-sm-10">
+                <h3 class="hi-light">Christopher Barnett, Global Business Development Mgr.</h3>
 
-        <p>Alahna guides the global team and has been at the helm of the creative, learn-to-fly-after-takeoff team that is Amber. Under her leadership, the innovative thinking and proprietary methods have made us the only corporate housing name you need. Outside the office Alahna is obsessed with cooking, reading, boating and binge-watching her favorite tv shows from her exercise machine.</p>
-
-
-
-        <h3 class="hi-light">Chris Sands, Global Ops. Mgr.</h3>
-
-
-
-        <p>Chris started with Amber Lodging Co. in 2001 while attending St. Edwards University. Thirteen years later, Chris is our secret weapon, being impossibly dependable and hard-wired for results. When Chris isn&rsquo;t solving immediate global housing challenges, he loves golf, spending time with his family, grilling and golf. And on occasion, he also plays golf.</p>
-
-
-
-        <h3 class="hi-light">Tara Guerra, Client & Vendor Services Mgr.</h3>
-
-
-
-        <p>Tara joined our team in 2011 and has the unique ability to communicate and execute successfully across diverse client, vendor and internal service partner platforms. Translation: She gets stuff done. When she&rsquo;s not rewriting the global manual on process improvement, Tara cherishes every minute with her family, improving their processes as well.</p>
-
-
-
-        <h3 class="hi-light">Christopher Barnett, Global Business Development Mgr.</h3>
-
-
-
-        <p>Chris initially joined us in 2010 to develop a Global sales team. Today, Chris leads our global external facing business development team. Chris&rsquo; mobility Savvy pedigree includes international program management experience in everything from tech firms to a global law firms. Chris is a die-hard San Francisco Giants and 49ers fan. His passion for travel and all things World Cup Soccer keeps him constantly in the friendly skies.</p>
-
-
+                <p>Chris initially joined us in 2010 to develop a Global sales team. Today, Chris leads our global external facing business development team. Chris&rsquo; mobility Savvy pedigree includes international program management experience in everything from tech firms to a global law firms. Chris is a die-hard San Francisco Giants and 49ers fan. His passion for travel and all things World Cup Soccer keeps him constantly in the friendly skies.</p>
+            </div>
+        </div>
 
     </article>
-
-
-
 </section>
 
-
-
-        <footer>
-
-    <div class="copyright"><img srcset="/Content/img/logo_bw.svg 208w" src="/Content/img/logo_bw.png" width="200" alt="Amber Lodging" /></div>
-
-</footer>
-
+<footer>
+    <div class="row">
+        <div class="copyright col-sm-4 col-sm-push-4">
+            <img srcset="Content/img/logo_bw.svg 208w" src="Content/img/logo_bw.png" width="200" alt="Amber Lodging" />
+        </div>
+        <div class="col-sm-4  col-sm-push-4">
+            <div class="social">
+                <a href="https://www.linkedin.com/company/amber-lodging-company" target="_blank"><img src="Content/img/si_white_linkedin.svg" class="social-icon" /></a>
+                <a href="https://www.instagram.com/amberlodging" target="_blank"><img src="Content/img/si_white_instagram.svg" class="social-icon" /></a>
+                <a href="https://twitter.com/SuitesTweets" target="_blank"><img src="Content/img/si_white_twitter.svg" class="social-icon" /></a>
+                <a href="https://www.facebook.com/AMBERLODGING/" target="_blank"><img src="Content/img/si_white_facebook.svg" class="social-icon" /></a>
+            </div>
+        </div>
     </div>
-
+</footer>
+    </div>
     <script type="text/javascript" src="/Scripts/jquery-2.2.3.min.js"></script>
-
     <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
-
-    <script type="text/javascript" language="javascript">
-
-        $(document).ready(function () {
-
-            $(".Login").click(function () {
-
-                var h = $("body").height() + 'px';
-
-                $("#grey_overlay").css({ "height": h, "visibility": "visible" });
-
-                $(".login_form").css('display', 'block');
-
-            });
-
-            $(".close, #submit").click(function () {
-
-                $(".login_form").css('display', 'none');
-
-                $("#grey_overlay").css("visibility", "hidden");
-
-            });
-
-        });
-
-    </script>
-
     
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-</body>
+  ga('create', 'UA-41071207-2', 'auto');
+  ga('send', 'pageview');
 
+</script></body>
 </html>
-

@@ -20,10 +20,11 @@
 
 
     <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
+<!-- 
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
-
-
-                               
+-->
+    <link rel="stylesheet" href="https://gist.githubusercontent.com/polarbeardesign/7008e9087c90a5d6fb58e0bcb1cb567a/raw/c7edd30dafd215df70c7850c5e6e663bd79d89e5/amber_style.css" type="text/css" media="screen" />
+        
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
 

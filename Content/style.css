@@ -1213,7 +1213,9 @@ color: #808285;
   }
 
 .social-icon {
-  margin: 0 0.251em;
+  width: 40px;
+  height: 40px;
+  margin: 0 0.3em;
   }
 
 .droplink {
@@ -1660,6 +1662,12 @@ padding-right: 0;
 
 .feature-properties {
   margin: 0 2em 4em;
+  }
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.3em;
   }
 
 .social {
