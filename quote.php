@@ -362,7 +362,7 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                   <h2 class="property-name">'.$inner[property_name].'</h2>
                   <p class="property-address">'.$inner[property_address].', '.$inner[property_city].' '.$inner[property_state].' '.$inner[property_postal_code].'</p>
                   <p class="property-description">'.$inner[property_description].'</p>
-                  <p class="request_link"><a href="#" class="btn btn-quote">Request to Book</a></p>
+                  <p class="request_link"><a href="reservation_request.php" class="btn btn-quote">Request to Book</a></p>
                 </div>
               </div>
               <div class="row property-details" >
