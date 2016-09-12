@@ -513,15 +513,22 @@ footer {
   padding: 1em 0;
 }
 
+.last-row {
+  margin-bottom: 3em;
+}
+
 .no-padding > p {
   margin: 0 0 0.5em;
 }
 
-h2.property-name {
-margin: 0;
+.property-selection {
+  font-size: 0.75em;
+
 }
 
-
+h2.property-name, p.property-address, p.property-description {
+  margin: 0 0 0.5em 1em;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -1723,6 +1730,10 @@ Medium Width Style 600 <=> 900
   box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
   }
 
+ p.property-description {
+   max-width: 400px;
+ }
+
 #map {
   height: 90%;
   display: block;
@@ -1813,10 +1824,6 @@ article h2 {
 article h3 {
   margin: 0 2em 0.65em 2em;
   }
-
-.col-xs-12 p {
-  margin: 0 0 2em;
-}
 
 .social-icon {
   width: 40px;

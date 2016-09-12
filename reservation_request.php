@@ -41,6 +41,14 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
+<!-- for form vaidations -->  
+  <script src="inc/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+  <script src="inc/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- for form validation styling -->
+  <link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
+
 </head>
 <body>
         <div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
@@ -111,48 +119,47 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
 
 <section class="main container-fluid">
 
-    <article>
+<article>
+
 <div class="row">
+  <div class="col-sm-8 col-sm-push-2 no-padding">
+    <h1 class="reservation-request">Your Reservation Request #<?php echo '459867' ?></h1>
 
-<div class="col-sm-8 col-sm-push-2 no-padding">
-<h1 class="reservation-request">Your Reservation Request #<?php echo '459867' ?></h1>
+    <h2 class="reservation-request">You Selected:</h2>
 
-<h2 class="reservation-request">You Selected:</h2>
-
-
-  <div class="row" >
-    <div class="col-xs-12 col-sm-5">
-      <img src="<?php echo $result_properties[property_thumb] ?>" width="100%" />
-    </div>
-    <div class="col-xs-12 col-sm-7">
-      <h2 class="property-name"><?php echo $result_properties[property_name]  ?></h2>
-      <p class="property-address"><?php echo $result_properties[property_address] ?>, <?php echo $result_properties[property_city] ?> <?php echo $result_properties[property_state] ?> <?php echo $result_properties[property_postal_code] ?></p>
+    <div class="row property-selection" >
+      <div class="col-xs-12 col-sm-5">
+        <img src="<?php echo $result_properties[property_thumb] ?>" width="100%" />
+      </div>
+      <div class="col-xs-12 col-sm-7 no-padding">
+        <h2 class="property-name"><?php echo $result_properties[property_name]  ?></h2>
+        <p class="property-address"><?php echo $result_properties[property_address] ?>, <?php echo $result_properties[property_city] ?> <?php echo $result_properties[property_state] ?> <?php echo $result_properties[property_postal_code] ?></p>
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 
 <form id="formID" method="post" name="RequestInfo" action="reservation_request_ty.php">
 
-<div class="row">
+<div class="row property-selection">
   <div class="col-sm-2 text-right">
-    <label for="FirstName">Start Date:</label>
+    <label for="StartDate">Start Date:</label>
   </div>
   <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' id='FirstName' name='FirstName' value=''>
+    <input class="validate[required] text-input" type='text' id='StartDate' name='StartDate' value=''>
   </div>
 </div>
 
-<div class="row row-padding">
+<div class="row property-selection row-padding">
   <div class="col-sm-2 text-right">
-    <label for="LastName">Length of Stay:</label>
+    <label for="LengthofStay">Length of Stay:</label>
   </div>
   <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' id='LastName' name='LastName' value=''>
+    <input class="validate[required] text-input" type='text' id='LengthofStay' name='LengthofStay' value=''>
   </div>
 </div>
-<div class="row">
+<div class="row property-selection">
   <div class="col-sm-2 text-right">
     
   </div>
@@ -162,13 +169,15 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
   </div>
 </div>
 
-<div class="row row-padding">
-<div class="col-sm-12">
-<div class="center">
+<div class="row row-padding last-row">
+  <div class="col-sm-2">
+    
+  </div>
+  <div class="col-sm-8 no-padding">
   <input class="btn btn-quote" type="submit" value="Submit">
 </div>
 </div>
-</div>
+
 </form>
 </div>
 </div>
