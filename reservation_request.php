@@ -37,17 +37,13 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
 <html>
 <head>
     <title>Offer :: Amber Lodging</title>
+
     <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 
-<!-- for form vaidations -->  
-  <script src="inc/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
-  <script src="inc/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- for form validation styling -->
-  <link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
 
 </head>
 <body>
@@ -147,8 +143,13 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
     <label for="StartDate">Start Date:</label>
   </div>
   <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' id='StartDate' name='StartDate' value=''>
+    <input class="validate[required] text-input" type='text' class="form-control" id='datetimepicker4' />
   </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker4').datetimepicker();
+        });
+    </script>
 </div>
 
 <div class="row property-selection row-padding">
