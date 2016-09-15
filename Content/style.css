@@ -371,8 +371,12 @@ article p {
   line-height: 1.3em;
 }
 
-.col-xs-12 p, .col-xs-12 img {
+.col-xs-12 p {
   margin: 0 0 1em;
+}
+
+.col-xs-12 img {
+  margin: 0 0;
 }
 
 article h2, article h3 {
@@ -532,6 +536,17 @@ h2.property-name, p.property-address, p.property-description {
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
+/* to allow carousels on quote page to autosize height*/
+.carousel .item.thumb {
+  height: auto;
+}
+
+/* to remove dot navigation on carousels on quote page */
+
+.property-row .carousel-indicators li {
+  display: none;
+  }
+
 
 /* Carousel base class */
 .carousel {
@@ -1984,11 +1999,6 @@ nav > .menu-link > ul > li > a {
   padding: 0;
   }
 
-
-/* Declare heights because of positioning of img element */
-.carousel .item.thumb {
-  height: 147px;
-}
 
 /* Declare heights because of positioning of img element */
 .carousel .item {

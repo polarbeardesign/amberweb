@@ -391,7 +391,7 @@ $result_properties = array(0 => array('property_thumb' => array("Content/img/cli
             </div>
             <div class="col-sm-11 col-xs-push-0">
               <div class="row" >
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-4 no-padding">
                   <!--- <img src="'.$inner[property_thumb].'" width="100%" /> -->
 
 ';
