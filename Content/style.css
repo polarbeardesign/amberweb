@@ -1936,6 +1936,12 @@ nav > .menu-link > ul > li > a {
   padding: 0;
   }
 
+
+/* Declare heights because of positioning of img element */
+.carousel .item.thumb {
+  height: 147px;
+}
+
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 400px;

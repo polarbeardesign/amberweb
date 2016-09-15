@@ -1,6 +1,8 @@
 <?php 
 $sequence = 1;
-$result_properties = array(0 => array('property_thumb' => "Content/img/clients/property_feature_2.jpg", 
+$result_properties = array(0 => array('property_thumb' => array("Content/img/clients/property_feature_4.jpg",
+                                                                "Content/img/clients/property_feature_3.jpg",
+                                                                "Content/img/clients/property_feature_2.jpg"),
                                       'property_name' => "Nokonah Condo AMD", 
                                       'neighborhood' => "Austin", 
                                       'id' => "987654", 
@@ -32,7 +34,7 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://thenokonah.com"),
-                           1 => array('property_thumb' => "Content/img/clients/property_feature_1.jpg", 
+                           1 => array('property_thumb' => array(), 
                                       'property_name' => "Green Pastures", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "987654", 
@@ -64,7 +66,7 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://wwwthenokonah.com"),
-                           2 => array('property_thumb' => "Content/img/clients/property_feature_3.jpg", 
+                           2 => array('property_thumb' => array("Content/img/clients/property_feature_5.jpg"), 
                                       'property_name' => "Travis Heights Arms", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "123456", 
@@ -96,7 +98,9 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://wwwthenokonah.com"),
-                           3 => array('property_thumb' => "Content/img/clients/property_feature_4.jpg", 
+                           3 => array('property_thumb' => array("Content/img/clients/property_feature_5.jpg",
+                                                                "Content/img/clients/property_feature_3.jpg",
+                                                                "Content/img/clients/property_feature_2.jpg"),
                                       'property_name' => "Lakeside Apartments", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "234567", 
@@ -128,7 +132,9 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://wwwthenokonah.com"),
-                           4 => array('property_thumb' => "Content/img/clients/property_feature_5.jpg", 
+                           4 => array('property_thumb' => array("Content/img/clients/property_feature_2.jpg",
+                                                                "Content/img/clients/property_feature_3.jpg",
+                                                                "Content/img/clients/property_feature_4.jpg"),
                                       'property_name' => "Travis Heights Arms", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "123456", 
@@ -160,7 +166,8 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://wwwthenokonah.com"),
-                           5 => array('property_thumb' => "Content/img/clients/property_feature_1.jpg", 
+                           5 => array('property_thumb' => array("Content/img/clients/property_feature_2.jpg",
+                                                                "Content/img/clients/property_feature_4.jpg"),
                                       'property_name' => "Lakeside Apartments", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "234567", 
@@ -192,7 +199,7 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://wwwthenokonah.com"),
-                           6 => array('property_thumb' => "Content/img/clients/property_987654_thumb.jpg", 
+                           6 => array('property_thumb' => array(),  
                                       'property_name' => "Travis Heights Arms", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "123456", 
@@ -224,7 +231,7 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
                                       'notice_req' => "1 Month",
                                       'deposit' => "1800",
                                       'property_website' => "http://wwwthenokonah.com"),
-                           7 => array('property_thumb' => "Content/img/clients/property_feature_2.jpg", 
+                           7 => array('property_thumb' => array(),  
                                       'property_name' => "Lakeside Apartments", 
                                       'neighborhood' => "Downtown", 
                                       'id' => "234567", 
@@ -265,10 +272,37 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
 <html>
 <head>
     <title>Offer :: Amber Lodging</title>
+
+<!-- JQuery -->
+  <script type="text/javascript" src="Scripts/jquery-2.2.3.min.js"></script>
+<!-- for property slider on property details page -->
+  <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+<!-- for JQuery'd UI elements: tooltips, etc -->
+  <script type="text/javascript" src="Scripts/jquery-ui-1.11.4.min.js"></script>
+<!-- for form vaidations -->  
+  <script src="inc/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+  <script src="inc/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- for imported fonts and icons -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,500,600,400italic,600italic,800italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Bootstrap styles -->
+
+  <link rel="stylesheet" href="Content/themes/base/all.css" type="text/css">
+
+<!-- for form validation styling -->
+  <link rel="stylesheet" href="inc/validationEngine.jquery.css" type="text/css"/>
+
+
     <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
+<!-- 
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
+-->
+    <link rel="stylesheet" href="https://gist.githubusercontent.com/polarbeardesign/7008e9087c90a5d6fb58e0bcb1cb567a/raw/c7edd30dafd215df70c7850c5e6e663bd79d89e5/amber_style.css" type="text/css" media="screen" />
+        
+  <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
 </head>
 <body>
         <div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
@@ -348,7 +382,9 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
     <article>
 
 <?php 
- foreach($result_properties as $inner) { echo    
+ foreach($result_properties as $key => $inner) { 
+ $carousel_index = $key;
+ echo    
         '<div class="row property-row">
             <div class="col-xs-12 col-sm-1">
                 <div class="circle-count">'. $sequence.'</div>
@@ -356,7 +392,70 @@ $result_properties = array(0 => array('property_thumb' => "Content/img/clients/p
             <div class="col-sm-11 col-xs-push-0">
               <div class="row" >
                 <div class="col-xs-12 col-sm-4">
-                  <img src="'.$inner[property_thumb].'" width="100%" />
+                  <!--- <img src="'.$inner[property_thumb].'" width="100%" /> -->
+
+';
+
+/////
+
+
+
+  if (!empty($inner[property_thumb]))
+  
+  {
+  if (count($inner[property_thumb]) > 1)
+
+  { echo '<div id="amber-carousel-'.$carousel_index.'" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">';
+
+foreach($inner[property_thumb] as $key => $value) { echo '
+    <li data-target="#amber-carousel-'.$carousel_index.'" data-slide-to="'.$key.'" class="active"></li>'
+   ;}
+  echo '</ol>
+   <!-- Wrapper for slides -->
+  <div class="carousel-inner">';
+
+foreach($inner[property_thumb] as $key => $value) { echo '
+    <div class="item'; if ($key == 0) {echo ' active' ;} echo ' thumb">
+      <img src="'.$value.'" alt="">
+    </div>'
+   ;}
+
+
+
+
+
+
+ echo '</div>
+ <!-- Controls -->
+  <a class="left carousel-control" href="#amber-carousel-'.$carousel_index.'" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#amber-carousel-'.$carousel_index.'" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->  ' ;} 
+
+  else
+  { echo '<img src="'.$inner[property_thumb][0].'" width="100%"  />' ;}
+;}
+  else 
+  { echo '<img src="Content/img/clients/property_image_unavailable.jpg" width="100%" />' ;}
+
+
+
+
+
+
+
+
+/////
+
+
+
+
+echo '                  
                 </div>
                 <div class="col-xs-12 col-sm-8">
                   <h2 class="property-name">'.$inner[property_name].'</h2>
