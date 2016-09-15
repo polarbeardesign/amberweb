@@ -386,7 +386,7 @@ $result_properties = array(0 => array('property_thumb' => array("Content/img/cli
  $carousel_index = $key;
  echo    
         '<div class="row property-row">
-            <div class="col-xs-12 col-sm-1">
+            <div class="col-xs-12 col-sm-1 no-padding">
                 <div class="circle-count">'. $sequence.'</div>
             </div>
             <div class="col-sm-11 col-xs-push-0">
@@ -456,12 +456,13 @@ foreach($inner[property_thumb] as $key => $value) { echo '
 
 
 echo '                  
+
                 </div>
-                <div class="col-xs-12 col-sm-8">
+                <div class="col-xs-12 col-sm-8 no-padding">
                   <h2 class="property-name">'.$inner[property_name].'</h2>
                   <p class="property-address">'.$inner[property_address].', '.$inner[property_city].' '.$inner[property_state].' '.$inner[property_postal_code].'</p>
                   <p class="property-description">'.$inner[property_description].'</p>
-                  <p class="request_link"><a href="#" class="btn btn-quote">Request to Book</a></p>
+                  <p class="request_link"><a href="reservation_request.php" class="btn btn-quote">Request to Book</a></p>
                 </div>
               </div>
               <div class="row property-details" >

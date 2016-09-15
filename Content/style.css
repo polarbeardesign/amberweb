@@ -297,12 +297,10 @@ nav > .menu-link > ul.main-navigation {
 
 h1.banner-text {
   position: relative;
-  width: 40%;
+  /*width: 40%;*/
   min-width: 300px;
   text-transform: uppercase;
   font-size: 1.5em;
-  margin-top: -100px;
-  margin-bottom: 100px;
   font-weight: bold;
   background: rgba(255,255,255,0.85);
   padding: 1rem;
@@ -314,6 +312,30 @@ h1.banner-text.quote-summary {
   margin-bottom: 40px;
   text-align: left;
 }
+
+h1.reservation-request {
+  text-transform: uppercase;
+  color: #ff6600;
+  margin: 3em 0 0 0;
+  }
+
+h2.reservation-request {
+  margin: 0.5em 0 1em 0;
+  font-size: 1.75em;
+  font-weight: normal;
+  }
+
+p.reservation-request {
+  text-transform: uppercase;
+  color: #ff6600;
+  margin: 1.5em 0 0 0;
+  font-size: 0.75em
+  }
+
+p.thank-you {
+  margin: 1.5em 0 0 0;
+  line-height: 1.4em;
+  }
 
 .client-field, .res-req-no-field, .guest-name-field {
   font-size: 0.65em;
@@ -391,6 +413,7 @@ article h3 {
 
 .btn-quote {
   background: #ff6600;
+  color: #fff;
 }
 
 .btn-quote:hover {
@@ -486,6 +509,26 @@ footer {
   width: 95%;
   }
 
+.row-padding {
+  padding: 1em 0;
+}
+
+.last-row {
+  margin-bottom: 3em;
+}
+
+.no-padding > p {
+  margin: 0 0 0.5em;
+}
+
+.property-selection {
+  font-size: 0.75em;
+
+}
+
+h2.property-name, p.property-address, p.property-description {
+  margin: 0 0 0.5em 1em;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -1687,6 +1730,10 @@ Medium Width Style 600 <=> 900
   box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
   }
 
+ p.property-description {
+   max-width: 400px;
+ }
+
 #map {
   height: 90%;
   display: block;
@@ -1708,9 +1755,14 @@ Medium Width Style 600 <=> 900
 
 h1.banner-text.quote-summary {
   width: 100%;
-  margin-top: -50px;
-  margin-bottom: 40px;
+  margin-top: -60px;
+  height: 60px;
   text-align: left;
+}
+
+.selection-highlight {
+max-width: 600px;
+
 }
 
 .filter-bar * .col-sm-3, .filter-bar * .col-sm-2, .filter-bar * .col-sm-1,
@@ -1772,10 +1824,6 @@ article h2 {
 article h3 {
   margin: 0 2em 0.65em 2em;
   }
-
-.col-xs-12 p {
-  margin: 0 2em 2em;
-}
 
 .social-icon {
   width: 40px;

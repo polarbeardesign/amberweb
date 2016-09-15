@@ -1,50 +1,15 @@
 <?php 
-$result_properties = array('property_thumb' => "Content/img/clients/property_feature_2.jpg", 
-                                      'property_name' => "Nokonah Condo AMD", 
-                                      'neighborhood' => "Austin", 
-                                      'id' => "987654", 
-                                      'size' => "3 bedrooms, 2 bathrooms", 
-                                      'property_address' => "901 W Austin St #315", 
-                                      'property_city' => "Austin", 
-                                      'property_state' => "Texas", 
-                                      'property_postal_code' => "78703", 
-                                      'property_country_code' => "US",
-                                      'daily_price' => "260",
-                                      'min_stay' => "30",
-                                      'property_description' => "Raw denim franzen letterpress fixie, jean shorts locavore mustache jianbing swag health goth aesthetic vape pour-over chambray. Locavore mlkshk disrupt pabst, venmo shoreditch banh mi deep v. You probably haven't heard of them butcher tofu +1.",
-                                      'distance' => "3 miles",
-                                      'available' => "02/01/2017 - 08/01/2017",
-                                      'size' => "3 bedrooms, 2 bathrooms",
-                                      'floor' => "3",
-                                      'w_d' => "in suite",
-                                      'parking' => "Yes, covered",
-                                      'housekeeping' => "Weekly",
-                                      'internet' => "Broadband",
-                                      'utilities' => "No",
-                                      'square_ft' => "1200",
-                                      'currency' => "US Dollars",
-                                      'monthly_rate' => "1800",
-                                      'early_termination' => "No",
-                                      'check_in' => "Lockbox, Concierge",
-                                      'elevator_stair' => "Yes",
-                                      'min_lease' => "6 Months",
-                                      'notice_req' => "1 Month",
-                                      'deposit' => "1800",
-                                      'property_website' => "http://thenokonah.com");
+
 ?>
 <!DOCTYPE html>
 
 <html>
 <head>
     <title>Offer :: Amber Lodging</title>
-
     <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800italic,700' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-
-
-
 </head>
 <body>
         <div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
@@ -115,73 +80,22 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
 
 <section class="main container-fluid">
 
-<article>
+    <article>
+<div class="row row-padding">
 
-<div class="row">
-  <div class="col-sm-8 col-sm-push-2 no-padding">
-    <h1 class="reservation-request">Your Reservation Request #<?php echo '459867' ?></h1>
+<div class="col-sm-8 col-sm-push-2">
 
-    <h2 class="reservation-request">You Selected:</h2>
-
-    <div class="row property-selection" >
-      <div class="col-xs-12 col-sm-5">
-        <img src="<?php echo $result_properties[property_thumb] ?>" width="100%" />
-      </div>
-      <div class="col-xs-12 col-sm-7 no-padding">
-        <h2 class="property-name"><?php echo $result_properties[property_name]  ?></h2>
-        <p class="property-address"><?php echo $result_properties[property_address] ?>, <?php echo $result_properties[property_city] ?> <?php echo $result_properties[property_state] ?> <?php echo $result_properties[property_postal_code] ?></p>
-      </div>
-    </div>
-  </div>
-</div>
+<p class="thank-you">Thank you,<br />
+we received your request!<br />
+We'll be in touch with you soon<br />to finalize your reservation.</p>
+<p class="reservation-request">Your Reservation Request #<?php echo '459867' ?></h1>
 
 
-<form id="formID" method="post" name="RequestInfo" action="reservation_request_ty.php">
-
-<div class="row property-selection">
-  <div class="col-sm-2 text-right">
-    <label for="StartDate">Start Date:</label>
-  </div>
-  <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' class="form-control" id='datetimepicker4' />
-  </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker4').datetimepicker();
-        });
-    </script>
-</div>
-
-<div class="row property-selection row-padding">
-  <div class="col-sm-2 text-right">
-    <label for="LengthofStay">Length of Stay:</label>
-  </div>
-  <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' id='LengthofStay' name='LengthofStay' value=''>
-  </div>
-</div>
-<div class="row property-selection">
-  <div class="col-sm-2 text-right">
-    
-  </div>
-  <div class="col-sm-8 no-padding">
-    <p>Please provide any comments or questions:</p>
-    <textarea id='comments' name='comments' value='' rows="4" cols="70"></textarea>
-  </div>
-</div>
-
-<div class="row row-padding last-row">
-  <div class="col-sm-2">
-    
-  </div>
-  <div class="col-sm-8 no-padding">
-  <input class="btn btn-quote" type="submit" value="Submit">
 </div>
 </div>
 
-</form>
-</div>
-</div>
+
+
     </article>
 </section>
 
