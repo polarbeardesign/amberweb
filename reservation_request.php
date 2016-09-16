@@ -163,35 +163,30 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
 
 <form id="formID" method="post" name="RequestInfo" action="reservation_request_ty.php">
 
-<div class="row property-selection">
+<div class="row property-selection row-padding">
   <div class="col-sm-2 text-right">
     <label for="StartDate">Start Date:</label>
   </div>
-  <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' class="form-control" id='datetimepicker4' />
+  <div class="col-sm-2 no-padding">
+    <input type="text" class="form-control" id="move_in" name="move_in" />
   </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker4').datetimepicker();
-        });
-    </script>
 </div>
 
 <div class="row property-selection row-padding">
   <div class="col-sm-2 text-right">
     <label for="LengthofStay">Length of Stay:</label>
   </div>
-  <div class="col-sm-8 no-padding">
-    <input class="validate[required] text-input" type='text' id='LengthofStay' name='LengthofStay' value=''>
+  <div class="col-sm-2 no-padding">
+    <input type="text" class="form-control" >
   </div>
 </div>
 <div class="row property-selection">
   <div class="col-sm-2 text-right">
     
   </div>
-  <div class="col-sm-8 no-padding">
+  <div class="col-sm-6 no-padding">
     <p>Please provide any comments or questions:</p>
-    <textarea id='comments' name='comments' value='' rows="4" cols="70"></textarea>
+    <textarea id='comments' class="form-control" name='comments' value='' rows="4" cols="70"></textarea>
   </div>
 </div>
 
@@ -238,6 +233,31 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
   ga('create', 'UA-41071207-2', 'auto');
   ga('send', 'pageview');
 
+</script>
+<script>
+    function validateDates (dateText) { 
+        var endDate = new Date(dateText); 
+        var startDate = new Date($("#move_in").val());
+        var ticksDifference = endDate - startDate;
+        var difference = Math.round(Math.abs((ticksDifference)/86400000));
+        if (ticksDifference < 0) {
+            $("#submit").attr('disabled','disabled');
+            alert("You have entered an end date that is before the start date. Please enter an end date that comes after the start date.");
+            $("#move_out").val("");
+        }
+        else {
+            $("#submit").removeAttr('disabled');
+            if (difference < 29) {
+                alert("Your requested stay is less than 30 days?  Short term stays may be subject to additional taxes & fees which vary by City, State and County.  Our Reservation team will disclose all fees prior to confirming your stay.");
+            }
+        }
+    }
+    $("#move_in").datepicker({ minDate: +5, maxDate: "+1Y" });
+    $("#move_out").datepicker({ minDate: +6, maxDate: "+1Y",
+        onSelect: function(dateText) { 
+            validateDates(dateText);
+        }
+    });
 </script>
 
 </body>
