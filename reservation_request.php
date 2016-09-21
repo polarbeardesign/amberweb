@@ -43,15 +43,8 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="Content/themes/base/all.css" type="text/css" />
     <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 
-
-
-<!-- JQuery -->
-  <script type="text/javascript" src="Scripts/jquery-2.2.3.min.js"></script>
-<!-- for JQuery'd UI elements: tooltips, etc -->
-  <script type="text/javascript" src="Scripts/jquery-ui-1.11.4.min.js"></script>
-<!-- for form vaidations -->  
+<!-- for form validations -->  
   <script src="inc/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
   <script src="inc/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 <!-- for form validation styling -->
@@ -123,9 +116,7 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
 
 
 <div class="banner">
-    <img srcset="Content/img/banner_about_1500.jpg 1500w, Content/img/banner_about_960.jpg 960w, Content/img/banner_about_480.jpg 480w"
-         sizes="(min-width: 93.75em) 93.75em, 100vw"
-         src="Content/img/banner_about_960.jpg" width="100%"
+    <img src="Content/img/banner_about_960_half.jpg" width="100%"
          alt="About Amber" />
 </div>
 
@@ -212,8 +203,10 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
     </div>
 </footer>
     </div>
-    <script type="text/javascript" src="/Scripts/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://amberlodging.com//Scripts/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="http://amberlodging.com//Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://amberlodging.com//Scripts/jquery-ui-1.11.4.min.js"></script>
+
     
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -227,21 +220,7 @@ $result_properties = array('property_thumb' => "Content/img/clients/property_fea
 </script>
 <script>
     function validateDates (dateText) { 
-        var endDate = new Date(dateText); 
-        var startDate = new Date($("#move_in").val());
-        var ticksDifference = endDate - startDate;
-        var difference = Math.round(Math.abs((ticksDifference)/86400000));
-        if (ticksDifference < 0) {
-            $("#submit").attr('disabled','disabled');
-            alert("You have entered an end date that is before the start date. Please enter an end date that comes after the start date.");
-            $("#move_out").val("");
-        }
-        else {
-            $("#submit").removeAttr('disabled');
-            if (difference < 29) {
-                alert("Your requested stay is less than 30 days?  Short term stays may be subject to additional taxes & fees which vary by City, State and County.  Our Reservation team will disclose all fees prior to confirming your stay.");
-            }
-        }
+
     }
     $("#move_in").datepicker({ minDate: +5, maxDate: "+1Y" });
     $("#move_out").datepicker({ minDate: +6, maxDate: "+1Y",

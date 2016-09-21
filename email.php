@@ -303,34 +303,21 @@ $result_properties = array(0 => array('property_thumb' => array("Content/img/cli
   <link rel="stylesheet" href="Content/style.css" type="text/css" media="screen" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 
+<style>
+
+.email-intro {
+margin: 2em 0;
+}
+.email-intro p{
+margin: 1em 0;
+}
+
+</style>
+
 </head>
 <body>
-        <div class="title-bar Login" data-toggle="modal" data-target="#loginModal">LOG&nbsp;IN</div>
-<form action="/ReserveNow/Login" method="post"><input name="__RequestVerificationToken" type="hidden" value="DdpDAC9YXthnatLzqFuvy2xjeQZVMccbfqwFolgX65ZT2VGsOcY57N7j3phopgraij_OXA5hAZyIURLWzBdlrwkVNatFicuIpYhqW116nZg1" />        <div class="modal fade login_form" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="text-right">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </div>
-                        <h4 class="modal-title" id="myModalLabel">Log In</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="text-input-label">Email</div>
-                        <input type="text" id="UserName" name="UserName" class="boxsizingBorder" placeholder="Your Email">
-                        <div class="text-input-label">Password</div>
-                        <input type="password" id="Password" name="Password" class="boxsizingBorder" placeholder="Your Password">
-                        <div class="flat-cb-container">
-                            <input type="checkbox" id="RememberMe" name="RememberMe" /><label for="RememberMe"></label><div class="cb-label"> Remember me</div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" class="btn btn-primary li-button" value="Log In" id="submit" />
-                    </div>
-                </div>
-            </div>
-        </div>
-</form>
+<div class="row">
+   <div class="col-xs-8  col-md-push-2">
     <div id="container-fluid">
         <header>
             <div class="logo">
@@ -341,43 +328,24 @@ $result_properties = array(0 => array('property_thumb' => array("Content/img/cli
             </div>
         </header>
 
-        <nav>
-            <div class="menu-link">
-                <div class="show_menu">
-                    <div class="bar-icon-wrapper">
-                        <span class="bar-icon"></span>
-                        <span class="bar-icon"></span>
-                        <span class="bar-icon"></span>
-                    </div>
-                </div>
-
-                <ul class="mobile main-navigation">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/About">About Amber Lodging</a></li>
-                    <li><a href="/How">How We Work</a></li>
-                    <li><a href="/CurrentResident">Current Resident Request</a></li>
-                    <li><a href="/Information">Request Information</a></li>
-                    <li><a href="/Contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-
-
-
 <div class="banner">
-    <img src="Content/img/banner_about_960_half.jpg" width="100%"
+    <img srcset="Content/img/banner_about_1500.jpg 1500w, Content/img/banner_about_960.jpg 960w, Content/img/banner_about_480.jpg 480w"
+         sizes="(min-width: 93.75em) 93.75em, 100vw"
+         src="Content/img/banner_about_960.jpg" width="100%"
          alt="About Amber" />
-    <h1 class="banner-text quote-summary">
-      <div class="row">
-      <div class="client-field col-xs-12 col-sm-4">Presented to: <span class="field-value"><?php echo 'Jane Smith' ?></span></div>
-      <div class="res-req-no-field col-xs-12 col-sm-4">Reservation Request #: <span class="field-value"><?php echo '459867' ?></span></div>
-      <div class="guest-name-field col-xs-12 col-sm-4">Guest Name: <span class="field-value"><?php echo 'Mike Davis' ?></span></div>
-    </h1>
 </div>
 
 <section class="main container-fluid">
 
     <article>
+
+<div class="email-intro">
+<p>Dear [Client Name],</p>
+
+<p>Thanks for reaching out to AMBER for your housing needs for [Guest Name], you made our day!</p>
+
+<h1 class="reservation-request">Your Reservation Request #<?php echo '459867' ?></h1>
+</div>
 
 <?php 
  foreach($result_properties as $key => $inner) { 
@@ -501,7 +469,7 @@ echo '
                   <label>Currency:</label> '.$inner[currency].'
                 </div>
                 <div class="property-return-value">
-                  <label>Monthly rate:</label> $'.$inner[monthly_rate].'
+                  <label>Monthly rate:</label> '.$inner[monthly_rate].'
                 </div>
                 <div class="property-return-value">
                   <label>Early termination:</label> '.$inner[early_termination].'
@@ -519,7 +487,7 @@ echo '
                   <label>Notice requirement:</label> '.$inner[notice_req].'
                 </div>
                 <div class="property-return-value">
-                  <label>Deposit</label> $'.$inner[deposit].'
+                  <label>Deposit</label> '.$inner[deposit].'
                 </div>
                 <div class="property-return-value">
                   <label>Property website:</label> '.$inner[property_website].'
@@ -539,6 +507,8 @@ echo '
 
 
     </article>
+
+
 </section>
 
 <footer>
@@ -570,6 +540,7 @@ echo '
   ga('send', 'pageview');
 
 </script>
-
+</div>
+</div>
 </body>
 </html>

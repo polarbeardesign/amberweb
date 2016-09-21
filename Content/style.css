@@ -313,10 +313,12 @@ h1.banner-text.quote-summary {
   text-align: left;
 }
 
-h1.reservation-request {
+h1.reservation-request, p.reservation-request {
   text-transform: uppercase;
-  color: #ff6600;
+  color: #808285;
   margin: 3em 0 0 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
   }
 
 h2.reservation-request {
@@ -326,10 +328,7 @@ h2.reservation-request {
   }
 
 p.reservation-request {
-  text-transform: uppercase;
-  color: #ff6600;
   margin: 1.5em 0 0 0;
-  font-size: 0.75em
   }
 
 p.thank-you {

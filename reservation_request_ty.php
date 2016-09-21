@@ -72,9 +72,7 @@
 
 
 <div class="banner">
-    <img srcset="Content/img/banner_about_1500.jpg 1500w, Content/img/banner_about_960.jpg 960w, Content/img/banner_about_480.jpg 480w"
-         sizes="(min-width: 93.75em) 93.75em, 100vw"
-         src="Content/img/banner_about_960.jpg" width="100%"
+    <img src="Content/img/banner_about_960_half.jpg" width="100%"
          alt="About Amber" />
 </div>
 
