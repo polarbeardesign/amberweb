@@ -1699,6 +1699,305 @@ td.available a {
   padding-bottom: 15px;
   }
 
+
+/*=========== Client Form ==================*/
+
+h3 {
+  color: #222;
+  margin: 1em 0 1em 0;
+}
+
+fieldset {
+  margin: 1em 0 2em 0;
+}
+
+.text-input-wrapper {
+  position: relative;
+  margin: 0.5em auto;
+}
+
+.radio-input-wrapper, .select-input-wrapper {
+  border: 1px solid #dde0df;
+  width: 100%;
+  height: 24px;
+  padding: 5px 15px 6px 60px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #e2e4e3;
+  margin: 0.5em auto;
+  position: relative;
+}
+
+.text-area-input-wrapper {
+  border: 1px solid #dde0df;
+  width: 100%;
+  height: 24px;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #e2e4e3;
+  margin: 0.5em auto;
+  position: relative;
+}
+
+.no-label {
+  padding-left: 0;
+}
+
+
+label[for=HousekeepingYes] {
+  padding: 0 0 0 55px;
+}
+
+label[for=WDYes] {
+  padding: 0 0 0 115px;
+}
+
+span.placeholder[for=WD]{
+  width: 160px;
+}
+
+label[for=Elevator] {
+  padding: 0 0 0 1px;
+}
+
+span.placeholder[for=Concierge]{
+  width: 260px;
+}
+
+label[for=ConciergeYes] {
+  padding: 0 0 0 68px;
+}
+
+span.placeholder[for=FitnessCenter]{
+  width: 160px;
+}
+
+label[for=FitnessCenterYes] {
+  padding: 0 0 0 80px;
+}
+
+span.placeholder[for=Restaurant]{
+  width: 160px;
+}
+
+label[for=RestaurantYes] {
+  padding: 0 0 0 80px;
+}
+
+span.placeholder[for=AirportTransportaion]{
+  width: 160px;
+}
+
+label[for=AirportTransportaionYes] {
+  padding: 0 0 0 110px;
+}
+
+span.placeholder[for=ParkingIncluded]{
+  width: 160px;
+}
+
+label[for=ParkingIncludedYes] {
+  padding: 0 0 0 80px;
+}
+
+span.placeholder[for=VacateReq]{
+  width: 200px;
+}
+
+label[for=VacateReqYes] {
+  padding: 0 0 0 160px;
+}
+
+span.placeholder[for=UtilityCaps]{
+  width: 90px;
+}
+
+label[for=UtilityCapsYes] {
+  padding: 0 0 0 40px;
+}
+
+span.placeholder[for=AdditionalPropertyInfo]{
+  width: 342px;
+}
+
+span.placeholder[for=CancellationPolicy]{
+  width: 162px;
+}
+
+span.placeholder[for=AdditionalInfo]{
+  width: 520px;
+}
+
+span.placeholder[for=InternetIncluded]{
+  width: 250px;
+}
+
+label[for=InternetIncludedYes] {
+  padding: 0 0 0 80px;
+}
+
+span.placeholder[for=PhoneIncluded]{
+  width: 110px;
+}
+
+label[for=PhoneIncludedYes] {
+  padding: 0 0 0 65px;
+}
+
+span.placeholder[for=CableIncluded]{
+  width: 110px;
+}
+
+label[for=CableIncludedYes] {
+  padding: 0 0 0 65px;
+}
+
+span.placeholder[for=Elevator]{
+  width: 110px;
+}
+
+label[for=ElevatorYes] {
+  padding: 0 0 0 65px;
+}
+
+span.placeholder[for=BackgroundCheck]{
+  width: 300px;
+}
+
+label[for=BackgroundCheckYes] {
+  padding: 0 0 0 220px;
+}
+
+label[for=LeaseCancellableYes] {
+  padding: 0 0 0 80px;
+}
+
+span.placeholder[for=LeaseCancellable]{
+  width: 146px;
+}
+
+
+
+span.placeholder[for=PetFriendly]{
+  width: 90px;
+}
+
+label[for=PetFriendlyYes] {
+  padding: 0 0 0 40px;
+}
+
+.select-input-wrapper select {
+  position: relative;
+  left: 160px;
+  margin-top: -3px;
+}
+
+.select-input-wrapper input[type=file] {
+  position: relative;
+  left: 170px;
+  margin-top: -3px;
+}
+
+span.placeholder[for=VacateReq] {
+  /*padding: 0 0 0 800px;*/
+}
+
+.radio-input-wrapper > label {
+    text-transform: uppercase;
+        font-size: 12px;
+}
+
+input[type=radio].radio-input-new {
+  margin: 0 8px 0 3px;
+}
+ 
+input[type=radio].radio-input-new:last-of-type {
+  margin: 0 0 0 3px;
+}
+
+.text-input-new {
+    border: 1px solid #dde0df;
+    width: 100%;
+    height: 24px;
+    padding: 7px 15px 6px 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    background: #e2e4e3;
+}
+
+.text-area-input-wrapper textarea {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    background: #e2e4e3;
+}
+
+
+.form-rt-arrow {
+  color: #fff;
+  margin: 0 20px 0 20px;
+}
+
+span.placeholder {
+    position: absolute;
+    font-size: 12px;
+    top: 6px;
+    left: 8px;
+    width: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.middle-placeholder {
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+label.placeholder {
+    position: absolute;
+    font-size: 12px;
+    top: 6px;
+    left: 8px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+.request-summary-table td {
+  padding: 0.25em 0.5em;
+  color: #222;
+}
+
+td.table-label {
+  text-align: right;
+  color: #808285;
+}
+
+.request-summary {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+/*=== Debugging boxes ===
+label {
+border: 1px solid red;
+}
+.text-input-new {
+border: 1px solid blue;
+}
+/*=== Debugging boxes ===*/
+
+
+/*=========== Client Form ==================*/
+
 /*----------------------------------------------------------------------------
 Medium Width Style 600 <=> 900
 ----------------------------------------------------------------------------*/

@@ -15,8 +15,14 @@ body {
 }
 
 header {
+  width: 100%;
   float: left;
+    border-bottom: 1px solid #ccc;
 }
+
+.clearer {
+  clear: both;
+  }
 
 a, a:visited, a:hover{
   color: #003399;
@@ -47,7 +53,9 @@ a, a:visited, a:hover{
 
 article {
   width: 500px;
-  margin: 20px auto;
+  margin: 20px auto 0;
+  background: #fff;
+  padding-bottom: 30px;
 }
 
 .email-intro {
@@ -164,7 +172,18 @@ a.btn-quote, a:hover.btn-quote, a:active.btn-quote, a:visited.btn-quote {
     color: #fff;
 }
 
-.btn-quote:hover {
+.btn-submit {
+    background: #ff6600;
+    color: #fff;
+    width: 200px;
+    margin: 1em 0;
+}
+
+.btn-submit a {
+    color: #fff;
+}
+
+.btn-quote:hover, .btn-submit:hover {
   background: #ff8e2d;
 }
 
@@ -190,9 +209,20 @@ a.btn-quote, a:hover.btn-quote, a:active.btn-quote, a:visited.btn-quote {
     border-radius: 0;
 }
 
-a.btn-quote, a:hover.btn-quote, a:active.btn-quote, a:visited.btn-quote {
+a.btn-quote, a:hover.btn-quote, a:active.btn-quote, a:visited.btn-quote,
+a.btn-submit, a:hover.btn-submit, a:active.btn-submit, a:visited.btn-submit {
     color: #fff;
     text-decoration: none;
+}
+
+.request-summary-table td {
+  padding: 0 0.5em;
+  color: #222;
+}
+
+td.table-label {
+  text-align: right;
+  color: #808285;
 }
 
 footer {
