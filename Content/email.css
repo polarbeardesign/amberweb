@@ -47,6 +47,14 @@ a, a:visited, a:hover{
   float: left;
 }
 
+.tagline-new {
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0;
+  width: 20em;
+  float: left;
+}
+
 .heavy-italic {
     font-weight: bold;
 }
@@ -93,7 +101,7 @@ h1.reservation-request {
 }
 
 h2.property-name, p.property-address, p.property-description {
-    margin: 0 0 0.5em 1em;
+    margin: 0 0 0.5em 9px;
     }
 
 .row {
@@ -152,6 +160,11 @@ h2.property-name, p.property-address, p.property-description {
 .property-return-value > label {
     font-weight: normal;
     color: #808285;
+    margin-right: 5px;
+}
+
+.request_link {
+  margin-bottom: 32px;
 }
 
 .request_link a {
